@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {ContentItem} from '../../models/contentItem';
+import { ContentItem } from '../../models/contentItem';
 
 @Component({
   selector: 'app-content-item',

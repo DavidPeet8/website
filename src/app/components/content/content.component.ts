@@ -14,7 +14,8 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
   	this.itemlist = [
-  		new WorkItem(".", ".")
+  		new WorkItem(".", ".").setData("BOO", "COO", "FOO", "MOO"),
+  		new WorkItem(".", "")
   	]
   }
 

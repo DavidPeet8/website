@@ -19,6 +19,15 @@ export class WorkItem extends ContentItem
 		this.company = this.getCompany();
 	}
 
+	setData(startDate:string, endDate:string, position:string, company:string) {
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.position = position;
+		this.company = company;
+
+		return this;
+	}
+
 	getStartDate() 
 	{
 		let startDate:string = "";
