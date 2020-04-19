@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { About } from '../../models/About';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-about',
@@ -7,14 +7,24 @@ import { About } from '../../models/About';
   styleUrls: ['./about.component.sass']
 })
 export class AboutComponent implements OnInit {
-	about = About;
+  data;
+  config;
 
-  constructor() { 
-
+  constructor(private contentService:ContentService) {
+    this.data = contentService.getData(['about']);
+    this.config = contentService.getData(['config']);
   }
 
-  ngOnInit(): void {
-  	
+  ngOnInit(): void {}
+
+  openGithub(): void
+  {
+  	window.open(this.config.links.github, "_blank");
+  }
+
+  openResume() 
+  {
+    window.open(this.config.resumePath, "_blank")
   }
 
 }

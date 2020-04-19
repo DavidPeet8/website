@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {ContentItem} from '../../models/contentItem'
-import {WorkItem} from '../../models/workplace'
+import { ContentService } from '../../services/content.service'
 
 @Component({
   selector: 'app-content',
@@ -8,15 +7,14 @@ import {WorkItem} from '../../models/workplace'
   styleUrls: ['./content.component.sass']
 })
 export class ContentComponent implements OnInit {
-	itemlist:ContentItem[]
+  itemlist:Object;
 
-  constructor() { }
+  constructor(private contentService:ContentService) { }
 
   ngOnInit(): void {
-  	this.itemlist = [
-  		new WorkItem(".", ".").setData("BOO", "COO", "FOO", "MOO"),
-  		new WorkItem(".", "")
-  	]
+  	this.itemlist = Object.values(this.contentService.getData(['work']));
+
+    // Set up the spanner size
   }
 
 }

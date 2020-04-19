@@ -1,0 +1,65 @@
+@import '../../../mixins'
+
+@mixin getCompanyIconSize() 
+	@media only screen and (max-width: $xsmallWidthMax)
+		width: 70px
+		height: 70px
+		padding: 5px
+		margin-right: 10px
+	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
+		width: 100px
+		height: 100px
+		padding: 8px
+		margin-right: 30px
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		width: 150px
+		height: 150px
+		padding: 10px
+		margin-right: 50px
+	@media only screen and (max-width: $largeWidthMax) and (min-width: $largeWidthMin)
+		width: 200px
+		height: 200px
+		padding: 10px
+		margin-right: 50px
+	@media only screen and (min-width: $xlargeWidthMin)
+		width: 300px
+		height: 300px
+		padding: 15px
+		margin-right: 50px
+
+.content-item
+	border-radius: 15px
+	background-color: transparent
+	margin-bottom: 10px
+
+// Do we want circles or do we want rounded squares
+// Connect these with a subway system type thing
+
+.img-container
+	border-radius: 100%
+	background-color: $grey
+	@include getCompanyIconSize()
+
+	.img 
+		display: inline-block
+		object-fit: cover
+		width: inherit
+		height: inherit
+		border-radius: 100%
+		
+.text
+	display: inline-block
+	@include regularTextSize()
+
+.title
+	font-family: 'Montserrat', sans-serif
+	@include headerTextSize()
+
+.content-item-container
+	padding: 20px
+	@media only screen and (max-width: $xsmallWidthMax)
+		padding: 5px
+		margin-bottom: 30px
+
+
+

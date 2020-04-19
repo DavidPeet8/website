@@ -1,14 +1,20 @@
-<section class="about-section">
-	<div class="padd flex">
-		<div class="profileImg">
-			<img src="{{ about.profileImgPath }}">
+<section>
+	<div class="padd flex about-section">
+		<div class="profile-img">
+			<img (click)="openGithub()" src="{{ data.imgPath }}">
 		</div>
 		<div class="about">
 			<h3 class="section-header-text"> Technology excites me </h3>
-			<hr class="hr-one">
-			<p class="aboutText">
-				Hi, I'm {{ about.myname }}, thanks for visiting my website! I am a {{about.schoolTerm}} Honours Computer Science student at the University of Waterloo.
+			<hr class="fade">
+			<p class="about-text">
+				Hi, I'm {{ data.name }}, thanks for visiting my website!
+				<br/>
+				I am a {{ data.schoolTerm }} Honours Computer Science student at the University of Waterloo. My passion lies in systems development and I enjoy writing in C/C++, and Go lang is at the top of my list of new languages I want to try.
+				<br/>
+				Looking for {{ data.internshipDate }} internship oppertunities.
 			</p>
+			<a (click)="openResume()" href="#" class="btn">Resume  <i class="far fa-file-alt"></i></a>
+			<a (click)="openGithub()" href="#" class="btn">Github  <i class="fab fa-github"></i></a>
 		</div>
 	</div>
 </section>

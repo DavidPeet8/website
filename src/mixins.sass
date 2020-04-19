@@ -1,12 +1,62 @@
+@import './variables'
+
 @mixin hideSmall()
-	@media screen and (max-width: 800px)
+	@media only screen and (max-width: $smallWidthMax)
 		display: none
 
 @mixin hideMedium()
-	@media screen and (max-width: 1199px)
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
 		display: none
 
 @mixin hideLarge()
-	@media screen and (min-width: 1200px)
+	@media only screen and (min-width: $largeWidthMin)
 		display: none
 
+@mixin modifyPaddingOnSmall($padding) 
+	@media only screen and (max-width: $smallWidthMax)
+		padding: $padding
+
+
+@mixin regularTextSize()
+	@media only screen and (max-width: $xsmallWidthMax)
+		font-size: 10pt
+	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
+		font-size: 11pt
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		font-size: 12pt
+	@media only screen and (min-width: $largeWidthMin)
+		font-size: 14pt
+
+@mixin headerTextSize()
+	@media only screen and (max-width: $xsmallWidthMax)
+		font-size: 14pt
+	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
+		font-size: 18pt
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		font-size: 20pt
+	@media only screen and (min-width: $largeWidthMin)
+		font-size: 30pt
+
+@mixin splashTextSize() 
+	@media only screen and (max-width: $smallWidthMax)
+		font-size: 40pt
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		font-size: 70pt
+	@media only screen and (min-width: $largeWidthMin)
+		font-size: 70pt
+
+@mixin quoteTextSize()
+	@media only screen and (max-width: $smallWidthMax)
+		font-size: 14pt
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		font-size: 20pt
+	@media only screen and (min-width: $largeWidthMin)
+		font-size: 20pt
+
+@mixin iconTextSize() 
+	@media only screen and (max-width: $smallWidthMax)
+		font-size: 14pt
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		font-size: 20pt
+	@media only screen and (min-width: $largeWidthMin)
+		font-size: 20pt

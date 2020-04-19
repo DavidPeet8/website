@@ -1,5 +1,8 @@
-<section class="full-width">
-	<ul class="item-list">
-		<app-content-item *ngFor="let item of itemlist" [item]="item"></app-content-item>
-	</ul>
+<section class="full-width text-center">
+	<div class="content-container">
+		<ul class="item-list">
+			<app-content-item *ngFor="let item of itemlist" [item]="item"></app-content-item>
+		</ul>
+		<!-- <div class="spanner" #workSpanner></div> -->
+	</div>
 </section>

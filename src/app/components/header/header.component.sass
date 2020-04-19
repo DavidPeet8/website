@@ -1,7 +1,13 @@
+@import '../../../mixins'
+
 .section-header
-	min-height: 250px
+	min-height: 150px
 	background-image: url("../../../assets/img/codesnippet-min.jpg")
 	color: white
 	background-size: cover
 
-	
+.header-main
+	@include splashTextSize()
+
+.header-subtext
+	@include quoteTextSize()

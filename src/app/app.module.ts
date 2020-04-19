@@ -8,17 +8,28 @@ import { AboutComponent } from './components/about/about.component';
 import { ContentComponent } from './components/content/content.component';
 import { ContentItemComponent } from './components/content-item/content-item.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
+import { IconBarComponent } from './components/icon-bar/icon-bar.component';
+import { TagBarComponent } from './components/tag-bar/tag-bar.component';
+import { TagComponent } from './components/tag/tag.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutComponent,
     ContentComponent,
-    ContentItemComponent
+    ContentItemComponent,
+    FooterComponent,
+    IconBarComponent,
+    TagBarComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
