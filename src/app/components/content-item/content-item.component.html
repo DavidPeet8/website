@@ -1,16 +1,17 @@
 <div class="fullwidth content-item">
-	<div class="flex-left content-item-container">
-		<div [@grow]="isbig ? 'mouseIn' : 'mouseOut'" (click)="goToSite()" (mouseover)="onMouseEnter()" (mouseout)="onMouseLeave()" class="img-container">
+	<div [ngClass]="getClasses()" [ngStyle]="getStyle()" [@projectGrow]="isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()" (mouseout)="onMouseLeaveContainer()">
+		<div *ngIf="isWork" [@grow]="isBigImg ? 'mouseIn' : 'mouseOut'" (click)="goToSite()" (mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container">
 			<img class="img" src="{{item.imgPath}}">
 		</div>
 		
 		<div class="text">
-			<h3 class="title">{{ getPrimary() }} - {{ getSecondary() }}</h3>
+			<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
 			<ul class="fa-ul bullet-list">
-				<li *ngFor="let bullet of getBullets()">
+				<p>{{getContent()}}</p>
+<!-- 				<li *ngFor="let bullet of getBullets()">
 					<span class="fa-li"><i class="fas fa-cog fa-spin"></i></span>
 					{{bullet}}
-				</li>
+				</li> -->
 			</ul>
 			<app-tag-bar [tags]="item.tags"></app-tag-bar>
 		</div>

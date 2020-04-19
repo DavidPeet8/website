@@ -77,7 +77,7 @@ export class ContentService {
   			'imgPath': '../../assets/img/mcafee.png',
   			'companyURL': 'https://www.mcafee.com/',
   			'tags': ['C/C++', 'Bash', 'Win32API', 'Angular', 'CEF'],
-  			'content': ['Worked on installer', 'woo']
+  			'content': 'Worked on installer woo'
   		},
   		'axonify': 
   		{
@@ -88,7 +88,7 @@ export class ContentService {
   			'imgPath': '../../assets/img/axonify-min.jpg',
   			'companyURL': 'https://axonify.com/',
   			'tags': ['Java', 'JS', 'Hibernate', 'Backbone.js', 'Make'],
-  			'content': []
+  			'content': ''
   		},
   		'sobeys': 
   		{
@@ -99,7 +99,7 @@ export class ContentService {
   			'imgPath': '../../assets/img/sobeys-min.jpg',
   			'companyURL': 'https://www.sobeys.com/',
   			'tags': ['Team Work'],
-  			'content': []
+  			'content': ''
   		},
   		'playhouse': 
   		{
@@ -110,7 +110,7 @@ export class ContentService {
   			'imgPath': '../../assets/img/playhouse-min.jpg',
   			'companyURL': 'https://www.draytonentertainment.com/',
   			'tags': ['Team Work'],
-  			'content': []
+  			'content': ''
   		}
   	};
   }
@@ -118,7 +118,102 @@ export class ContentService {
   _getProjects(): Object
   {
   	return {
+  		'memcheck':
+  		{
+  			'name': 'Memcheck Shim',
+  			'position': null,
+  			'dateRange': null,
+  			'location': null,
+  			'imgPath': '',
+  			'companyURL': null,
+  			'tags': ['C++', 'Shared Libraries', 'Syscalls', 'Kernel'],
+  			'content': 'Intercepts library calls requesting more memory before they reach the standard library allowing for memory consumption monitoring',
+  			'modalContent': {
+  				
+  			}
+  		},
+  		'Website': 
+  		{
+  			'name': 'Personal Website',
+  			'position': null,
+  			'dateRange': null,
+  			'location': null,
+  			'imgPath': '../../../assets/img/website-min.PNG',
+  			'companyURL': null,
+  			'tags': ['JS', 'Angular', 'HTML', 'Sass'],
+  			'content': 'Tracks banking payments utilizing some DB software and other shit',
+  			'modalContent': {
+  				
+  			}
+  		},
+  		'banking-payment-tracker':
+  		{
+  			'name': 'Banking-Payment-Tracker',
+  			'position': null,
+  			'dateRange': null,
+  			'location': null,
+  			'imgPath': '',
+  			'companyURL': null,
+  			'tags': ['Java', 'Spring', 'REST API', 'Postgresql'],
+  			'content': 'Tracks banking payments utilizing some DB software and other shit',
+  			'modalContent': {
+  				
+  			}
+  		},
+  		'git-branch-parent-tracker':
+  		{
+  			'name': 'Git-Branch-Parent-Tracker',
+  			'position': null,
+  			'dateRange': null,
+  			'location': null,
+  			'imgPath': '',
+  			'companyURL': null,
+  			'tags': ['Git', 'Bash'],
+  			'content': 'Look at the name ... ur smart u can figure it out',
+  			'modalContent': {
 
+  			}
+  		},
+  		'highlight-sights':
+  		{
+  			'name': 'Highlight-Sights',
+  			'position': null,
+  			'dateRange': null,
+  			'location': null,
+  			'imgPath': '',
+  			'companyURL': null,
+  			'tags': ['JS'],
+  			'content': 'Chrome browser extension that highlights google search results from endpoints that the user has specified to be important in various colors',
+  			'modalContent': {
+
+  			}
+  		},
+  		'new-tab-page': {
+  			'name': 'Easy Access NewTab Page',
+  			'position': null,
+  			'dateRange': null,
+  			'location': null,
+  			'imgPath': '../../../assets/img/newtab-min.PNG',
+  			'companyURL': null,
+  			'tags': ['Java', 'LibGDX', 'Box2D'],
+  			'content': 'Emulation of popular game Terraria, turned into a windows meme',
+  			'modalContent': {
+  				
+  			}
+  		},
+  		'terraria': {
+  			'name': 'Terraria Emulation',
+  			'position': null,
+  			'dateRange': null,
+  			'location': null,
+  			'imgPath': '../../../assets/img/terraria1-min.PNG',
+  			'companyURL': null,
+  			'tags': ['Java', 'LibGDX', 'Box2D'],
+  			'content': 'Emulation of popular game Terraria, turned into a windows meme',
+  			'modalContent': {
+  				
+  			}
+  		},
   	};
   }
 }
