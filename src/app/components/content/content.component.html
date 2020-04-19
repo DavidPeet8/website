@@ -1,16 +1,21 @@
-<section class="full-width text-center">
-	<div *ngIf="isWork" class="content-container">
-		<h1 class="section-heading">Work Experience</h1>
-		<ul class="item-list">
-			<app-content-item *ngFor="let item of workList" [item]="item" [isWork]="true"></app-content-item>
-		</ul>
-		<!-- <div class="spanner" #workSpanner></div> -->
-	</div>
+<section class="full-width">
+	<div class="main-container">
+		<div class="display-selector">
+			<h1 class="section-heading">EXPERIENCE</h1>
+			<h1 class="section-heading">PROJECTS</h1>
+		</div>
+		<div *ngIf="isWork">
+			
+			<ul class="item-list">
+				<app-content-item *ngFor="let item of workList" [item]="item" [isWork]="true"></app-content-item>
+			</ul>
+			<!-- <div class="spanner" #workSpanner></div> -->
+		</div>
 
-	<div *ngIf="isWork" class="content-container">
-		<h1 class="section-heading">Projects</h1>
-		<ul class="item-list">
-			<app-content-item *ngFor="let item of projectList" [item]="item" [isWork]="false"></app-content-item>
-		</ul>
+		<div *ngIf="!isWork">
+			<ul class="item-list">
+				<app-content-item *ngFor="let item of projectList" [item]="item" [isWork]="false"></app-content-item>
+			</ul>
+		</div>
 	</div>
 </section>

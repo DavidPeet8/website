@@ -1,20 +1,20 @@
 <div class="fullwidth content-item">
-	<div [ngClass]="getClasses()" [ngStyle]="getStyle()" [@projectGrow]="isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()" (mouseout)="onMouseLeaveContainer()">
-		<div *ngIf="isWork" [@grow]="isBigImg ? 'mouseIn' : 'mouseOut'" (click)="goToSite()" (mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container">
+	<div [ngClass]="getClasses()" [ngStyle]="getStyle()" [@projectGrow]="isWork ? null : isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()" (mouseout)="onMouseLeaveContainer()">
+		<div *ngIf="isWork" [@grow]="isWork ? (isBigImg ? 'mouseIn' : 'mouseOut') : null" (click)="goToSite()" (mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container">
 			<img class="img" src="{{item.imgPath}}">
 		</div>
 		
 		<div class="text">
 			<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
 			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h5>
-			<ul class="fa-ul bullet-list">
-				<p>{{getContent()}}</p>
-<!-- 				<li *ngFor="let bullet of getBullets()">
+			<p>{{getContent()}}</p>
+			<!-- <ul class="fa-ul bullet-list">
+				<li *ngFor="let bullet of getBullets()">
 					<span class="fa-li"><i class="fas fa-cog fa-spin"></i></span>
 					{{bullet}}
-				</li> -->
-			</ul>
-			<app-tag-bar [tags]="item.tags"></app-tag-bar>
+				</li>
+			</ul> -->
+			<app-tag-bar [tags]="item.tags" [css]="item.css"></app-tag-bar>
 		</div>
 	</div>
 </div>

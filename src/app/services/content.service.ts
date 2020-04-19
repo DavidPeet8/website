@@ -12,6 +12,7 @@ export class ContentService {
   	'projects': {},
   	'header': {}
   };
+  grey:string="#292929";
 
   constructor() {
   	this.data['header'] = this._getHeader();
@@ -43,10 +44,9 @@ export class ContentService {
   {
   	return {
   		'name': 'David', 
-		'imgPath': '../../assets/img/profile2-min.jpg', // Relative path
-		'schoolTerm': '2B', // Ex. 2B
-		'internshipDate': 'Fall 2020 (Sept-Dec)',
-
+  		'imgPath': '../../assets/img/profile2-min.jpg', // Relative path
+  		'schoolTerm': '2B', // Ex. 2B
+  		'internshipDate': 'Fall 2020 (Sept-Dec)',
   	};
   }
 
@@ -55,13 +55,13 @@ export class ContentService {
   	return {
   		'faviconPath': './favicon.ico',
   		'resumePath': '../../assets/docs/resume.pdf',
-		'windowTitle': 'David Peet',
-		'links': {
-			'github': 'https://github.com/DavidPeet8',
-			'linkedIn': 'https://www.linkedin.com/in/dapeet/',
-			'email': 'davidpeetw@gmail.com',
-			'phone': '226-505-7050'
-		},
+  		'windowTitle': 'David Peet',
+  		'links': {
+  			'github': 'https://github.com/DavidPeet8',
+  			'linkedIn': 'https://www.linkedin.com/in/dapeet/',
+  			'email': 'davidpeetw@gmail.com',
+  			'phone': '226-505-7050'
+  		},
   	};
   }
 
@@ -70,6 +70,10 @@ export class ContentService {
   	return {
   		'mcafee': 
   		{
+        'css': {
+          'color': this.grey,
+          'display': 'block'
+        },
   			'name': 'McAfee',
   			'position': 'Software Developer',
   			'dateRange': 'Jan 2020 - Apr 2020',
@@ -81,6 +85,10 @@ export class ContentService {
   		},
   		'axonify': 
   		{
+        'css': {
+          'color': this.grey,
+          'display': 'block'
+        },
   			'name': 'Axonify',
   			'position': 'Software Developer',
   			'dateRange': 'May 2019 - Aug 2019',
@@ -92,6 +100,10 @@ export class ContentService {
   		},
   		'sobeys': 
   		{
+        'css': {
+          'color': this.grey,
+          'display': 'block'
+        },
   			'name': 'Sobeys',
   			'position': 'Deli Staff',
   			'dateRange': '2017 - 2018',
@@ -103,6 +115,10 @@ export class ContentService {
   		},
   		'playhouse': 
   		{
+        'css': {
+          'color': this.grey,
+          'display': 'block'
+        },
   			'name': 'St. Jacobs Playhouse',
   			'position': 'Usher',
   			'dateRange': '2013 - 2018',
@@ -120,7 +136,11 @@ export class ContentService {
   	return {
   		'memcheck':
   		{
-  			'name': 'Memcheck Shim',
+  			'css': {
+  				'color': 'white',
+  				'display': 'none'
+  			},
+  			'name': 'MEMCHECK SHIM',
   			'position': null,
   			'dateRange': 2020,
   			'location': null,
@@ -134,7 +154,11 @@ export class ContentService {
   		},
   		'Website': 
   		{
-  			'name': 'Personal Website',
+  			'css': {
+  				'color': 'white',
+  				'display': 'block'
+  			},
+  			'name': 'PERSONAL WEBSITE',
   			'position': null,
   			'dateRange': 2020,
   			'location': null,
@@ -148,7 +172,11 @@ export class ContentService {
   		},
   		'banking-payment-tracker':
   		{
-  			'name': 'Banking-Payment-Tracker',
+  			'css': {
+  				'color': 'white',
+  				'display': 'block'
+  			},
+  			'name': 'BANKING PAYMENT TRACKER',
   			'position': null,
   			'dateRange': 2019,
   			'location': null,
@@ -162,7 +190,11 @@ export class ContentService {
   		},
   		'git-branch-parent-tracker':
   		{
-  			'name': 'Git-Branch-Parent-Tracker',
+  			'css': {
+  				'color': 'white',
+  				'display': 'block'
+  			},
+  			'name': 'GIT BRANCH PARENT-TRACKER',
   			'position': null,
   			'dateRange': 2019,
   			'location': null,
@@ -176,7 +208,11 @@ export class ContentService {
   		},
   		'highlight-sights':
   		{
-  			'name': 'Highlight-Sights',
+  			'css': {
+  				'color': 'white',
+  				'display': 'block'
+  			},
+  			'name': 'HIGHLIGHT SIGHTS',
   			'position': null,
   			'dateRange': 2019,
   			'location': null,
@@ -188,8 +224,13 @@ export class ContentService {
 
   			}
   		},
-  		'new-tab-page': {
-  			'name': 'Easy Access NewTab Page',
+  		'new-tab-page': 
+  		{
+  			'css': {
+  				'color': 'white',
+  				'display': 'block'
+  			},
+  			'name': 'EASY ACCESS NEWTAB PAGE',
   			'position': null,
   			'dateRange': 2018,
   			'location': null,
@@ -201,8 +242,13 @@ export class ContentService {
   				
   			}
   		},
-  		'terraria': {
-  			'name': 'Terraria Emulation',
+  		'terraria': 
+  		{
+  			'css': {
+  				'color': 'white',
+  				'display': 'block'
+  			},
+  			'name': 'TERRARIA EMULATION',
   			'position': null,
   			'dateRange': 2017,
   			'location': null,

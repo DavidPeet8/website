@@ -7,10 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TagComponent implements OnInit {
 	@Input() tagModel:string;
+	@Input() css;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getStyle() : Object
+  {
+  	return {
+  		'color': this.css.color,
+  		'border': '2px solid ' + this.css.color,
+  		'background': 'transparent'
+  	};
   }
 
 }

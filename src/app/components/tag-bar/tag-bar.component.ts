@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TagBarComponent implements OnInit {
   @Input() tags:string[];
+  @Input() css: Object;
 
   constructor() { }
 

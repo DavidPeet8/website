@@ -9,7 +9,7 @@ import { ContentService } from '../../services/content.service'
 export class ContentComponent implements OnInit {
   workList:Object;
   projectList:Object;
-  isWork:boolean = true;
+  isWork:boolean = true; // Used to toggle between work and projects
 
   constructor(private contentService:ContentService) { }
 

@@ -24,11 +24,13 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
     trigger('projectGrow', [
       state('big', style({
-        transform: 'scale(1.05)'
+        transform: 'scale(1.05)',
+        'background-color': '#292929'
         // shade background
       })),
       state('smol', style({
-        transform: 'scale(1)'
+        transform: 'scale(1)',
+        'background-color': '#424242'
       })),
       transition('smol => big', [
         animate('0.1s')
@@ -124,13 +126,11 @@ export class ContentItemComponent implements OnInit {
 
   getStyle(): Object 
   {
-    if (this.isWork) 
-    {
-      return {};
-    }
+    if (this.isWork) { return {}; }
     return  {
-      'background': 'url("' + this.item.imgPath + '")',
-      'background-size': 'cover'
+      'background-image': 'url("' + this.item.imgPath + '")',
+      'background-size': 'cover',
+      ...this.item.css
     };
   }
 
