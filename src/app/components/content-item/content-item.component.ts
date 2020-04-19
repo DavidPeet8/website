@@ -77,7 +77,7 @@ export class ContentItemComponent implements OnInit {
     this.isBigImg = true;
   }
 
-  onMouseEnterContainer()
+  onMouseEnterContainer(): void
   {
     if(this.isWork || !this.animated) return;
     console.log("Mouse Enter Container Triggered")
@@ -91,7 +91,7 @@ export class ContentItemComponent implements OnInit {
     this.isBigImg = false;
   }
 
-  onMouseLeaveContainer() 
+  onMouseLeaveContainer(): void 
   {
     if (this.isWork || !this.animated) return;
     console.log("Mouse Leave Container Triggered")
@@ -103,7 +103,7 @@ export class ContentItemComponent implements OnInit {
     window.open("https://google.com", "_blank");
   }
 
-  getClasses() 
+  getClasses(): Object
   {
     return {
       'flex-left': true,
@@ -115,6 +115,11 @@ export class ContentItemComponent implements OnInit {
   getContent(): string
   {
     return this.item.content;
+  }
+
+  getDate(): string
+  {
+    return this.item.dateRange;
   }
 
   getStyle(): Object 

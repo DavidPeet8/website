@@ -122,7 +122,7 @@ export class ContentService {
   		{
   			'name': 'Memcheck Shim',
   			'position': null,
-  			'dateRange': null,
+  			'dateRange': 2020,
   			'location': null,
   			'imgPath': '',
   			'companyURL': null,
@@ -136,7 +136,7 @@ export class ContentService {
   		{
   			'name': 'Personal Website',
   			'position': null,
-  			'dateRange': null,
+  			'dateRange': 2020,
   			'location': null,
   			'imgPath': '../../../assets/img/website-min.PNG',
   			'companyURL': null,
@@ -150,7 +150,7 @@ export class ContentService {
   		{
   			'name': 'Banking-Payment-Tracker',
   			'position': null,
-  			'dateRange': null,
+  			'dateRange': 2019,
   			'location': null,
   			'imgPath': '',
   			'companyURL': null,
@@ -164,7 +164,7 @@ export class ContentService {
   		{
   			'name': 'Git-Branch-Parent-Tracker',
   			'position': null,
-  			'dateRange': null,
+  			'dateRange': 2019,
   			'location': null,
   			'imgPath': '',
   			'companyURL': null,
@@ -178,7 +178,7 @@ export class ContentService {
   		{
   			'name': 'Highlight-Sights',
   			'position': null,
-  			'dateRange': null,
+  			'dateRange': 2019,
   			'location': null,
   			'imgPath': '',
   			'companyURL': null,
@@ -191,7 +191,7 @@ export class ContentService {
   		'new-tab-page': {
   			'name': 'Easy Access NewTab Page',
   			'position': null,
-  			'dateRange': null,
+  			'dateRange': 2018,
   			'location': null,
   			'imgPath': '../../../assets/img/newtab-min.PNG',
   			'companyURL': null,
@@ -204,7 +204,7 @@ export class ContentService {
   		'terraria': {
   			'name': 'Terraria Emulation',
   			'position': null,
-  			'dateRange': null,
+  			'dateRange': 2017,
   			'location': null,
   			'imgPath': '../../../assets/img/terraria1-min.PNG',
   			'companyURL': null,
