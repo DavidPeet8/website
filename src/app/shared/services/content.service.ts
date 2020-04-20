@@ -52,7 +52,8 @@ export class ContentService {
   {
   	return {
   		'mainHeader': 'Developer.',
-  		'expressionLine': 'I google better than the occasional bear'
+  		'expressionLine': 'I google better than the occasional bear',
+      'imgPath': 'url("assets/img/codesnippet-min.jpg")'
   	};
   } 
 
@@ -60,7 +61,7 @@ export class ContentService {
   {
   	return {
   		'name': 'David', 
-  		'imgPath': '../../assets/img/profile2-min.jpg', // Relative path
+  		'imgPath': 'assets/img/profile2-min.jpg', // Relative path
   		'schoolTerm': '2B', // Ex. 2B
   		'internshipDate': 'Fall 2020 (Sept-Dec)',
   	};
@@ -70,7 +71,7 @@ export class ContentService {
   {
   	return {
   		'faviconPath': './favicon.ico',
-  		'resumePath': '../../assets/docs/resume.pdf',
+  		'resumePath': 'assets/docs/resume.pdf',
   		'windowTitle': 'David Peet',
   		'links': {
   			'github': 'https://github.com/DavidPeet8',
@@ -101,7 +102,7 @@ export class ContentService {
         'Software Developer',
         'May 2019 - Aug 2019',
         'Waterloo, Ontario',
-        '../../assets/img/axonify-min.jpg',
+        'assets/img/axonify-min.jpg',
         'https://axonify.com/',
         ['Java', 'JS', 'Hibernate', 'Backbone.js', 'Make'],
         '',

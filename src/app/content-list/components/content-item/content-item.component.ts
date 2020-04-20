@@ -50,7 +50,9 @@ export class ContentItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   getPrimary(): string
   {

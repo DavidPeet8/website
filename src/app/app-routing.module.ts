@@ -1,30 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component'
+import { ContentComponent } from '@content-list/components/content/content.component'
 
 
 const routes: Routes = [
  	{ path: '', redirectTo: '/experience', pathMatch: 'full' },
-	{ path: 'experience', component: AppComponent,
-		children: [
-		{
-			path: 'mcafee',
-			component: AppComponent
-		},
-		{
-			path: 'axonify',
-			component: AppComponent
-		},
-		{
-			path: 'sobeys',
-			component: AppComponent
-		},
-		{
-			path: 'playhouse',
-			component: AppComponent
-		}]
-	},
-	{ path: 'projects', component: AppComponent },
+	{ path: 'experience', component: ContentComponent },
+	{ path: 'projects', component: ContentComponent },
 	{ path: '**', component: AppComponent} // 404 page
 ];
 

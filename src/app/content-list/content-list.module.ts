@@ -6,6 +6,7 @@ import { TagBarComponent } from './components/tag-bar/tag-bar.component';
 import { TagComponent } from './components/tag/tag.component';
 import { ContentComponent } from './components/content/content.component';
 import { ContentItemComponent } from './components/content-item/content-item.component';
+import { SharedModule } from '@shared/shared.module'
 
 
 @NgModule({
@@ -17,7 +18,11 @@ import { ContentItemComponent } from './components/content-item/content-item.com
   ],
   imports: [
     CommonModule,
-    ContentListRoutingModule
+    ContentListRoutingModule,
+    SharedModule
+  ], 
+  exports: [
+  	ContentComponent
   ]
 })
 export class ContentListModule { }

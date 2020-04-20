@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { IconBarComponent } from './components/icon-bar/icon-bar.component';
 import { ContentListModule } from './content-list/content-list.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContentListModule } from './content-list/content-list.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ContentListModule
+    ContentListModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
