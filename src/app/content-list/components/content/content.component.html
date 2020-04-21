@@ -1,8 +1,8 @@
 <section class="full-width">
 	<div class="main-container">
 		<div class="display-selector">
-			<h1 class="section-heading">EXPERIENCE</h1>
-			<h1 class="section-heading">PROJECTS</h1>
+			<h1 [routerLink]="['/experience']" [routerLinkActive]="['active-tab']" class="section-heading">EXPERIENCE</h1>
+			<h1 [routerLink]="['/projects']" [routerLinkActive]="['active-tab']" class="section-heading">PROJECTS</h1>
 		</div>
 		<div *ngIf="isWork">
 			
