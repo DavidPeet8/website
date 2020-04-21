@@ -1,5 +1,5 @@
 <div class="fullwidth content-item">
-	<div [ngClass]="getClasses()" [ngStyle]="getStyle()" [@projectGrow]="isWork ? null : isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()" (mouseout)="onMouseLeaveContainer()">
+	<div [routerLink]="['/projects' + item.partialURI]" [ngClass]="getClasses()" [ngStyle]="getStyle()" [@projectGrow]="isWork ? null : isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()" (mouseout)="onMouseLeaveContainer()">
 		<div *ngIf="isWork" [@grow]="isWork ? (isBigImg ? 'mouseIn' : 'mouseOut') : null" (click)="goToSite()" (mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container">
 			<img class="img" src="{{item.imgPath}}">
 		</div>

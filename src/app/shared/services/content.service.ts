@@ -32,7 +32,7 @@ export class ContentService {
   	return ret;
   }
 
-  _createContentObject(name, position, dateRange, location, imgPath, companyURL, tags, content, modalContent, cssObj): Object
+  _createContentObject(name, position, dateRange, location, imgPath, companyURL, tags, content, modalContent, cssObj, partialURI = ""): Object
   {
     return {
       'name': name,
@@ -44,7 +44,8 @@ export class ContentService {
       'tags': tags,
       'content': content,
       'modalContent': modalContent,
-      'css': cssObj
+      'css': cssObj,
+      'partialURI': partialURI
     };
   }
 
@@ -149,7 +150,8 @@ export class ContentService {
         ['C++', 'Shared Libraries', 'Syscalls', 'Kernel'],
         'Intercepts library calls requesting more memory before they reach the standard library allowing for memory consumption monitoring',
         {},
-        { 'color': 'white', 'display': 'none' }
+        { 'color': 'white', 'display': 'none' },
+        '/memcheck'
       ),
   		'Website': this._createContentObject(
         'PERSONAL WEBSITE',
@@ -161,7 +163,8 @@ export class ContentService {
         ['JS', 'Angular', 'HTML', 'Sass'],
         'Tracks banking payments utilizing some DB software and other shit',
         {},
-        { 'color': 'white', 'display': 'block' }
+        { 'color': 'white', 'display': 'block' },
+        '/website'
       ),
   		'banking-payment-tracker': this._createContentObject(
         'BANKING PAYMENT TRACKER',
@@ -173,7 +176,8 @@ export class ContentService {
         ['Java', 'Spring', 'REST API', 'Postgresql'],
         'Tracks banking payments utilizing some DB software and other shit',
         {},
-        { 'color': 'white', 'display': 'block' }
+        { 'color': 'white', 'display': 'block' },
+        '/banking-payment-tracker'
       ),
   		'git-branch-parent-tracker': this._createContentObject(
         'GIT BRANCH PARENT-TRACKER',
@@ -185,7 +189,8 @@ export class ContentService {
         ['Git', 'Bash'],
         'Look at the name ... ur smart u can figure it out',
         {},
-        { 'color': 'white', 'display': 'block' }
+        { 'color': 'white', 'display': 'block' },
+        '/git-branch-parent-tracker'
       ),
   		'highlight-sights': this._createContentObject(
         'HIGHLIGHT SIGHTS',
@@ -197,7 +202,8 @@ export class ContentService {
         ['JS'],
         'Chrome browser extension that highlights google search results from endpoints that the user has specified to be important in various colors',
         {},
-        { 'color': 'white', 'display': 'block' }
+        { 'color': 'white', 'display': 'block' },
+        '/highlight-sights'
       ),
   		'new-tab-page': this._createContentObject(
         'EASY ACCESS NEWTAB PAGE',
@@ -209,7 +215,8 @@ export class ContentService {
         ['Java', 'LibGDX', 'Box2D'],
         'Emulation of popular game Terraria, turned into a windows meme',
         {},
-        { 'color': 'white', 'display': 'block' }
+        { 'color': 'white', 'display': 'block' },
+        '/new-tab-page'
       ),
   		'terraria': this._createContentObject(
         'TERRARIA EMULATION',
@@ -221,7 +228,8 @@ export class ContentService {
         ['Java', 'LibGDX', 'Box2D'],
         'Emulation of popular game Terraria, turned into a windows meme',
         {},
-        { 'color': 'white', 'display': 'block' }
+        { 'color': 'white', 'display': 'block' },
+        '/terraria'
       ),
   	};
   }
