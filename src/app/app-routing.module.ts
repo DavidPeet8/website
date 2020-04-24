@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component'
-import { ContentComponent } from '@content-list/components/content/content.component'
-
 
 const routes: Routes = [
- 	{ path: '', redirectTo: '/experience', pathMatch: 'full' },
-	{ path: 'experience', component: ContentComponent },
-	{ path: 'projects', component: ContentComponent },
-	{ path: '**', component: AppComponent} // 404 page
+	{ 
+		path: 'experience',  
+		loadChildren: () => import ('@content-list/content-list.module').then(mod => mod.ContentListModule) 
+	},
+	{ 
+		path: 'projects', 
+		loadChildren: () => import('@content-list/content-list.module').then(mod => mod.ContentListModule) 
+	},
+	{ path: '', redirectTo: '/experience', pathMatch: 'full' },
+	//{ path: '**', redirectTo: '/experience', pathMatch: 'full' } // 404 page
 ];
 
 @NgModule({

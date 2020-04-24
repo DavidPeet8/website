@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'website';
+
+  ngOnInit(): void {
+  	console.log("App component was initialized")
+  }
 }

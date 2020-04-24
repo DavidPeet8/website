@@ -4,6 +4,7 @@
     "baseUrl": "src",
     "paths": {
       "@content-list/*": ["app/content-list/*"],
+      "@content-modal/*": ["app/content-modal/*"],
       "@environments/*": ["environments/*"],
       "@shared/*": ["app/shared/*"],
     },
