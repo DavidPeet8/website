@@ -7,13 +7,7 @@
 		<div class="text">
 			<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
 			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h5>
-			<p>{{getContent()}}</p>
-			<!-- <ul class="fa-ul bullet-list">
-				<li *ngFor="let bullet of getBullets()">
-					<span class="fa-li"><i class="fas fa-cog fa-spin"></i></span>
-					{{bullet}}
-				</li>
-			</ul> -->
+			<p [@contentShow]="isWork ? null : isBigContent ? 'show' : 'hide'">{{getContent()}}</p>
 			<app-tag-bar [tags]="item.tags" [css]="item.css"></app-tag-bar>
 		</div>
 	</div>

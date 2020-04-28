@@ -26,7 +26,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       state('big', style({
         transform: 'scale(1.05)',
         'background-color': '#292929'
-        // shade background
       })),
       state('smol', style({
         transform: 'scale(1)',
@@ -36,6 +35,21 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         animate('0.1s')
       ]),
       transition('big => smol', [
+        animate('0.1s')
+      ]) 
+    ]),
+
+    trigger('contentShow', [
+      state('show', style({
+        'visibility': 'visible'
+      })),
+      state('hide', style({
+        'visibility': 'hidden'
+      })),
+      transition('show => hide', [
+        animate('0.1s')
+      ]),
+      transition('hide => show', [
         animate('0.1s')
       ]) 
     ])
