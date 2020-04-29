@@ -18,7 +18,7 @@ export class ContentService {
   	this.data['header'] = this._getHeader();
   	this.data['about'] = this._getAbout();
   	this.data['config'] = this._getConfig();
-  	this.data['work'] = this._getWork();
+  	this.data['experience'] = this._getExperience();
   	this.data['projects'] = this._getProjects();
   }
 
@@ -89,7 +89,7 @@ export class ContentService {
   	};
   }
 
-  _getWork(): Object
+  _getExperience(): Object
   {
   	return {
       'mcafee': this._createContentObject(
@@ -100,7 +100,10 @@ export class ContentService {
         'assets/img/mcafee.png', 
         'https://www.mcafee.com/', 
         ['C/C++', 'Bash', 'Win32API', 'Angular', 'CEF'], 
-        'Worked on installer woo', 
+        {
+          'splash': 'Improved product installers by profiling compiled binaries and solving critical issues including unnecessary device reboots',
+          'details': []
+        }, 
         {},
         { 'color': this.grey, 'display': 'block' }
       ),
@@ -112,7 +115,10 @@ export class ContentService {
         'assets/img/axonify-min.jpg',
         'https://axonify.com/',
         ['Java', 'JS', 'Hibernate', 'Backbone.js', 'Make'],
-        '',
+        {
+          'splash': 'Constructed impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
+          'details': []
+        },
         {},
         { 'color': this.grey, 'display': 'block' }
       ),
@@ -124,7 +130,10 @@ export class ContentService {
         'assets/img/sobeys-min.jpg',
         'https://www.sobeys.com/',
         ['Team Work'],
-        '',
+        {
+          'splash': 'Positively impacted team work environment assisting team members and serving customers',
+          'details': ['oof']
+        },
         {},
         { 'color': this.grey, 'display': 'block' }
       ),
@@ -136,7 +145,10 @@ export class ContentService {
         'assets/img/playhouse-min.jpg',
         'https://www.draytonentertainment.com/',
         ['Team Work'],
-        '',
+        {
+          'splash': 'Escorted customers to their seats and marketed house sales',
+          'details': []
+        },
         {},
         { 'color': this.grey, 'display': 'block' }
       )
@@ -154,8 +166,11 @@ export class ContentService {
         '',
         null,
         ['C++', 'Shared Libraries', 'Syscalls', 'Kernel'],
-        'Intercepts library calls requesting more memory before they reach the standard library allowing for memory consumption monitoring',
-        {imgSrc: "", description: "", improvements: ""},
+        {
+          'splash': 'Intercepts library calls requesting more memory before they reach the standard library allowing for memory consumption monitoring',
+          'details': []
+        },
+        {imgSrc: "", description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'none' },
         '/memcheck'
       ),
@@ -167,8 +182,11 @@ export class ContentService {
         'assets/img/website-min.PNG',
         null,
         ['JS', 'Angular', 'HTML', 'Sass'],
-        'Tracks banking payments utilizing some DB software and other shit',
-        {imgSrc: "", description: "", improvements: ""},
+        {
+          'splash': 'Tracks banking payments utilizing some DB software and other shit',
+          'details': []
+        },
+        {imgSrc: "", description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/website'
       ),
@@ -180,8 +198,11 @@ export class ContentService {
         '',
         null,
         ['Java', 'Spring', 'REST API', 'Postgresql'],
-        'Tracks banking payments utilizing some DB software and other shit',
-        {},
+        {
+          'splash': 'Tracks banking payments utilizing some DB software and other shit',
+          'details': []
+        },
+        {imgSrc: "", description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/banking-payment-tracker'
       ),
@@ -193,8 +214,11 @@ export class ContentService {
         'assets/img/git-branch-hierarchy.png',
         null,
         ['Git', 'Java'],
-        'This project tracks the parents of new branches that are created or deleted to assist in generating diffs for code reviews',
-        {imgSrc: "", description: "", improvements: ""},
+        {
+          'splash': 'This project tracks the parents of new branches that are created or deleted to assist in generating diffs for code reviews',
+          'details': []
+        },
+        {imgSrc: "", description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/git-branch-hierarchy'
       ),
@@ -206,8 +230,11 @@ export class ContentService {
         'assets/img/highlight-sights.png',
         null,
         ['JS'],
-        'Chrome browser extension that highlights google search results from endpoints that the user has specified to be important in various colors',
-        {imgSrc: "", description: "", improvements: ""},
+        {
+          'splash': 'Chrome browser extension that highlights google search results from endpoints that the user has specified to be important in various colors',
+          'details': []
+        },
+        {imgSrc: "", description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/highlight-sights'
       ),
@@ -219,8 +246,11 @@ export class ContentService {
         'assets/img/newtab.png',
         null,
         ['JS', 'Firebase', 'HTML', 'CSS'],
-        'Emulation of popular game Terraria, turned into a windows meme',
-        {imgSrc: "", description: "", improvements: ""},
+        {
+          'splash': 'Emulation of popular game Terraria, turned into a windows meme',
+          'details': []
+        },
+        {imgSrc: "", description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block', 'background-position': '50% 0%' },
         '/new-tab-page'
       ),
@@ -232,8 +262,11 @@ export class ContentService {
         'assets/img/terraria.PNG',
         null,
         ['Java', 'LibGDX', 'Box2D'],
-        'Emulation of popular game Terraria, turned into a windows meme',
-        {imgSrc: "", description: "", improvements: ""},
+        {
+          'splash': 'Emulation of popular game Terraria, turned into a windows meme',
+          'details': []
+        },
+        {imgSrc: "", description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/terraria'
       ),

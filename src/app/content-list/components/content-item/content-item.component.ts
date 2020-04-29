@@ -85,34 +85,30 @@ export class ContentItemComponent implements OnInit {
 
   getBullets():string[]
   {
-    return this.item.content;
+    return this.item.content.details;
   }
 
   onMouseEnterImg(): void
   {
     if (!this.isWork || !this.animated) return;
-    console.log("Mouse Enter Img Triggered");
     this.isBigImg = true;
   }
 
   onMouseEnterContainer(): void
   {
     if(this.isWork || !this.animated) return;
-    console.log("Mouse Enter Container Triggered")
     this.isBigContent=true;
   }
 
   onMouseLeaveImg(): void
   {
     if (!this.isWork || !this.animated) return;
-    console.log("Mouse Leave Img Triggered");
     this.isBigImg = false;
   }
 
   onMouseLeaveContainer(): void 
   {
     if (this.isWork || !this.animated) return;
-    console.log("Mouse Leave Container Triggered")
     this.isBigContent = false;
   }
 
@@ -130,9 +126,9 @@ export class ContentItemComponent implements OnInit {
     }; 
   }
 
-  getContent(): string
+  getSplashContent(): string
   {
-    return this.item.content;
+    return this.item.content.splash;
   }
 
   getDate(): string

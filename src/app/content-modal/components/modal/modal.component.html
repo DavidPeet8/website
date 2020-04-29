@@ -3,14 +3,21 @@
 		<p class="close" (click)="closeModal()" >&times;</p>
 		<div class="content">
 			<h1 class="title">{{getProject()}}</h1>
-			<img src="{{getImg()}}" />
+			<h3 class="date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h3>
+			<div class= "carousel" [ngStyle]="getImg()"></div>
 			<div class="description">
 				<h3>Description:</h3>
 				<p>{{getDescription()}}</p>
 			</div>
-			<div class="improvements">
-				<h3>Current State & Future Improvements:</h3>
-				<p>{{getImprovements()}}</p>
+			<div class="flex-row">
+				<div class="details">
+					<h3>Details:</h3>
+					<p>{{getDetails()}}</p>
+				</div>
+				<div class="improvements">
+					<h3>Future Improvements:</h3>
+					<p>{{getImprovements()}}</p>
+				</div>
 			</div>
 		</div>
 	</div>

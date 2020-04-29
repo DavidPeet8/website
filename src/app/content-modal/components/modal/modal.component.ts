@@ -16,8 +16,6 @@ export class ModalComponent implements OnInit
 
   ngOnInit(): void 
   {
-  	console.log("Modal has been initialized");
-  	console.log(this.contentService.getForContext());
   	this.item = this.contentService.getForContext();
   }
 
@@ -35,7 +33,11 @@ export class ModalComponent implements OnInit
 
   getImg() 
   {
-  	return this.item.modalContent.imgSrc;
+  	let src = (this.item.modalContent.imgSrc == "") ? this.item.imgPath : this.item.modalContent.imgSrc;
+  	console.log(src);
+  	return {
+  		'background-image': 'url(' + src + ')'
+  	};
   }
 
   getProject() 
@@ -43,14 +45,24 @@ export class ModalComponent implements OnInit
   	return this.item.name;
   }
 
-  getDescription()
+  getDetails()
   {
-  	return this.item.modalContent.description;
+  	return this.item.modalContent.details;
   }
 
   getImprovements () 
   {
   	return this.item.modalContent.improvements;
+  }
+
+  getDate() 
+  {
+  	return this.item.dateRange;
+  }
+
+  getDescription() 
+  {
+  	return this.item.modalContent.description
   }
 
 }
