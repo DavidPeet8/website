@@ -170,7 +170,7 @@ export class ContentService {
           'splash': 'Intercepts library calls requesting more memory before they reach the standard library allowing for memory consumption monitoring',
           'details': []
         },
-        {imgSrc: "", description: "", improvements: "", details: []},
+        {imgSrc: [], description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'none' },
         '/memcheck'
       ),
@@ -186,7 +186,7 @@ export class ContentService {
           'splash': 'Tracks banking payments utilizing some DB software and other shit',
           'details': []
         },
-        {imgSrc: "", description: "", improvements: "", details: []},
+        {imgSrc: ['assets/img/terraria.PNG', 'assets/img/git-branch-hierarchy.png'], description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/website'
       ),
@@ -202,7 +202,7 @@ export class ContentService {
           'splash': 'Tracks banking payments utilizing some DB software and other shit',
           'details': []
         },
-        {imgSrc: "", description: "", improvements: "", details: []},
+        {imgSrc: [], description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/banking-payment-tracker'
       ),
@@ -218,7 +218,7 @@ export class ContentService {
           'splash': 'This project tracks the parents of new branches that are created or deleted to assist in generating diffs for code reviews',
           'details': []
         },
-        {imgSrc: "", description: "", improvements: "", details: []},
+        {imgSrc: [], description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/git-branch-hierarchy'
       ),
@@ -234,7 +234,7 @@ export class ContentService {
           'splash': 'Chrome browser extension that highlights google search results from endpoints that the user has specified to be important in various colors',
           'details': []
         },
-        {imgSrc: "", description: "", improvements: "", details: []},
+        {imgSrc: [], description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/highlight-sights'
       ),
@@ -250,7 +250,7 @@ export class ContentService {
           'splash': 'Emulation of popular game Terraria, turned into a windows meme',
           'details': []
         },
-        {imgSrc: "", description: "", improvements: "", details: []},
+        {imgSrc: [], description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block', 'background-position': '50% 0%' },
         '/new-tab-page'
       ),
@@ -266,7 +266,7 @@ export class ContentService {
           'splash': 'Emulation of popular game Terraria, turned into a windows meme',
           'details': []
         },
-        {imgSrc: "", description: "", improvements: "", details: []},
+        {imgSrc: [], description: "", improvements: "", details: []},
         { 'color': 'white', 'display': 'block' },
         '/terraria'
       ),

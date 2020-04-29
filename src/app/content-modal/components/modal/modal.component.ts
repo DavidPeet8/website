@@ -40,29 +40,35 @@ export class ModalComponent implements OnInit
   	};
   }
 
-  getProject() 
+  getProject() : string
   {
   	return this.item.name;
   }
 
-  getDetails()
+  getDetails() : string
   {
   	return this.item.modalContent.details;
   }
 
-  getImprovements () 
+  getImprovements () : string 
   {
   	return this.item.modalContent.improvements;
   }
 
-  getDate() 
+  getDate() : string
   {
   	return this.item.dateRange;
   }
 
-  getDescription() 
+  getDescription() : string
   {
   	return this.item.modalContent.description
+  }
+
+  getSlides () : string[]
+  {
+  	let src = (this.item.modalContent.imgSrc == '') ? [this.item.imgPath] : this.item.modalContent.imgSrc;
+  	return src;
   }
 
 }

@@ -4,7 +4,7 @@
 		<div class="content">
 			<h1 class="title">{{getProject()}}</h1>
 			<h3 class="date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h3>
-			<div class= "carousel" [ngStyle]="getImg()"></div>
+			<app-carousel [slides]='getSlides()'></app-carousel>
 			<div class="description">
 				<h3>Description:</h3>
 				<p>{{getDescription()}}</p>

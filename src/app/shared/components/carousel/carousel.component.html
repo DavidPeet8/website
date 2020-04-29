@@ -1,0 +1,11 @@
+<section>
+	<div ng-swipe-left="showNext()" ng-swipe-right="showPrev()" class="flex-carousel">
+		<div (click)="showPrev()" class="nav-btn-left">
+			<i class="fas fa-chevron-left"></i>
+		</div>
+		<div class="carousel" [ngStyle]="carouselBackground" (changeBackground)="getBackground()"></div>
+		<div (click)="showNext()" class="nav-btn-right">
+			<i class="fas fa-chevron-right"></i>
+		</div>
+	</div>
+</section>
