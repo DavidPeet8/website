@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentService {
-  data = 
-  {
+  data = {
   	'about': {},
   	'config': {},
   	'work': {},
@@ -14,7 +14,7 @@ export class ContentService {
   };
   grey:string="#292929";
 
-  constructor() {
+  constructor(private router: Router) {
   	this.data['header'] = this._getHeader();
   	this.data['about'] = this._getAbout();
   	this.data['config'] = this._getConfig();
@@ -22,7 +22,7 @@ export class ContentService {
   	this.data['projects'] = this._getProjects();
   }
 
-  getData(arrayOfKeys)
+  getData(arrayOfKeys): Object
   {
   	let ret = this.data;
   	for (let key of arrayOfKeys) 
@@ -30,6 +30,14 @@ export class ContentService {
   		ret = this.data[key];
   	}
   	return ret;
+  }
+
+  getForContext()
+  {
+    // Fetch the URL as an array, return getData(thatArray)
+    console.log("Route URL: " + this.router.url);
+    return {imgSrc: "", description: "", improvements: ""};
+    return this.getData([]);
   }
 
   _createContentObject(name, position, dateRange, location, imgPath, companyURL, tags, content, modalContent, cssObj, partialURI = ""): Object

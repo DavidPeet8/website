@@ -5,19 +5,13 @@ import { ContentComponent } from '@content-list/components/content/content.compo
 import { ModalComponent } from '@content-modal/components/modal/modal.component'
 
 const routes: Routes = [
-	{ 
-		path: '', 
-		component: ContentComponent,
-		children: [
-			{ path: 'website', component: ModalComponent },
-			{ path: 'memcheck', component: ModalComponent },
-			{ path: 'banking-payment-tracker', component: ModalComponent },
-			{ path: 'git-branch-hierarchy', component: ModalComponent },
-			{ path: 'highlight-sights', component: ModalComponent },
-			{ path: 'new-tab-page', component: ModalComponent },
-			{ path: 'terraria', component: ModalComponent },
-		]
-	}
+	{ path: 'website', component: ModalComponent },
+	{ path: 'memcheck', component: ModalComponent },
+	{ path: 'banking-payment-tracker', component: ModalComponent },
+	{ path: 'git-branch-hierarchy', component: ModalComponent },
+	{ path: 'highlight-sights', component: ModalComponent },
+	{ path: 'new-tab-page', component: ModalComponent },
+	{ path: 'terraria', component: ModalComponent },
 ];
 
 @NgModule({
