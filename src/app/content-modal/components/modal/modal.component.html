@@ -12,11 +12,15 @@
 			<div class="flex-row">
 				<div class="details">
 					<h3>Details:</h3>
-					<p>{{getDetails()}}</p>
+					<ul>
+						<li *ngFor="let bullet of getDetails()">{{bullet}}</li>
+					</ul>
 				</div>
 				<div class="improvements">
 					<h3>Future Improvements:</h3>
-					<p>{{getImprovements()}}</p>
+					<ul>
+						<li *ngFor="let bullet of getImprovements()">{{bullet}}</li>
+					</ul>
 				</div>
 			</div>
 		</div>

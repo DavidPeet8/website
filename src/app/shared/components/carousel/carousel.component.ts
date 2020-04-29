@@ -16,6 +16,7 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
   	console.log("Carousel init");
+    console.log(this.slides.length + " " + this.slides[0]);
     this.carouselBackground['background-image'] = 'url(' + this.slides[this.slideIndex] + ')';
   }
 

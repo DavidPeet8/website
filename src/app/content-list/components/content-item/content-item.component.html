@@ -7,7 +7,7 @@
 		<div class="text">
 			<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
 			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h5>
-			<p [@contentShow]="isWork ? null : isBigContent ? 'show' : 'hide'">{{getSplashContent()}}</p>
+			<p>{{getSplashContent()}}</p>
 			<ul>
 				<li *ngFor="let bullet of getBullets()">{{bullet}}</li>
 			</ul>

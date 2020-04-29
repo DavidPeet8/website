@@ -1,5 +1,6 @@
 <section>
-	<div ng-swipe-left="showNext()" ng-swipe-right="showPrev()" class="flex-carousel">
+	<!--These are outdated and will not work, use hammerjs for swiping action-->
+	<div ng-swipe-left="showNext()" ng-swipe-right="showPrev()" class="flex-carousel" *ngIf="slides.length > 0">
 		<div (click)="showPrev()" class="nav-btn-left">
 			<i class="fas fa-chevron-left"></i>
 		</div>

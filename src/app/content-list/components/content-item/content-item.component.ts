@@ -37,21 +37,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       transition('big => smol', [
         animate('0.1s')
       ]) 
-    ]),
-
-    trigger('contentShow', [
-      state('show', style({
-        'opacity': '1'
-      })),
-      state('hide', style({
-        'opacity': '0'
-      })),
-      transition('show => hide', [
-        animate('0.1s ease-in-out')
-      ]),
-      transition('hide => show', [
-        animate('0.1s ease-in-out')
-      ]) 
     ])
   ]
 })

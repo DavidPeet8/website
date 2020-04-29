@@ -67,7 +67,9 @@ export class ModalComponent implements OnInit
 
   getSlides () : string[]
   {
-  	let src = (this.item.modalContent.imgSrc == '') ? [this.item.imgPath] : this.item.modalContent.imgSrc;
+  	let src = (this.item.modalContent.imgSrc == '') ? 
+      (this.item.imgPath == "" ? [] : [this.item.imgPath]) : 
+      this.item.modalContent.imgSrc;
   	return src;
   }
 

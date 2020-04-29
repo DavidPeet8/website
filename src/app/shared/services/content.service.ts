@@ -167,10 +167,17 @@ export class ContentService {
         null,
         ['C++', 'Shared Libraries', 'Syscalls', 'Kernel'],
         {
-          'splash': 'Intercepts library calls requesting more memory before they reach the standard library allowing for memory consumption monitoring',
+          'splash': 'Software shim intercepting library calls to allocate heap memory before they reach the standard library allowing monitoring of memory consumption',
           'details': []
         },
-        {imgSrc: [], description: "", improvements: "", details: []},
+        {
+          imgSrc: [],
+          description: `
+            This project is a memcheck shim, a piece of code that lies between an executing application and shared libraries that that application uses. My memcheck shim is meant to implement memory leak detection features similar to valgrind, but only implement leak checking, not other error checking that Valgrind supplies. 
+          `,
+          improvements: "",
+          details: []
+         },
         { 'color': 'white', 'display': 'none' },
         '/memcheck'
       ),
@@ -183,10 +190,20 @@ export class ContentService {
         null,
         ['JS', 'Angular', 'HTML', 'Sass'],
         {
-          'splash': 'Tracks banking payments utilizing some DB software and other shit',
+          'splash': 'Website displaying my passions and accomplishments',
           'details': []
         },
-        {imgSrc: ['assets/img/terraria.PNG', 'assets/img/git-branch-hierarchy.png'], description: "", improvements: "", details: []},
+        {
+          imgSrc: ['assets/img/terraria.PNG', 'assets/img/git-branch-hierarchy.png'], 
+          description: `
+            My personal website served both as an introduction to Angular 9 and also a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the nature of HTML and CSS (Far more copy paste than is acceptable).
+          `, 
+          improvements: ['Idea is to prevent need for future improvements, allowing me to simply update content and not spend extra time on my website'], 
+          details: [
+            'Leveraged Angular 9 to create mantainable, scalable code',
+            'Used Sass - precompiled CSS to improve styling maintainability'
+          ]
+        },
         { 'color': 'white', 'display': 'block' },
         '/website'
       ),
@@ -199,10 +216,15 @@ export class ContentService {
         null,
         ['Java', 'Spring', 'REST API', 'Postgresql'],
         {
-          'splash': 'Tracks banking payments utilizing some DB software and other shit',
+          'splash': 'Tracks banking payments utilizing Postgresql for data persistance and Java Spring for RESTful endpoints',
           'details': []
         },
-        {imgSrc: [], description: "", improvements: "", details: []},
+        {
+          imgSrc: [], 
+          description: "", 
+          improvements: "", 
+          details: []
+        },
         { 'color': 'white', 'display': 'block' },
         '/banking-payment-tracker'
       ),
