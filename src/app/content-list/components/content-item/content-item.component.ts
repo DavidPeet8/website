@@ -41,16 +41,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
     trigger('contentShow', [
       state('show', style({
-        'visibility': 'visible'
+        'opacity': '1'
       })),
       state('hide', style({
-        'visibility': 'hidden'
+        'opacity': '0'
       })),
       transition('show => hide', [
-        animate('0.1s')
+        animate('0.1s ease-in-out')
       ]),
       transition('hide => show', [
-        animate('0.1s')
+        animate('0.1s ease-in-out')
       ]) 
     ])
   ]
@@ -118,7 +118,7 @@ export class ContentItemComponent implements OnInit {
 
   goToSite(): void
   {
-    window.open("https://google.com", "_blank");
+    window.open(this.item.companyURL, "_blank");
   }
 
   getClasses(): Object

@@ -153,7 +153,7 @@ export class ContentService {
         { 'color': 'white', 'display': 'none' },
         '/memcheck'
       ),
-  		'Website': this._createContentObject(
+  		'website': this._createContentObject(
         'PERSONAL WEBSITE',
         null,
         2020,
@@ -179,7 +179,7 @@ export class ContentService {
         { 'color': 'white', 'display': 'block' },
         '/banking-payment-tracker'
       ),
-  		'git-branch-parent-tracker': this._createContentObject(
+  		'git-branch-hierarchy': this._createContentObject(
         'GIT BRANCH HIERARCHY',
         null,
         2019,

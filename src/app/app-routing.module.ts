@@ -12,7 +12,6 @@ const routes: Routes = [
 		loadChildren: () => import('@content-list/content-list.module').then(mod => mod.ContentListModule) 
 	},
 	{ path: '', redirectTo: '/experience', pathMatch: 'full' },
-	//{ path: '**', redirectTo: '/experience', pathMatch: 'full' } // 404 page
 ];
 
 @NgModule({

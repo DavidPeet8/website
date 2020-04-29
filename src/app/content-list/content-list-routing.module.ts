@@ -12,7 +12,7 @@ const routes: Routes = [
 			{ path: 'website', component: ModalComponent },
 			{ path: 'memcheck', component: ModalComponent },
 			{ path: 'banking-payment-tracker', component: ModalComponent },
-			{ path: 'git-branch-parent-tracker', component: ModalComponent },
+			{ path: 'git-branch-hierarchy', component: ModalComponent },
 			{ path: 'highlight-sights', component: ModalComponent },
 			{ path: 'new-tab-page', component: ModalComponent },
 			{ path: 'terraria', component: ModalComponent },
