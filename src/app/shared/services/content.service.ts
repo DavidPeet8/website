@@ -8,7 +8,7 @@ export class ContentService {
   data = {
   	'about': {},
   	'config': {},
-  	'work': {},
+  	'experience': {},
   	'projects': {},
   	'header': {}
   };
@@ -27,7 +27,7 @@ export class ContentService {
   	let ret = this.data;
   	for (let key of arrayOfKeys) 
   	{
-  		ret = this.data[key];
+  		ret = ret[key];
   	}
   	return ret;
   }
@@ -35,9 +35,7 @@ export class ContentService {
   getForContext()
   {
     // Fetch the URL as an array, return getData(thatArray)
-    console.log("Route URL: " + this.router.url);
-    return {imgSrc: "", description: "", improvements: ""};
-    return this.getData([]);
+    return this.getData(this.router.url.slice(1).split('/'));
   }
 
   _createContentObject(name, position, dateRange, location, imgPath, companyURL, tags, content, modalContent, cssObj, partialURI = ""): Object
@@ -157,7 +155,7 @@ export class ContentService {
         null,
         ['C++', 'Shared Libraries', 'Syscalls', 'Kernel'],
         'Intercepts library calls requesting more memory before they reach the standard library allowing for memory consumption monitoring',
-        {},
+        {imgSrc: "", description: "", improvements: ""},
         { 'color': 'white', 'display': 'none' },
         '/memcheck'
       ),
@@ -170,7 +168,7 @@ export class ContentService {
         null,
         ['JS', 'Angular', 'HTML', 'Sass'],
         'Tracks banking payments utilizing some DB software and other shit',
-        {},
+        {imgSrc: "", description: "", improvements: ""},
         { 'color': 'white', 'display': 'block' },
         '/website'
       ),
@@ -196,7 +194,7 @@ export class ContentService {
         null,
         ['Git', 'Java'],
         'This project tracks the parents of new branches that are created or deleted to assist in generating diffs for code reviews',
-        {},
+        {imgSrc: "", description: "", improvements: ""},
         { 'color': 'white', 'display': 'block' },
         '/git-branch-hierarchy'
       ),
@@ -209,7 +207,7 @@ export class ContentService {
         null,
         ['JS'],
         'Chrome browser extension that highlights google search results from endpoints that the user has specified to be important in various colors',
-        {},
+        {imgSrc: "", description: "", improvements: ""},
         { 'color': 'white', 'display': 'block' },
         '/highlight-sights'
       ),
@@ -222,7 +220,7 @@ export class ContentService {
         null,
         ['JS', 'Firebase', 'HTML', 'CSS'],
         'Emulation of popular game Terraria, turned into a windows meme',
-        {},
+        {imgSrc: "", description: "", improvements: ""},
         { 'color': 'white', 'display': 'block', 'background-position': '50% 0%' },
         '/new-tab-page'
       ),
@@ -235,7 +233,7 @@ export class ContentService {
         null,
         ['Java', 'LibGDX', 'Box2D'],
         'Emulation of popular game Terraria, turned into a windows meme',
-        {},
+        {imgSrc: "", description: "", improvements: ""},
         { 'color': 'white', 'display': 'block' },
         '/terraria'
       ),

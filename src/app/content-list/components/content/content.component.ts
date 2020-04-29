@@ -15,7 +15,7 @@ export class ContentComponent implements OnInit {
   constructor(private contentService:ContentService, private router:Router) { }
 
   ngOnInit(): void {
-  	this.workList = Object.values(this.contentService.getData(['work']));
+  	this.workList = Object.values(this.contentService.getData(['experience']));
     this.projectList = Object.values(this.contentService.getData(['projects']));
 
     this.isWork = (this.router.url === '/experience')
