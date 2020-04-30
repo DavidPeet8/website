@@ -48,7 +48,7 @@ export class ContentItemComponent implements OnInit {
   isBigContent: boolean = false;
   animated:boolean = window.innerWidth > 900 && window.innerHeight > 700
 
-  constructor(private sanitizer:DomSanitizer) { }
+  constructor(public sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
     

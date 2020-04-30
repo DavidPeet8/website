@@ -1,8 +1,5 @@
 <section>
 	<div class="padd flex about-section">
-		<div class="profile-img">
-			<img (click)="openGithub()" src="{{ data.imgPath }}">
-		</div>
 		<div class="about">
 			<h3 class="section-header-text"> Software Engineer</h3>
 			<hr class="fade">
@@ -16,8 +13,15 @@
 				<u>Prefered Positions:</u> C++ Developer <br/>
 				<u>Prefered languages:</u> C/C++ Java Bash JavaScript
 			</p>
-			<a (click)="openResume()" href="#" class="btn">Resume  <i class="far fa-file-alt"></i></a>
-			<a (click)="openGithub()" href="#" class="btn">Github  <i class="fab fa-github"></i></a>
+			<a (click)="openResume()" href="#" class="btn">
+				Resume  <i class="far fa-file-alt"></i>
+			</a>
+			<a (click)="openGithub()" href="#" class="btn">
+				Github  <i class="fab fa-github"></i>
+			</a>
+		</div>
+		<div class="profile-img">
+			<img (click)="openGithub()" src="{{ data.imgPath }}">
 		</div>
 	</div>
 </section>

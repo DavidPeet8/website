@@ -13,7 +13,7 @@ export class ModalComponent implements OnInit
 {
   item;
 
-  constructor(private router: Router, private contentService: ContentService, private sanitizer:DomSanitizer) { }
+  constructor(private router: Router, private contentService: ContentService, public sanitizer:DomSanitizer) { }
 
   ngOnInit(): void 
   {

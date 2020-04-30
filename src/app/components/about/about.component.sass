@@ -12,18 +12,15 @@ img
 	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
 		width: 300px
 		height: 300px
-		padding: 10px
-		margin-right: 50px
+		margin-left: 50px
 	@media only screen and (max-width: $largeWidthMax) and (min-width: $largeWidthMin)
 		width: 350px
 		height: 350px
-		padding: 10px
-		margin-right: 50px
+		margin-left: 50px
 	@media only screen and (min-width: $xlargeWidthMin)
 		width: 450px
 		height: 450px
-		padding: 15px
-		margin-right: 50px
+		margin-left: 50px
 	@include hideSmall()
 
 .about
@@ -32,7 +29,6 @@ img
 .about-text
 	padding-top: 10px
 	margin-bottom: 30px
-	white-space: pre-wrap
 
 .about-section
 	width: 100%
@@ -40,6 +36,7 @@ img
 	max-width: $maxContentWidth
 	margin: 0 auto
 	box-sizing: border-box
+	align-items: center
 
 .section-header-text
 	font-family: 'Montserrat', sans-serif

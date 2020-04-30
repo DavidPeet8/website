@@ -12,9 +12,11 @@
 	@media only screen and (min-width: $largeWidthMin)
 		display: none
 
-@mixin modifyPaddingOnSmall($padding) 
+@mixin modifyPaddingOnSmall($paddingSmall, $paddingMed) 
 	@media only screen and (max-width: $smallWidthMax)
-		padding: $padding
+		padding: $paddingSmall
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		padding: $paddingMed
 
 
 @mixin regularTextSize()
@@ -33,7 +35,7 @@
 	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
 		font-size: 20pt
 	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 30pt
+		font-size: 25pt
 	@media only screen and (min-width: $largeWidthMin)
 		font-size: 40pt
 
