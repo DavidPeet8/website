@@ -7,10 +7,13 @@
 		<div class="text">
 			<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
 			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h5>
-			<p>{{getSplashContent()}}</p>
-			<ul>
-				<li *ngFor="let bullet of getBullets()">{{bullet}}</li>
-			</ul>
+			<div class="content">
+				<p>{{getSplashContent()}}</p>
+				<hr class="details-separator" *ngIf="getBullets().length > 0">
+				<ul>
+					<li *ngFor="let bullet of getBullets()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
+				</ul>
+			</div>
 			<app-tag-bar [tags]="item.tags" [css]="item.css"></app-tag-bar>
 		</div>
 	</div>

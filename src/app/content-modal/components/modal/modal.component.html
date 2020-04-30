@@ -19,7 +19,7 @@
 						<li *ngFor="let bullet of getDetails()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 					</ul>
 				</div>
-				<div class="improvements">
+				<div class="improvements" *ngIf="getImprovements().length > 0">
 					<h3>Future Improvements:</h3>
 					<ul>
 						<li *ngFor="let bullet of getImprovements()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>

@@ -12,6 +12,7 @@ const routes: Routes = [
 	{ path: 'highlight-sights', component: ModalComponent },
 	{ path: 'new-tab-page', component: ModalComponent },
 	{ path: 'terraria', component: ModalComponent },
+	{ path: 'line-bot', component: ModalComponent },
 ];
 
 @NgModule({

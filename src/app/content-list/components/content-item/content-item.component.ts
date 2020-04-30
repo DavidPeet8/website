@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations'
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-content-item',
@@ -47,7 +48,7 @@ export class ContentItemComponent implements OnInit {
   isBigContent: boolean = false;
   animated:boolean = window.innerWidth > 900 && window.innerHeight > 700
 
-  constructor() { }
+  constructor(private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
     

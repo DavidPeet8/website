@@ -101,8 +101,12 @@ export class ContentService {
         'https://www.mcafee.com/', 
         ['C/C++', 'Bash', 'Win32API', 'Angular', 'CEF'], 
         {
-          'splash': 'Improved product installers by profiling compiled binaries and solving critical issues including unnecessary device reboots',
-          'details': []
+          'splash': 'Part of the installer team, contributing to main product installers including Windows System Security and McAfee Gamer Security',
+          'details': [
+            'Improved product installers by <b>profiling compiled binaries</b> in search of bottlenecks',
+            'Solved critical issues shipping to <b>500+ million users</b>',
+            '<b>Prevented unnecessary forced device reboots</b> affecting millions of customers globally'
+          ]
         }, 
         {},
         { 'color': this.grey, 'display': 'block' }
@@ -117,7 +121,11 @@ export class ContentService {
         ['Java', 'JS', 'Hibernate', 'Backbone.js', 'Make'],
         {
           'splash': 'Constructed impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
-          'details': []
+          'details': [
+            'Developed <b>RESTful API endpoints</b> & extended functionality of legacy endpoints',
+            '<b>Spearheaded</b> client side <b>development</b> for large <b>features shipping to 100 000+ users</b> worldwide',
+            'Leveraged <b>Mockito & JUnit</b> allowing for simple unit testing'
+          ]
         },
         {},
         { 'color': this.grey, 'display': 'block' }
@@ -132,7 +140,7 @@ export class ContentService {
         ['Team Work'],
         {
           'splash': 'Positively impacted team work environment assisting team members and serving customers',
-          'details': ['oof']
+          'details': []
         },
         {},
         { 'color': this.grey, 'display': 'block' }
@@ -202,7 +210,8 @@ export class ContentService {
           improvements: ['Idea is to prevent need for future improvements, allowing me to simply update content and not spend extra time on my website'], 
           details: [
             'Leveraged Angular 9 to create mantainable, scalable code',
-            'Used Sass - precompiled CSS to improve styling maintainability'
+            'Utilized Sass - precompiled CSS to improve styling maintainability',
+            'Employed routing improving separation of concerns'
           ]
         },
         { 'color': 'white', 'display': 'block' },
@@ -252,7 +261,7 @@ export class ContentService {
           ], 
           details: [
             'Leverages the Java <b>serializable interface</b> for <b>persisting</b> branch <b>structure</b>',
-            'Utilizes <b>IPC</b> to <b>retrieve</b> current branch and other <b>state information</b> on startup'
+            'Applied <b>IPC</b> to <b>retrieve</b> current branch and other <b>state information</b> on startup'
           ]
         },
         { 'color': 'white', 'display': 'block' },
@@ -266,7 +275,7 @@ export class ContentService {
         null,
         'assets/img/highlight-sights.png',
         null,
-        ['JS', 'JQuery'],
+        ['JS', 'JQuery', "CSS"],
         {
           'splash': 'Browser extension highlighting various google search results from user indicated endpoints enabling fast parsing of search results',
           'details': []
@@ -342,6 +351,34 @@ export class ContentService {
         },
         { 'color': 'white', 'display': 'block' },
         '/terraria'
+      ),
+
+      'line-bot': this._createContentObject(
+        'ANALOGUE LINE FOLLOWING ROBOT',
+        null,
+        2014,
+        null,
+        'assets/img/linebot-min.JPG',
+        null,
+        ['C', 'Circuit Components', 'PWM', 'RealTime Programming'],
+        {
+          'splash': 'Line Following Robot with digital and analogue modes',
+          'details': []
+        },
+        {
+          imgSrc: [], 
+          description: "This Robot applies knowledge of circuit design and hardware components combined with C instructions to either smoothly (analogue mode) or choppily (digital mode) follow a line", 
+          improvements: [
+            'Implement the ability to roam in search of a line to follow if started without a line to follow'
+          ], 
+          details: [
+            'Utilizes <b>PWM</b> (Pulse Width Modulation) to <b>overcome low power motors</b> - performance is poor when motors are running below 100% power',
+            'Manages <b>memory and CPU limitations</b> by considering loop and function call time overhead, as well as efficient memory usage',
+            'Applies knowledge of circuit hardware as debugging must be performed using lights in conjunction with an oscilloscope, due to inaccessable typical debugging tools'
+          ]
+        },
+        { 'color': 'white', 'display': 'block' },
+        '/line-bot'
       ),
   	};
   }
