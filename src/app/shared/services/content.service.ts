@@ -181,6 +181,7 @@ export class ContentService {
         { 'color': 'white', 'display': 'none' },
         '/memcheck'
       ),
+
   		'website': this._createContentObject(
         'PERSONAL WEBSITE',
         null,
@@ -207,6 +208,7 @@ export class ContentService {
         { 'color': 'white', 'display': 'block' },
         '/website'
       ),
+
   		'banking-payment-tracker': this._createContentObject(
         'BANKING PAYMENT TRACKER',
         null,
@@ -214,7 +216,7 @@ export class ContentService {
         null,
         '',
         null,
-        ['Java', 'Spring', 'REST API', 'Postgresql'],
+        ['Java', 'Spring', 'REST', 'Postgresql'],
         {
           'splash': 'Tracks banking payments utilizing Postgresql for data persistance and Java Spring for RESTful endpoints',
           'details': []
@@ -228,6 +230,7 @@ export class ContentService {
         { 'color': 'white', 'display': 'block' },
         '/banking-payment-tracker'
       ),
+
   		'git-branch-hierarchy': this._createContentObject(
         'GIT BRANCH HIERARCHY',
         null,
@@ -237,13 +240,25 @@ export class ContentService {
         null,
         ['Git', 'Java'],
         {
-          'splash': 'This project tracks the parents of new branches that are created or deleted to assist in generating diffs for code reviews',
+          'splash': 'Terminal utility tracking the parent-child relationship of git branches assisting in generating accurate diffs for code reviews',
           'details': []
         },
-        {imgSrc: [], description: "", improvements: "", details: []},
+        {
+          imgSrc: [], 
+          description: 'Git branch heirarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. As git stores branches as snapshots in a flat configuration, there is no way I am aware of to retrieve a branch tree displaying the parent tree and orphan branch trees. This was the inspiration for this project.', 
+          improvements: [
+            'Look into overwriting the git namespace allowing for identical command line interface',
+            'Support additional flags for the "git branch" command'
+          ], 
+          details: [
+            'Leverages the Java <b>serializable interface</b> for <b>persisting</b> branch <b>structure</b>',
+            'Utilizes <b>IPC</b> to <b>retrieve</b> current branch and other <b>state information</b> on startup'
+          ]
+        },
         { 'color': 'white', 'display': 'block' },
         '/git-branch-hierarchy'
       ),
+
   		'highlight-sights': this._createContentObject(
         'HIGHLIGHT SIGHTS',
         null,
@@ -251,15 +266,25 @@ export class ContentService {
         null,
         'assets/img/highlight-sights.png',
         null,
-        ['JS'],
+        ['JS', 'JQuery'],
         {
-          'splash': 'Chrome browser extension that highlights google search results from endpoints that the user has specified to be important in various colors',
+          'splash': 'Browser extension highlighting various google search results from user indicated endpoints enabling fast parsing of search results',
           'details': []
         },
-        {imgSrc: [], description: "", improvements: "", details: []},
+        {
+          imgSrc: [], 
+          description: "Highlight Sights was written to assist my development workflow. When googling the implementation of anything especially with markup there are a few sites that have routinely proved to be more useful than all others. I created Highlight Sights to allow me to quickly locate search results that I would likely find useful.", 
+          improvements: [
+            'Consider cleaning up the DOM manipulation, methods of applying styles to individual search results are a bit janky'
+          ], 
+          details: [
+            'Leveraged JQuery for DOM manipulation'
+          ]
+        },
         { 'color': 'white', 'display': 'block' },
         '/highlight-sights'
       ),
+
   		'new-tab-page': this._createContentObject(
         'EASY ACCESS NEWTAB PAGE',
         null,
@@ -269,13 +294,24 @@ export class ContentService {
         null,
         ['JS', 'Firebase', 'HTML', 'CSS'],
         {
-          'splash': 'Emulation of popular game Terraria, turned into a windows meme',
+          'splash': 'Beautiful custom Chrome NewTab page providing hotkeys and personal memos',
           'details': []
         },
-        {imgSrc: [], description: "", improvements: "", details: []},
+        {
+          imgSrc: ['assets/img/newtab-min.PNG'], 
+          description: "Easy Access NewTab Page is a beautiful new tab page designed to have a personal touch while adding functionality including hotkeys to launch favourite websites, and personal memos to keep track of tasks to do today", 
+          improvements: [
+            'Sanitize user input preventing Cross site scripting',
+            'improve scalability for different screen resolutions'
+          ], 
+          details: [
+            'Leveraged Firebase to persist daily memos which reset at the end of the day',
+          ]
+        },
         { 'color': 'white', 'display': 'block', 'background-position': '50% 0%' },
         '/new-tab-page'
       ),
+
   		'terraria': this._createContentObject(
         'TERRARIA EMULATION',
         null,
@@ -285,10 +321,25 @@ export class ContentService {
         null,
         ['Java', 'LibGDX', 'Box2D'],
         {
-          'splash': 'Emulation of popular game Terraria, turned into a windows meme',
+          'splash': 'Emulation of popular game Terraria as a Windows parody',
           'details': []
         },
-        {imgSrc: [], description: "", improvements: "", details: []},
+        {
+          imgSrc: ['assets/img/terraria1-min.PNG', 'assets/img/terraria2-min.PNG'], 
+          description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel for the game, which led me to making this game a Windows parody.", 
+          improvements: [
+            'Implement <b>enemy collision detection and damage</b> (as well as a different images for player vs enemies)',
+            'Write equipment crafting mechanics',
+            'Remove world boundaries, implement <b>runtime random terrain generation</b> allowing for an infinite map',
+            'Provide an <b>admin mode</b> for testing purposes - provide one hit kill for both enemies and resources'
+          ], 
+          details: [
+            'Utilizes <b>Perlin Noise</b> to implement pseudo-random terrain generation and resource distribution',
+            'Implements <b>discrete hit detection</b> preventing the classic <b>bullet through paper</b> problem',
+            'Supports Terraria basics such as <b>resource mining</b> and <b>collection</b>, resource <b>placement</b>, inventory item selection and item location swapping in the inventory',
+
+          ]
+        },
         { 'color': 'white', 'display': 'block' },
         '/terraria'
       ),

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ContentService } from '@shared/services/content.service';
 
 
@@ -12,7 +13,7 @@ export class ModalComponent implements OnInit
 {
   item;
 
-  constructor(private router: Router, private contentService: ContentService) { }
+  constructor(private router: Router, private contentService: ContentService, private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void 
   {
@@ -45,7 +46,7 @@ export class ModalComponent implements OnInit
   	return this.item.name;
   }
 
-  getDetails() : string
+  getDetails() : SafeHtml
   {
   	return this.item.modalContent.details;
   }
@@ -58,6 +59,11 @@ export class ModalComponent implements OnInit
   getDate() : string
   {
   	return this.item.dateRange;
+  }
+
+  getTags() : string
+  {
+    return this.item.tags.join("  \u2022  ");
   }
 
   getDescription() : string
