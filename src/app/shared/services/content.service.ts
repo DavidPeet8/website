@@ -203,7 +203,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/terraria.PNG', 'assets/img/git-branch-hierarchy.png'], 
+          imgSrc: [], 
           description: `
             My personal website served both as an introduction to Angular 9 and also a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the nature of HTML and CSS (Far more copy paste than is acceptable).
           `, 
@@ -232,9 +232,13 @@ export class ContentService {
         },
         {
           imgSrc: [], 
-          description: "", 
-          improvements: "", 
-          details: []
+          description: "This app was designed to give me some experience developing REST API's and programmatically interfacing with relational database software.", 
+          improvements: [
+            'Implement a UI for easier use',
+          ], 
+          details: [
+            '',
+          ]
         },
         { 'color': 'white', 'display': 'block' },
         '/banking-payment-tracker'
@@ -358,7 +362,7 @@ export class ContentService {
         null,
         2014,
         null,
-        'assets/img/linebot-min.JPG',
+        'assets/img/linebot2.png',
         null,
         ['C', 'Circuit Components', 'PWM', 'RealTime Programming'],
         {
@@ -366,7 +370,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: [], 
+          imgSrc: ['assets/img/linebot-min.JPG'], 
           description: "This Robot applies knowledge of circuit design and hardware components combined with C instructions to either smoothly (analogue mode) or choppily (digital mode) follow a line", 
           improvements: [
             'Implement the ability to roam in search of a line to follow if started without a line to follow'
