@@ -11,7 +11,7 @@
 				<p>{{getSplashContent()}}</p>
 				<hr class="details-separator" *ngIf="getBullets().length > 0">
 				<ul>
-					<li *ngFor="let bullet of getBullets()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
+					<li class="bullet-point" *ngFor="let bullet of getBullets()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 				</ul>
 			</div>
 			<app-tag-bar [tags]="item.tags" [css]="item.css"></app-tag-bar>

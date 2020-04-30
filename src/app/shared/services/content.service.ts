@@ -101,7 +101,7 @@ export class ContentService {
         'https://www.mcafee.com/', 
         ['C/C++', 'Bash', 'Win32API', 'Angular', 'CEF'], 
         {
-          'splash': 'Part of the installer team, contributing to main product installers including Windows System Security and McAfee Gamer Security',
+          'splash': 'Intern on the Installer team, contributed to main product installers and related components including Windows System Security and McAfee Gamer Security',
           'details': [
             'Improved product installers by <b>profiling compiled binaries</b> in search of bottlenecks',
             'Solved critical issues shipping to <b>500+ million users</b>',
@@ -120,7 +120,7 @@ export class ContentService {
         'https://axonify.com/',
         ['Java', 'JS', 'Hibernate', 'Backbone.js', 'Make'],
         {
-          'splash': 'Constructed impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
+          'splash': 'Tasked with writing new product feature Constructed impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
           'details': [
             'Developed <b>RESTful API endpoints</b> & extended functionality of legacy endpoints',
             '<b>Spearheaded</b> client side <b>development</b> for large <b>features shipping to 100 000+ users</b> worldwide',
