@@ -25,7 +25,7 @@ export class IconBarComponent implements OnInit {
   			window.open(this.data['links']['linkedIn'], "_blank");
   			break;
   		case 'phone':
-  			// Idk try to open a default phone app?
+  			// Try to place a call if possible
         window.location.href= "tel:+1-226-505-7050";
   			console.log("phone clicked");
   			break;

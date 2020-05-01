@@ -17,6 +17,16 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  getLinkedIn() : string
+  {
+    return this.config.links.linkedIn;
+  }
+
+  getEmail() : string
+  {
+    return "mailto:" + this.config.links.email
+  }
+
   openGithub(): void
   {
   	window.open(this.config.links.github, "_blank");

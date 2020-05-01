@@ -83,7 +83,7 @@ export class ContentService {
   		'links': {
   			'github': 'https://github.com/DavidPeet8',
   			'linkedIn': 'https://www.linkedin.com/in/dapeet/',
-  			'email': 'davidpeetw@gmail.com',
+  			'email': 'dapeet@uwaterloo.ca',
   			'phone': '226-505-7050'
   		},
   	};
@@ -257,7 +257,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: [], 
+          imgSrc: ['assets/img/git-branch-hierarchy-square.png'], 
           description: 'Git branch hierarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. Git stores branches in a flat list format, which effectively removes information about the base branch for any given branch. Thus without extra tooling developers need to keep track of the branch tree for their local repository. This was the inspiration for this project.', 
           improvements: [
             'Look into overwriting the git namespace allowing for identical command line interface',
