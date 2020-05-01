@@ -12,6 +12,10 @@
 	@media only screen and (min-width: $xlargeWidthMin)
 		#{$propname}: $xlval
 
+@mixin applyXSmall($prop, $val)
+	@media only screen and (max-width: $xsmallWidthMax)
+		#{$prop}: $val
+
 @mixin applySmall($prop, $val)
 	@media only screen and (max-width: $smallWidthMax)
 		#{$prop}: $val
@@ -50,3 +54,10 @@
 
 @mixin iconTextSize() 
 	@include scaleProp(font-size, 12pt, 12pt, 18pt, 18pt, 18pt)
+
+@mixin flex($contentJustification)
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: $contentJustification
+	align-items: center

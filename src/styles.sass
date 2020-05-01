@@ -45,30 +45,14 @@ hr.fade
 	font-size: 5rem
 
 .flex
-	display: flex
-	flex-direction: row
-	flex-wrap: nowrap
-	justify-content: space-around
-	align-items: center
+	@include flex(space-around)
 
 .flex-center
-	display: flex
-	flex-direction: row
-	flex-wrap: nowrap
-	justify-content: center
-	align-items: center
+	@include flex(center)
 
 .flex-left
-	display: flex
-	flex-direction: row
-	flex-wrap: nowrap
-	justify-content: flex-start
-	align-items: center
+	@include flex(flex-start)
 
 .flex-right
-	display: flex
-	flex-direction: row
-	flex-wrap: nowrap
-	justify-content: flex-end
-	align-items: center
+	@include flex(flex-end)
 

@@ -1,14 +1,7 @@
-@import 'variables'
+@import 'mixins'
 
 @mixin tagPadding()
-	@media only screen and (max-width: $xsmallWidthMax)
-		padding: 7px
-	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
-		padding: 8px
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		padding: 10px
-	@media only screen and (min-width: $largeWidthMin)
-		padding: 12px
+	@include scaleProp(padding, 7px, 8px, 10px, 12px, 12px)
 
 .tag-item-container
 	@include tagPadding()

@@ -1,31 +1,10 @@
 @import 'mixins'
 
 @mixin getCompanyIconSize() 
-	@media only screen and (max-width: $xsmallWidthMax)
-		width: 60px
-		height: 60px
-		padding: 3px
-		margin-right: 10px
-	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
-		width: 100px
-		height: 100px
-		padding: 8px
-		margin-right: 30px
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		width: 150px
-		height: 150px
-		padding: 10px
-		margin-right: 50px
-	@media only screen and (max-width: $largeWidthMax) and (min-width: $largeWidthMin)
-		width: 200px
-		height: 200px
-		padding: 10px
-		margin-right: 50px
-	@media only screen and (min-width: $xlargeWidthMin)
-		width: 300px
-		height: 300px
-		padding: 15px
-		margin-right: 50px
+	@include scaleProp(width, 60px, 100px, 150px, 200px, 300px)
+	@include scaleProp(height, 60px, 100px, 150px, 200px, 300px)
+	@include scaleProp(padding, 3px, 8px, 10px, 10px, 15px)
+	@include scaleProp(margin-right, 10px, 30px, 50px, 50px, 50px)
 
 .content-item
 	border-radius: 15px
@@ -68,9 +47,7 @@
 	border-radius: 10px
 	margin: 20px
 	background-size: cover
-	@media only screen and (max-width: $xsmallWidthMax)
-		margin: 10px
-	
+	@include applyXSmall(margin, 10px)	
 
 .project-container
 	padding: 30px

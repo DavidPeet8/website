@@ -37,8 +37,7 @@
 	cursor: pointer 
 	float: right
 	line-height: 20px
-	@media only screen and (max-width: $xsmallWidthMax)
-		font-size: 30px
+	@include applyXSmall(font-size, 30px)
 
 .content
 	clear: both
@@ -55,8 +54,7 @@
 	flex-wrap: nowrap
 	justify-content: flex-start
 	align-items: top
-	@media only screen and (max-width: $xsmallWidthMax)
-		flex-wrap: wrap
+	@include applyXSmall(flex-wrap, wrap)
 
 
 .details, .improvements
