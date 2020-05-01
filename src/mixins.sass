@@ -1,8 +1,23 @@
 @import './variables'
 
-@mixin hideSmall()
+@mixin scaleProp($propname, $xsval, $sval, $mval, $lval, $xlval)
+	@media only screen and (max-width: $xsmallWidthMax)
+		#{$propname}: $xsval
+	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
+		#{$propname}: $sval
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		#{$propname}: $mval
+	@media only screen and (min-width: $largeWidthMin) and (max-width: $largeWidthMax)
+		#{$propname}: $lval
+	@media only screen and (min-width: $xlargeWidthMin)
+		#{$propname}: $xlval
+
+@mixin applySmall($prop, $val)
 	@media only screen and (max-width: $smallWidthMax)
-		display: none
+		#{$prop}: $val
+
+@mixin hideSmall()
+	@include applySmall(display, none)
 
 @mixin hideMedium()
 	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
@@ -12,71 +27,26 @@
 	@media only screen and (min-width: $largeWidthMin)
 		display: none
 
-@mixin modifyPaddingOnSmall($paddingSmall, $paddingMed) 
-	@media only screen and (max-width: $smallWidthMax)
-		padding: $paddingSmall
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		padding: $paddingMed
-
+@mixin scalePadding($paddingSmall, $paddingMed, $paddingLarge) 
+	@include scaleProp(padding, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
 
 @mixin regularTextSize()
-	@media only screen and (max-width: $xsmallWidthMax)
-		font-size: 10pt
-	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
-		font-size: 11pt
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 12pt
-	@media only screen and (min-width: $largeWidthMin)
-		font-size: 14pt
+	@include scaleProp(font-size, 10pt, 11pt, 12pt, 14pt, 16pt)
 
 @mixin sectionHeaderTextSize()
-	@media only screen and (max-width: $xsmallWidthMax)
-		font-size: 16pt
-	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
-		font-size: 20pt
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 25pt
-	@media only screen and (min-width: $largeWidthMin)
-		font-size: 40pt
+	@include scaleProp(font-size, 16pt, 20pt, 25pt, 40pt, 40pt)
 
 @mixin headerTextSize()
-	@media only screen and (max-width: $xsmallWidthMax)
-		font-size: 14pt
-	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
-		font-size: 18pt
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 20pt
-	@media only screen and (min-width: $largeWidthMin)
-		font-size: 30pt
+	@include scaleProp(font-size, 14pt, 18pt, 20pt, 30pt, 30pt)
 
 @mixin splashTextSize() 
-	@media only screen and (max-width: $smallWidthMax)
-		font-size: 40pt
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 70pt
-	@media only screen and (min-width: $largeWidthMin)
-		font-size: 70pt
+	@include scaleProp(font-size, 40pt, 40pt, 70pt, 70pt, 70pt)
 
 @mixin quoteTextSize()
-	@media only screen and (max-width: $smallWidthMax)
-		font-size: 14pt
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 20pt
-	@media only screen and (min-width: $largeWidthMin)
-		font-size: 20pt
+	@include scaleProp(font-size, 14pt, 14pt, 20pt, 20pt, 20pt)
 
 @mixin iconSize() 
-	@media only screen and (max-width: $smallWidthMax)
-		font-size: 14pt
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 20pt
-	@media only screen and (min-width: $largeWidthMin)
-		font-size: 20pt
+	@include scaleProp(font-size, 14pt, 14pt, 20pt, 20pt, 20pt)
 
 @mixin iconTextSize() 
-	@media only screen and (max-width: $smallWidthMax)
-		font-size: 12pt
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		font-size: 18pt
-	@media only screen and (min-width: $largeWidthMin)
-		font-size: 18pt
+	@include scaleProp(font-size, 12pt, 12pt, 18pt, 18pt, 18pt)

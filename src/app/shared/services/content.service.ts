@@ -195,7 +195,7 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/website-min.PNG',
+        'assets/img/website.png',
         null,
         ['JS', 'Angular', 'HTML', 'Sass'],
         {
@@ -223,7 +223,7 @@ export class ContentService {
         null,
         2019,
         null,
-        '',
+        'assets/img/coin-magnet.jpg',
         null,
         ['Java', 'Spring', 'REST', 'Postgresql'],
         {
@@ -240,7 +240,7 @@ export class ContentService {
             '',
           ]
         },
-        { 'color': 'white', 'display': 'block' },
+        { 'color': 'white', 'display': 'block', 'background-position': '50% 40%' },
         '/banking-payment-tracker'
       ),
 

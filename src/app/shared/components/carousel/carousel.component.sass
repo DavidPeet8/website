@@ -1,12 +1,11 @@
 .carousel
-	width: 80%
-	max-width: 2000px
+	width: 100%
+	max-height: inherit 
 	filter: drop-shadow(0 0 10px #0003)
-	height: 40vw
-	max-height: 1000px
-	background-size: contain
-	background-position: center center
-	background-repeat: no-repeat
+
+.carousel > img
+	max-height: inherit
+	width: inherit
 
 .flex-carousel
 	display: flex
@@ -15,6 +14,9 @@
 	align-items: center
 	justify-content: center
 	margin: 30px auto
+	width: 80%
+	max-width: 2000px
+	max-height: 1000px
 
 .nav-btn-right, .nav-btn-left
 	z-index: 4

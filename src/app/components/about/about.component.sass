@@ -9,18 +9,9 @@ img
 .profile-img
 	display: inline-block
 	cursor: pointer
-	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
-		width: 300px
-		height: 300px
-		margin-left: 50px
-	@media only screen and (max-width: $largeWidthMax) and (min-width: $largeWidthMin)
-		width: 350px
-		height: 350px
-		margin-left: 50px
-	@media only screen and (min-width: $xlargeWidthMin)
-		width: 450px
-		height: 450px
-		margin-left: 50px
+	margin-left: 50px
+	@include scaleProp(width, 0, 0, 300px, 350px, 450px)
+	@include scaleProp(height, 0, 0, 300px, 350px, 450px)
 	@include hideSmall()
 
 .about
@@ -37,8 +28,7 @@ img
 	margin: 0 auto
 	box-sizing: border-box
 	align-items: center
-	padding: 50px
-	@include modifyPaddingOnSmall(10px, 25px)
+	@include scalePadding(10px, 25px, 50px)
 
 .section-header-text
 	font-family: 'Montserrat', sans-serif

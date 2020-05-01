@@ -4,7 +4,9 @@
 		<div (click)="showPrev()" class="nav-btn-left" *ngIf="slides.length > 1">
 			<i class="fas fa-chevron-left"></i>
 		</div>
-		<div class="carousel" [ngStyle]="carouselBackground" (changeBackground)="getBackground()"></div>
+		<div class="carousel">
+			<img [src]="carouselBackground"/>
+		</div>
 		<div (click)="showNext()" class="nav-btn-right" *ngIf="slides.length > 1">
 			<i class="fas fa-chevron-right"></i>
 		</div>

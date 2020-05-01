@@ -8,16 +8,14 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 export class CarouselComponent implements OnInit {
   @Input() slides: string[];
   slideIndex: number = 0;
-  carouselBackground:Object = {
-    'background-image': 'url(' + '' + ')'
-  };
+  carouselBackground:string = "";
 
   constructor() { }
 
   ngOnInit(): void {
   	console.log("Carousel init");
     console.log(this.slides.length + " " + this.slides[0]);
-    this.carouselBackground['background-image'] = 'url(' + this.slides[this.slideIndex] + ')';
+    this.carouselBackground = this.slides[this.slideIndex];
   }
 
   showNext () : void 
@@ -39,7 +37,7 @@ export class CarouselComponent implements OnInit {
   getBackground() 
   {
     console.log("Changing background");
-  	this.carouselBackground['background-image'] = 'url(' + this.slides[this.slideIndex] + ')';
+  	this.carouselBackground = this.slides[this.slideIndex];
   }
 
 }

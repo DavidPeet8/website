@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ContentService } from '@shared/services/content.service';
@@ -78,5 +78,4 @@ export class ModalComponent implements OnInit
       this.item.modalContent.imgSrc;
   	return src;
   }
-
 }

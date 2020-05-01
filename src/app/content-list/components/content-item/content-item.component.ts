@@ -26,11 +26,13 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     trigger('projectGrow', [
       state('big', style({
         transform: 'scale(1.05)',
-        'background-color': '#292929'
+        'background-color': '#292929',
+        //'backdrop-filter': 'blur(200px)'
       })),
       state('smol', style({
         transform: 'scale(1)',
-        'background-color': '#424242'
+        'background-color': '#424242',
+        //'backdrop-filter': 'blur(0px)'
       })),
       transition('smol => big', [
         animate('0.1s')
