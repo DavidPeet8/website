@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "0.0.0",
-  "homepage": "https://davidpeet8.github.io/website",
+  "homepage": "https://davidpeet8.github.io",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
