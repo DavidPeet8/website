@@ -1,7 +1,17 @@
 @import 'variables'
 
+@mixin tagPadding()
+	@media only screen and (max-width: $xsmallWidthMax)
+		padding: 7px
+	@media only screen and (max-width: $smallWidthMax) and (min-width: $smallWidthMin)
+		padding: 8px
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		padding: 10px
+	@media only screen and (min-width: $largeWidthMin)
+		padding: 12px
+
 .tag-item-container
-	padding: 8px
+	@include tagPadding()
 	border-radius: 10px
 	margin: 2px
 	font-weight: 900

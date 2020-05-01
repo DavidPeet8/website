@@ -99,7 +99,7 @@ export class ContentService {
         'Waterloo, Ontario', 
         'assets/img/mcafee.png', 
         'https://www.mcafee.com/', 
-        ['C/C++', 'Bash', 'Win32API', 'Angular', 'CEF'], 
+        ['C/C++', 'Bash', 'WinAPI', 'Angular', 'CEF'], 
         {
           'splash': 'Intern on the Installer team. Contributed to main product installers and related components including Windows System Security and McAfee Gamer Security',
           'details': [
@@ -118,7 +118,7 @@ export class ContentService {
         'Waterloo, Ontario',
         'assets/img/axonify-min.jpg',
         'https://axonify.com/',
-        ['Java', 'JS', 'Hibernate', 'Backbone.js', 'Make'],
+        ['Java', 'JS', 'Hibernate', 'Backbone.js'],
         {
           'splash': 'Constructed new, impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
           'details': [

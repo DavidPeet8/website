@@ -1,15 +1,21 @@
 <div class="fullwidth content-item">
 	<div [routerLink]="['./' + item.partialURI]" [ngClass]="getClasses()" [ngStyle]="getStyle()" [@projectGrow]="isWork ? null : isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()" (mouseout)="onMouseLeaveContainer()">
-		<div *ngIf="isWork" [@grow]="isWork ? (isBigImg ? 'mouseIn' : 'mouseOut') : null" (click)="goToSite()" (mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container">
+		<div *ngIf="isWork" [@grow]="isWork ? (isBigImg ? 'mouseIn' : 'mouseOut') : null" (click)="goToSite()" (mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container hidden-xsmall">
 			<img class="img" src="{{item.imgPath}}">
 		</div>
 		
 		<div class="text">
-			<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
+			<div class="title-bar">
+				<div *ngIf="isWork" (click)="goToSite()" class="img-container hidden-large">
+					<img class="img" src="{{item.imgPath}}">
+				</div>
+				<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
+			</div>
 			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h5>
 			<div class="content">
+				<h3 class="sub-header" *ngIf="isWork">Overview:</h3>
 				<p>{{getSplashContent()}}</p>
-				<hr class="details-separator" *ngIf="getBullets().length > 0">
+				<h3 class="sub-header" *ngIf="isWork && getBullets().length > 0">Details:</h3>
 				<ul>
 					<li class="bullet-point" *ngFor="let bullet of getBullets()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 				</ul>

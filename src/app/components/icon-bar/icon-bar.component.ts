@@ -26,10 +26,12 @@ export class IconBarComponent implements OnInit {
   			break;
   		case 'phone':
   			// Idk try to open a default phone app?
+        window.location.href= "tel:+1-226-505-7050";
   			console.log("phone clicked");
   			break;
   		case 'email':
-  			// Idk go to their mail provider
+  			// Open default mail provider and address to me
+        window.location.href = "mailto:dapeet@uwaterloo.ca?body=I%20saw%20your%20website!";
   			console.log("Email clicked");
   			break;
   		default:

@@ -9,18 +9,18 @@
 			</h3>
 			<app-carousel [slides]='getSlides()'></app-carousel>
 			<div class="description">
-				<h3>Description:</h3>
+				<h3 class="modal-header">Description:</h3>
 				<p innerHTML="{{getDescription()}}"></p>
 			</div>
 			<div class="flex-row">
 				<div class="details">
-					<h3>Details:</h3>
+					<h3 class="modal-header nowrap">Details:</h3>
 					<ul>
 						<li *ngFor="let bullet of getDetails()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 					</ul>
 				</div>
 				<div class="improvements" *ngIf="getImprovements().length > 0">
-					<h3>Future Improvements:</h3>
+					<h3 class="modal-header nowrap">Future Improvements:</h3>
 					<ul>
 						<li *ngFor="let bullet of getImprovements()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 					</ul>
