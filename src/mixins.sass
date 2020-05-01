@@ -20,6 +20,10 @@
 	@media only screen and (max-width: $smallWidthMax)
 		#{$prop}: $val
 
+@mixin applyLarge($prop, $val)
+	@media only screen and (max-width: $largeWidthMax)
+		#{$prop}: $val
+
 @mixin hideSmall()
 	@include applySmall(display, none)
 

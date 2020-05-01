@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '@shared/services/content.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.sass']
 })
 export class FooterComponent implements OnInit {
+  data;
 
-  constructor() { }
+  constructor(private contentService:ContentService) { }
 
   ngOnInit(): void {
+  	this.data = this.contentService.getData(['config']);
+  }
+
+  getGithubURL()
+  {
+  	return this.data.links.github;
   }
 
 }

@@ -1,3 +1,5 @@
+@import 'mixins'
+
 .carousel
 	width: 100%
 	max-height: inherit 
@@ -6,6 +8,7 @@
 .carousel > img
 	max-height: inherit
 	width: inherit
+	object-fit: contain
 
 .flex-carousel
 	display: flex
@@ -16,7 +19,8 @@
 	margin: 30px auto
 	width: 80%
 	max-width: 2000px
-	max-height: 1000px
+	max-height: 700px
+	@include applyLarge(max-height, 350px)
 
 .nav-btn-right, .nav-btn-left
 	z-index: 4

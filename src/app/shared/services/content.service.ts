@@ -22,7 +22,7 @@ export class ContentService {
   	this.data['projects'] = this._getProjects();
   }
 
-  getData(arrayOfKeys): Object
+  getData(arrayOfKeys)
   {
   	let ret = this.data;
   	for (let key of arrayOfKeys) 
@@ -205,7 +205,7 @@ export class ContentService {
         {
           imgSrc: [], 
           description: `
-            Creating my personal website served both as an introduction to Angular 9 and a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the nature of HTML and CSS (far more copy paste than is acceptable).
+            Creating my personal website served both as an introduction to Angular 9 and a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the poor reusability of both HTML and CSS.
           `, 
           improvements: ['Idea is to prevent need for future improvements, allowing me to simply update content and not spend extra time on my website'], 
           details: [
@@ -237,7 +237,9 @@ export class ContentService {
             'Implement a UI for easier use',
           ], 
           details: [
-            '',
+            'Leveraged Java <b>Spring</b> to expose <b>API endpoints</b>',
+            'Utilizes <b>RESTful data transfer</b> to return data to caller',
+            'Utilizes <b>Relational Database</b> for storage due to relational nature of banking data'
           ]
         },
         { 'color': 'white', 'display': 'block', 'background-position': '50% 40%' },
@@ -253,19 +255,19 @@ export class ContentService {
         null,
         ['Git', 'Java'],
         {
-          'splash': 'Terminal utility tracking the parent-child relationship of git branches assisting in generating accurate diffs for code reviews',
+          'splash': 'Terminal utility tracking the parent-child relationship of git branches assisting in generating correct diffs for code reviews',
           'details': []
         },
         {
           imgSrc: ['assets/img/git-branch-hierarchy-square.png'], 
-          description: 'Git branch hierarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. Git stores branches in a flat list format, which effectively removes information about the base branch for any given branch. Thus without extra tooling developers need to keep track of the branch tree for their local repository. This was the inspiration for this project.', 
+          description: 'Git branch hierarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. Git stores branches in a flat list format, which effectively removes information about the base branch for any given branch. Thus without extra tooling developers need to keep track of the branch tree for their local repository themselves. In projects where one developer is simultaneously working on multiple branches or is waiting for changes from another team, it becomes difficult to keep track of the branch tree. This scenario was the inspiration for this project. This project serves as a replacement for the git branch command, but only supporting branch creation and deletion.', 
           improvements: [
             'Look into overwriting the git namespace allowing for identical command line interface',
             'Support additional flags for the "git branch" command'
           ], 
           details: [
             'Leverages the Java <b>serializable interface</b> for <b>persisting</b> branch <b>structure</b>',
-            'Applied <b>IPC</b> to <b>retrieve</b> current branch and other <b>state information</b> on startup'
+            'Applies <b>IPC</b> to <b>retrieve</b> the current branch and other <b>state information</b>'
           ]
         },
         { 'color': 'white', 'display': 'block' },
@@ -281,17 +283,17 @@ export class ContentService {
         null,
         ['JS', 'JQuery', "CSS"],
         {
-          'splash': 'Browser extension highlighting various google search results from user indicated endpoints enabling fast parsing of search results',
+          'splash': 'Browser extension enabling fast parsing of  google search results by highlighting results from user specified endpoints',
           'details': []
         },
         {
           imgSrc: [], 
           description: "Highlight Sights was written to assist my development workflow. When googling the implementation of anything, especially with markup, there are a few sites that have routinely proved to be more useful than all others. I created Highlight Sights to allow me to quickly locate search results that I would likely find useful.", 
           improvements: [
-            'Consider cleaning up the DOM manipulation, methods of applying styles to individual search results are a bit janky'
+            'Consider cleaning up the DOM queries, methods of applying styles to individual search results are a bit janky'
           ], 
           details: [
-            'Leveraged JQuery for DOM manipulation'
+            'Leveraged <b>JQuery</b> for DOM manipulation'
           ]
         },
         { 'color': 'white', 'display': 'block' },
@@ -312,13 +314,13 @@ export class ContentService {
         },
         {
           imgSrc: ['assets/img/newtab-min.PNG'], 
-          description: "Easy Access NewTab Page is a beautiful new tab page designed to have a personal touch while adding functionality, including hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.", 
+          description: "Easy Access NewTab Page is a beautiful new tab page designed to have a personal touch while providing increased functionality. This newtab page includes hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.", 
           improvements: [
-            'Sanitize user input preventing Cross site scripting',
-            'Improve scalability for different screen resolutions'
+            'Sanitize user input to prevent script injection attackes',
+            'Improve scalability for different browser window sizes'
           ], 
           details: [
-            'Leveraged Firebase to persist daily memos which reset at the end of the day',
+            'Leveraged <b>Firebase</b> to persist daily memos which reset at the end of the day',
           ]
         },
         { 'color': 'white', 'display': 'block', 'background-position': '50% 0%' },
@@ -334,12 +336,12 @@ export class ContentService {
         null,
         ['Java', 'LibGDX', 'Box2D'],
         {
-          'splash': 'Emulation of popular game Terraria as a Windows parody',
+          'splash': 'Emulation of popular game Terraria with a flare of Microsoft Windows comedy',
           'details': []
         },
         {
           imgSrc: ['assets/img/terraria1-min.PNG', 'assets/img/terraria2-min.PNG'], 
-          description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel, which led me to making this game a Windows parody.", 
+          description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel, which turned into a Windows parody.", 
           improvements: [
             'Implement <b>enemy collision detection and damage</b> (as well as a different images for player vs enemies)',
             'Write equipment crafting mechanics',
@@ -371,14 +373,14 @@ export class ContentService {
         },
         {
           imgSrc: ['assets/img/linebot-min.JPG'], 
-          description: "This Robot applies knowledge of circuit design and hardware components combined with C instructions to either smoothly (analogue mode) or choppily (digital mode) follow a line.", 
+          description: "This Robot applies knowledge of circuit design and hardware components combined with instructions written in C to either smoothly (analogue mode) or choppily (digital mode) follow a line.", 
           improvements: [
-            'Implement the ability to roam in search of a line to follow if started without a line to follow'
+            'Implement the ability to roam in search of a line if started without a line to follow'
           ], 
           details: [
             'Utilizes <b>PWM</b> (Pulse Width Modulation) to <b>overcome low power motors</b> - performance is poor when motors are running below 100% power',
             'Manages <b>memory and CPU limitations</b> by considering loop and function call time overhead, as well as efficient memory usage',
-            'Applies knowledge of circuit hardware since debugging must be performed using lights in conjunction with an oscilloscope due to inaccessable typical debugging tools'
+            'Applies knowledge of circuit hardware - debugging must be performed using lights in conjunction with an oscilloscope due to inaccessable typical debugging tools'
           ]
         },
         { 'color': 'white', 'display': 'block' },
