@@ -15,12 +15,17 @@
 	display: inline-block
 	height: auto
 	margin: 5px
-	border-radius: 30px
+	border-radius: 50px
 	background-color: #2b2b2b 
 	text-align: center
 	padding: 10px
 
 .icon
-	@include iconTextSize()
+	@include iconSize()
 	display: inline-block
+	vertical-align: middle
+
+.text
+	@include iconTextSize()
+	white-space: pre
 	vertical-align: middle

@@ -65,10 +65,18 @@
 	@media only screen and (min-width: $largeWidthMin)
 		font-size: 20pt
 
-@mixin iconTextSize() 
+@mixin iconSize() 
 	@media only screen and (max-width: $smallWidthMax)
 		font-size: 14pt
 	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
 		font-size: 20pt
 	@media only screen and (min-width: $largeWidthMin)
 		font-size: 20pt
+
+@mixin iconTextSize() 
+	@media only screen and (max-width: $smallWidthMax)
+		font-size: 12pt
+	@media only screen and (max-width: $medWidthMax) and (min-width: $medWidthMin)
+		font-size: 18pt
+	@media only screen and (min-width: $largeWidthMin)
+		font-size: 18pt

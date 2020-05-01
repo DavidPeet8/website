@@ -101,7 +101,7 @@ export class ContentService {
         'https://www.mcafee.com/', 
         ['C/C++', 'Bash', 'Win32API', 'Angular', 'CEF'], 
         {
-          'splash': 'Intern on the Installer team, contributed to main product installers and related components including Windows System Security and McAfee Gamer Security',
+          'splash': 'Intern on the Installer team. Contributed to main product installers and related components including Windows System Security and McAfee Gamer Security',
           'details': [
             'Improved product installers by <b>profiling compiled binaries</b> in search of bottlenecks',
             'Solved critical issues shipping to <b>500+ million users</b>',
@@ -120,10 +120,10 @@ export class ContentService {
         'https://axonify.com/',
         ['Java', 'JS', 'Hibernate', 'Backbone.js', 'Make'],
         {
-          'splash': 'Tasked with writing new product feature Constructed impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
+          'splash': 'Constructed new, impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
           'details': [
-            'Developed <b>RESTful API endpoints</b> & extended functionality of legacy endpoints',
-            '<b>Spearheaded</b> client side <b>development</b> for large <b>features shipping to 100 000+ users</b> worldwide',
+            'Developed <b>RESTful API endpoints</b> and extended functionality of legacy endpoints',
+            '<b>Spearheaded</b> client side <b>development</b> for large <b>features, shipping to 100 000+ users</b> worldwide',
             'Leveraged <b>Mockito & JUnit</b> allowing for simple unit testing'
           ]
         },
@@ -205,13 +205,13 @@ export class ContentService {
         {
           imgSrc: [], 
           description: `
-            My personal website served both as an introduction to Angular 9 and also a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the nature of HTML and CSS (Far more copy paste than is acceptable).
+            Creating my personal website served both as an introduction to Angular 9 and a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the nature of HTML and CSS (far more copy paste than is acceptable).
           `, 
           improvements: ['Idea is to prevent need for future improvements, allowing me to simply update content and not spend extra time on my website'], 
           details: [
             'Leveraged Angular 9 to create mantainable, scalable code',
             'Utilized Sass - precompiled CSS to improve styling maintainability',
-            'Employed routing improving separation of concerns'
+            'Employed routing, improving separation of concerns'
           ]
         },
         { 'color': 'white', 'display': 'block' },
@@ -258,7 +258,7 @@ export class ContentService {
         },
         {
           imgSrc: [], 
-          description: 'Git branch heirarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. As git stores branches as snapshots in a flat configuration, there is no way I am aware of to retrieve a branch tree displaying the parent tree and orphan branch trees. This was the inspiration for this project.', 
+          description: 'Git branch hierarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. Git stores branches in a flat list format, which effectively removes information about the base branch for any given branch. Thus without extra tooling developers need to keep track of the branch tree for their local repository. This was the inspiration for this project.', 
           improvements: [
             'Look into overwriting the git namespace allowing for identical command line interface',
             'Support additional flags for the "git branch" command'
@@ -286,7 +286,7 @@ export class ContentService {
         },
         {
           imgSrc: [], 
-          description: "Highlight Sights was written to assist my development workflow. When googling the implementation of anything especially with markup there are a few sites that have routinely proved to be more useful than all others. I created Highlight Sights to allow me to quickly locate search results that I would likely find useful.", 
+          description: "Highlight Sights was written to assist my development workflow. When googling the implementation of anything, especially with markup, there are a few sites that have routinely proved to be more useful than all others. I created Highlight Sights to allow me to quickly locate search results that I would likely find useful.", 
           improvements: [
             'Consider cleaning up the DOM manipulation, methods of applying styles to individual search results are a bit janky'
           ], 
@@ -312,10 +312,10 @@ export class ContentService {
         },
         {
           imgSrc: ['assets/img/newtab-min.PNG'], 
-          description: "Easy Access NewTab Page is a beautiful new tab page designed to have a personal touch while adding functionality including hotkeys to launch favourite websites, and personal memos to keep track of tasks to do today", 
+          description: "Easy Access NewTab Page is a beautiful new tab page designed to have a personal touch while adding functionality, including hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.", 
           improvements: [
             'Sanitize user input preventing Cross site scripting',
-            'improve scalability for different screen resolutions'
+            'Improve scalability for different screen resolutions'
           ], 
           details: [
             'Leveraged Firebase to persist daily memos which reset at the end of the day',
@@ -339,7 +339,7 @@ export class ContentService {
         },
         {
           imgSrc: ['assets/img/terraria1-min.PNG', 'assets/img/terraria2-min.PNG'], 
-          description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel for the game, which led me to making this game a Windows parody.", 
+          description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel, which led me to making this game a Windows parody.", 
           improvements: [
             'Implement <b>enemy collision detection and damage</b> (as well as a different images for player vs enemies)',
             'Write equipment crafting mechanics',
@@ -348,8 +348,8 @@ export class ContentService {
           ], 
           details: [
             'Utilizes <b>Perlin Noise</b> to implement pseudo-random terrain generation and resource distribution',
-            'Implements <b>discrete hit detection</b> preventing the classic <b>bullet through paper</b> problem',
-            'Supports Terraria basics such as <b>resource mining</b> and <b>collection</b>, resource <b>placement</b>, inventory item selection and item location swapping in the inventory',
+            'Implements <b>discrete hit detection</b>, preventing the classic <b>bullet through paper</b> problem',
+            'Supports Terraria basics such as <b>resource mining</b> and <b>collection</b>, resource <b>placement</b>, inventory item selection, and item location swapping in the inventory',
 
           ]
         },
@@ -371,14 +371,14 @@ export class ContentService {
         },
         {
           imgSrc: ['assets/img/linebot-min.JPG'], 
-          description: "This Robot applies knowledge of circuit design and hardware components combined with C instructions to either smoothly (analogue mode) or choppily (digital mode) follow a line", 
+          description: "This Robot applies knowledge of circuit design and hardware components combined with C instructions to either smoothly (analogue mode) or choppily (digital mode) follow a line.", 
           improvements: [
             'Implement the ability to roam in search of a line to follow if started without a line to follow'
           ], 
           details: [
             'Utilizes <b>PWM</b> (Pulse Width Modulation) to <b>overcome low power motors</b> - performance is poor when motors are running below 100% power',
             'Manages <b>memory and CPU limitations</b> by considering loop and function call time overhead, as well as efficient memory usage',
-            'Applies knowledge of circuit hardware as debugging must be performed using lights in conjunction with an oscilloscope, due to inaccessable typical debugging tools'
+            'Applies knowledge of circuit hardware since debugging must be performed using lights in conjunction with an oscilloscope due to inaccessable typical debugging tools'
           ]
         },
         { 'color': 'white', 'display': 'block' },
