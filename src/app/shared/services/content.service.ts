@@ -38,7 +38,7 @@ export class ContentService {
     return this.getData(this.router.url.slice(1).split('/'));
   }
 
-  _createContentObject(name, position, dateRange, location, imgPath, companyURL, tags, content, modalContent, cssObj, partialURI = ""): Object
+  _createContentObject(name, position, dateRange, location, imgPath, url, tags, content, modalContent, cssObj, partialURI = ""): Object
   {
     return {
       'name': name,
@@ -46,7 +46,7 @@ export class ContentService {
       'dateRange': dateRange,
       'location': location,
       'imgPath': imgPath,
-      'companyURL': companyURL,
+      'url': url,
       'tags': tags,
       'content': content,
       'modalContent': modalContent,
@@ -196,14 +196,14 @@ export class ContentService {
         2020,
         null,
         'assets/img/website.png',
-        null,
+        'https://github.com/DavidPeet8/website',
         ['JS', 'Angular', 'HTML', 'Sass'],
         {
           'splash': 'Website displaying my passions and accomplishments',
           'details': []
         },
         {
-          imgSrc: [], 
+          imgSrc: ['assets/img/website2.png', 'assets/img/website3.png', 'assets/img/website4.png'], 
           description: `
             Creating my personal website served both as an introduction to Angular 9 and a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the poor reusability of both HTML and CSS.
           `, 
@@ -224,7 +224,7 @@ export class ContentService {
         2019,
         null,
         'assets/img/coin-magnet.jpg',
-        null,
+        'https://github.com/DavidPeet8/Banking-Payment-Tracker',
         ['Java', 'Spring', 'REST', 'Postgresql'],
         {
           'splash': 'Tracks banking payments utilizing Postgresql for data persistance and Java Spring for RESTful endpoints',
@@ -252,7 +252,7 @@ export class ContentService {
         2019,
         null,
         'assets/img/git-branch-hierarchy.png',
-        null,
+        'https://github.com/DavidPeet8/Git-Branch-Hierarchy',
         ['Git', 'Java'],
         {
           'splash': 'Terminal utility tracking the parent-child relationship of git branches assisting in generating correct diffs for code reviews',
@@ -280,7 +280,7 @@ export class ContentService {
         2019,
         null,
         'assets/img/highlight-sites.png',
-        null,
+        'https://github.com/DavidPeet8/Highlight-Sites',
         ['JS', 'JQuery', "CSS"],
         {
           'splash': 'Browser extension enabling fast parsing of  google search results by highlighting results from user specified endpoints',
@@ -306,7 +306,7 @@ export class ContentService {
         2018,
         null,
         'assets/img/newtab.png',
-        null,
+        'https://github.com/DavidPeet8/NewTabPage2',
         ['JS', 'Firebase', 'HTML', 'CSS'],
         {
           'splash': 'Beautiful custom Chrome NewTab page providing hotkeys and personal memos',
@@ -314,9 +314,9 @@ export class ContentService {
         },
         {
           imgSrc: ['assets/img/newtab-min.PNG'], 
-          description: "Easy Access NewTab Page is a beautiful new tab page designed to have a personal touch while providing increased functionality. This newtab page includes hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.", 
+          description: "Easy Access NewTab Page is a beautiful newtab page designed to have a personal touch while providing increased functionality. This newtab page includes hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.", 
           improvements: [
-            'Sanitize user input to prevent script injection attackes',
+            'Sanitize user input to prevent script injection attacks',
             'Improve scalability for different browser window sizes'
           ], 
           details: [
@@ -333,7 +333,7 @@ export class ContentService {
         2017,
         null,
         'assets/img/terraria.PNG',
-        null,
+        'https://github.com/DavidPeet8/Terraria',
         ['Java', 'LibGDX', 'Box2D'],
         {
           'splash': 'Emulation of popular game Terraria with a flare of Microsoft Windows comedy',
@@ -343,7 +343,7 @@ export class ContentService {
           imgSrc: ['assets/img/terraria1-min.PNG', 'assets/img/terraria2-min.PNG'], 
           description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel, which turned into a Windows parody.", 
           improvements: [
-            'Implement <b>enemy collision detection and damage</b> (as well as a different images for player vs enemies)',
+            'Implement <b>enemy collision detection and damage</b> (as well as different images for player vs enemies)',
             'Write equipment crafting mechanics',
             'Remove world boundaries, implement <b>runtime random terrain generation</b> allowing for an infinite map',
             'Provide an <b>admin mode</b> for testing purposes - provide one hit kill for both enemies and resources'

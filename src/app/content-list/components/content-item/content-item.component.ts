@@ -102,7 +102,7 @@ export class ContentItemComponent implements OnInit {
 
   goToSite(): void
   {
-    window.open(this.item.companyURL, "_blank");
+    window.open(this.item.url, "_blank");
   }
 
   getClasses(): Object

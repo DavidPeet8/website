@@ -78,4 +78,14 @@ export class ModalComponent implements OnInit
       this.item.modalContent.imgSrc;
   	return src;
   }
+
+  getGithub() : string
+  {
+    return this.item.url;
+  }
+
+  openSite() : void
+  {
+    window.open(this.item.url, "_blank");
+  }
 }

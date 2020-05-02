@@ -8,6 +8,9 @@
 				<p class="inline" innerHTML=" {{getDate()}}   |   {{getTags()}}"></p>
 			</h3>
 			<app-carousel [slides]='getSlides()'></app-carousel>
+			<div *ngIf="getGithub() != null" (click)="openSite()" class="github-link">
+				<p>Github</p>
+			</div>
 			<div class="description">
 				<h3 class="modal-header">Description:</h3>
 				<p innerHTML="{{getDescription()}}"></p>
