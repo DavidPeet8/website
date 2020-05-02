@@ -14,11 +14,8 @@ export class AppComponent {
   constructor(private router:Router) 
   {
   	 this.router.events.subscribe(event => {
-
       if (event instanceof NavigationEnd) {
-      	console.log("I was supposed to do something useful")
-        gtag('set', 'page', event.urlAfterRedirects);
-        gtag('send', 'pageview');
+      	gtag('config', 'UA-133496735-2', {'page_path': event.urlAfterRedirects});
       }
   	});
   }
