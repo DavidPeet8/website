@@ -139,7 +139,7 @@ export class ContentService {
         'https://www.sobeys.com/',
         ['Team Work'],
         {
-          'splash': 'Positively impacted team work environment assisting team members and serving customers',
+          'splash': 'Positively impacted team work environment by assisting team members and serving customers',
           'details': []
         },
         {},
@@ -237,7 +237,7 @@ export class ContentService {
             'Implement a UI for easier use',
           ], 
           details: [
-            'Leveraged Java <b>Spring</b> to expose <b>API endpoints</b>',
+            'Leverages Java <b>Spring</b> to expose <b>API endpoints</b>',
             'Utilizes <b>RESTful data transfer</b> to return data to caller',
             'Utilizes <b>Relational Database</b> for storage due to relational nature of banking data'
           ]
@@ -260,9 +260,9 @@ export class ContentService {
         },
         {
           imgSrc: ['assets/img/git-branch-hierarchy-square.png'], 
-          description: 'Git branch hierarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. Git stores branches in a flat list format, which effectively removes information about the base branch for any given branch. Thus without extra tooling developers need to keep track of the branch tree for their local repository themselves. In projects where one developer is simultaneously working on multiple branches or is waiting for changes from another team, it becomes difficult to keep track of the branch tree. This scenario was the inspiration for this project. This project serves as a replacement for the git branch command, but only supporting branch creation and deletion.', 
+          description: 'Git branch hierarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. Git stores branches in a flat list format, which effectively removes information about the base branch for any given branch. Without extra tooling, developers need to keep track of the branch tree for their local repository themselves. In projects where one developer is simultaneously working on multiple branches or is waiting for changes from another team, it becomes difficult to keep track of the branch tree. This scenario was the inspiration for this project. This project serves as a replacement for the Git branch command, but only supporting branch creation and deletion.', 
           improvements: [
-            'Look into overwriting the git namespace allowing for identical command line interface',
+            'Look into overwriting the Git namespace allowing for identical command line interface',
             'Support additional flags for the "git branch" command'
           ], 
           details: [
@@ -274,12 +274,12 @@ export class ContentService {
         '/git-branch-hierarchy'
       ),
 
-  		'highlight-sights': this._createContentObject(
-        'HIGHLIGHT SIGHTS',
+  		'highlight-sites': this._createContentObject(
+        'HIGHLIGHT SITES',
         null,
         2019,
         null,
-        'assets/img/highlight-sights.png',
+        'assets/img/highlight-sites.png',
         null,
         ['JS', 'JQuery', "CSS"],
         {
@@ -288,7 +288,7 @@ export class ContentService {
         },
         {
           imgSrc: [], 
-          description: "Highlight Sights was written to assist my development workflow. When googling the implementation of anything, especially with markup, there are a few sites that have routinely proved to be more useful than all others. I created Highlight Sights to allow me to quickly locate search results that I would likely find useful.", 
+          description: "Highlight Sites was written to assist my development workflow. When googling the implementation of anything, especially with markup, there are a few sites that have routinely proved to be more useful than all others. I created Highlight Sites to allow me to quickly locate search results that I would likely find useful.", 
           improvements: [
             'Consider cleaning up the DOM queries, methods of applying styles to individual search results are a bit janky'
           ], 
@@ -297,7 +297,7 @@ export class ContentService {
           ]
         },
         { 'color': 'white', 'display': 'block' },
-        '/highlight-sights'
+        '/highlight-sites'
       ),
 
   		'new-tab-page': this._createContentObject(
