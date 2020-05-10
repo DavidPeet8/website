@@ -17,13 +17,13 @@ export class ModalComponent implements OnInit
 
   ngOnInit(): void 
   {
-  	this.item = this.contentService.getForContext();
+  	this.item = this.contentService.getProjectForContext();
   }
 
   closeModal() 
   {
   	console.log("Modal Closed");
-  	this.router.navigate(['projects']); // Navigate back
+  	this.router.navigate(['']); // Navigate back
   }
 
   stopPropagation(event) 

@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Router } from '@angular/router' 
 import { ContentService } from '@shared/services/content.service'
 
@@ -10,15 +10,13 @@ import { ContentService } from '@shared/services/content.service'
 export class ContentComponent implements OnInit {
   workList:Object;
   projectList:Object;
-  isWork:boolean = true; // Used to toggle between work and projects
+  @Input() isWork:boolean; // Used to toggle between work and projects
 
   constructor(private contentService:ContentService, private router:Router) { }
 
   ngOnInit(): void {
   	this.workList = Object.values(this.contentService.getData(['experience']));
     this.projectList = Object.values(this.contentService.getData(['projects']));
-
-    this.isWork = (this.router.url === '/experience')
     // Set up the spanner size
   }
 

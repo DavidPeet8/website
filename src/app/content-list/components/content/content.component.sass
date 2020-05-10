@@ -21,11 +21,18 @@
 
 .section-heading
 	padding: 20px
+	margin: 10px
 	display: inline-block
-	@include headerTextSize()
+	@include sectionHeaderTextSize()
 	font-weight: 700
 	font-family: 'Montserrat', sans-serif
 	cursor: pointer
+	color: black
+
+.section-sep
+	margin: 10px
+	border: 1px solid $grey
+
 
 .display-selector
 	width: 100%
@@ -37,5 +44,6 @@
 
 .active-tab
 	outline: none
-	background: rgb(50,50,50)
-	background: linear-gradient(0deg, rgba(50,50,50,1) 0%, rgba(40,40,40,0) 10%)
+	background: white
+	color: black
+

@@ -37,4 +37,9 @@ export class AboutComponent implements OnInit {
     window.open(this.config.resumePath, "_blank")
   }
 
+  openEmail()
+  {
+    window.location.href = this.getEmail();
+  }
+
 }

@@ -32,10 +32,9 @@ export class ContentService {
   	return ret;
   }
 
-  getForContext()
+  getProjectForContext()
   {
-    // Fetch the URL as an array, return getData(thatArray)
-    return this.getData(this.router.url.slice(1).split('/'));
+    return this.getData(['projects'].concat(this.router.url.slice(1).split('/')));
   }
 
   _createContentObject(name, position, dateRange, location, imgPath, url, tags, content, modalContent, cssObj, partialURI = ""): Object
@@ -68,7 +67,7 @@ export class ContentService {
   {
   	return {
   		'name': 'David', 
-  		'imgPath': 'assets/img/profile2-min.jpg', // Relative path
+  		'imgPath': 'assets/img/profile.jpg', // Relative path
   		'schoolTerm': '2B', // Ex. 2B
   		'internshipDate': 'Fall 2020 (Sept-Dec)',
   	};
@@ -94,7 +93,7 @@ export class ContentService {
   	return {
       'mcafee': this._createContentObject(
         'McAfee',
-        'Software Developer',
+        'Software Developer Intern',
         'Jan 2020 - Apr 2020', 
         'Waterloo, Ontario', 
         'assets/img/mcafee.png', 
@@ -113,10 +112,10 @@ export class ContentService {
       ),
   		'axonify': this._createContentObject(
         'Axonify',
-        'Software Developer',
+        'Software Developer Intern',
         'May 2019 - Aug 2019',
         'Waterloo, Ontario',
-        'assets/img/axonify-min.jpg',
+        'assets/img/axonify.jpg',
         'https://axonify.com/',
         ['Java', 'JS', 'Hibernate', 'Backbone.js'],
         {
@@ -135,7 +134,7 @@ export class ContentService {
         'Deli Staff',
         '2017 - 2018',
         'Waterloo, Ontario',
-        'assets/img/sobeys-min.jpg',
+        'assets/img/sobeys.jpg',
         'https://www.sobeys.com/',
         ['Team Work'],
         {
@@ -150,7 +149,7 @@ export class ContentService {
         'Usher',
         '2013 - 2018',
         'St. Jacobs, Ontario',
-        'assets/img/playhouse-min.jpg',
+        'assets/img/playhouse.jpg',
         'https://www.draytonentertainment.com/',
         ['Team Work'],
         {
@@ -167,26 +166,38 @@ export class ContentService {
   {
   	return {
   		'memcheck': this._createContentObject(
-        'MEMCHECK SHIM',
+        'MINIMALIST VALGRIND EMULATION',
         null,
         2020,
         null,
-        '',
-        null,
-        ['C++', 'Shared Libraries', 'Syscalls', 'Kernel'],
+        'assets/img/mcheck.png',
+        'https://github.com/DavidPeet8/Memcheck-Shim',
+        ['C/C++', 'Make', 'Shared Libraries', 'Syscalls', 'Kernel'],
         {
-          'splash': 'Software shim intercepting library calls to allocate heap memory before they reach the standard library allowing monitoring of memory consumption',
+          'splash': 'Software shim intercepting heap allocation library calls and monitoring memory consumption',
           'details': []
         },
         {
           imgSrc: [],
           description: `
-            This project is a memcheck shim, a piece of code that lies between an executing application and shared libraries that that application uses. My memcheck shim is meant to implement memory leak detection features similar to valgrind, but only implement leak checking, not other error checking that Valgrind supplies. 
+            This project is a lightweight memcheck program, a piece of code that lies between an executing application and shared libraries that the application uses. My memcheck shim is an emulation of Valgrind, detecting and reporting memory leaks found in an executing program. Valgrind approaches this issue by running the executable in a virtual CPU, then using just in time translation to instrument the executable on the fly. I have adopted the approach of overloading new and delete operators and forcing dynamic symbol resolution for those operators before libstdc++ is linked, then running the program normally. My implementation will run much faster than Valgrind, with the tradeoff that I am unable to produce code snippets and line numbers for detected leaks. 
+            <br/>
+            <br/>
+            It's worth noting in the image above that Foo only has 20 bytes worth of data to store, yet the report indicates that 24 bytes were requested. This is due to the compiler. The compiler believes the program will run faster if all data members of struct Foo are aligned to 8 byte boundaries, so it pads the int field with another 4 bytes of unused space.
           `,
-          improvements: "",
-          details: []
+          improvements: [
+            'Add external plugin support to modify shim behavior',
+            'Shim malloc and free as well as other C style memory manipulation to allow for memcheck of C programs'
+          ],
+          details: [
+            'This project works with any C++ executable using new and delete to allocate and deallocate memory. The executable will not need to be recompiled or compiled in a special way',
+            'Utilizes Kernel persistent IPC, enabling future support for external plugins to message the shim, modifying behavior',
+            'Implemented DLL Injection enabling Library call interception by forcing new and delete symbol resolution before libstdc++ is linked',
+            'Leverages static linking of the standard library to prevent infinite new recursion and separate the library heap space from the client',
+            'Leveraged readelf and knowledge of both procedural linkage table and dynamic linkage table to debug symbol resolution errors'
+          ]
          },
-        { 'color': 'white', 'display': 'none' },
+        { 'color': 'white', 'display': 'block' },
         '/memcheck'
       ),
 
@@ -313,7 +324,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/newtab-min.PNG'], 
+          imgSrc: ['assets/img/newtab2.png'], 
           description: "Easy Access NewTab Page is a beautiful newtab page designed to have a personal touch while providing increased functionality. This newtab page includes hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.", 
           improvements: [
             'Sanitize user input to prevent script injection attacks',
@@ -332,7 +343,7 @@ export class ContentService {
         null,
         2017,
         null,
-        'assets/img/terraria.PNG',
+        'assets/img/terraria.png',
         'https://github.com/DavidPeet8/Terraria',
         ['Java', 'LibGDX', 'Box2D'],
         {
@@ -340,7 +351,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/terraria1-min.PNG', 'assets/img/terraria2-min.PNG'], 
+          imgSrc: ['assets/img/terraria1.png', 'assets/img/terraria2.png'], 
           description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel, which turned into a Windows parody.", 
           improvements: [
             'Implement <b>enemy collision detection and damage</b> (as well as different images for player vs enemies)',
@@ -372,7 +383,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/linebot-min.JPG'], 
+          imgSrc: ['assets/img/linebot.jpg'], 
           description: "This Robot applies knowledge of circuit design and hardware components combined with instructions written in C to either smoothly (analogue mode) or choppily (digital mode) follow a line.", 
           improvements: [
             'Implement the ability to roam in search of a line if started without a line to follow'

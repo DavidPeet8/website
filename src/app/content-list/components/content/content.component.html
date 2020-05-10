@@ -1,12 +1,13 @@
 <section class="full-width">
 	<router-outlet></router-outlet>
 	<div class="main-container">
-		<div class="display-selector">
+<!-- 		<div class="display-selector">
 			<h1 [routerLink]="['/experience']" [routerLinkActive]="['active-tab']" class="section-heading">EXPERIENCE</h1>
 			<h1 [routerLink]="['/projects']" [routerLinkActive]="['active-tab']" class="section-heading">PROJECTS</h1>
-		</div>
+		</div> -->
 		<div *ngIf="isWork">
-			
+			<hr class="section-sep"/>
+			<h1 class="section-heading">EXPERIENCE:</h1>
 			<ul class="item-list">
 				<app-content-item *ngFor="let item of workList" [item]="item" [isWork]="true"></app-content-item>
 			</ul>
@@ -14,6 +15,8 @@
 		</div>
 
 		<div *ngIf="!isWork">
+			<hr class="section-sep"/>
+			<h1 class="section-heading">PROJECTS:</h1>
 			<ul class="item-list">
 				<app-content-item *ngFor="let item of projectList" [item]="item" [isWork]="false"></app-content-item>
 			</ul>
