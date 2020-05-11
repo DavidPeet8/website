@@ -126,7 +126,9 @@ export class ContentItemComponent implements OnInit {
 
   getStyle(): Object 
   {
-    if (this.isWork) { return {}; }
+    if (this.isWork) { 
+      return this.item.css;
+    }
     return  {
       'background-image': 'url("' + this.item.imgPath + '")',
       'background-size': 'cover',

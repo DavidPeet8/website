@@ -108,7 +108,7 @@ export class ContentService {
           ]
         }, 
         {},
-        { 'color': this.grey, 'display': 'block' }
+        { 'color': this.grey }
       ),
   		'axonify': this._createContentObject(
         'Axonify',
@@ -127,7 +127,7 @@ export class ContentService {
           ]
         },
         {},
-        { 'color': this.grey, 'display': 'block' }
+        { 'color': this.grey }
       ),
   		'sobeys': this._createContentObject(
         'Sobeys',
@@ -142,7 +142,7 @@ export class ContentService {
           'details': []
         },
         {},
-        { 'color': this.grey, 'display': 'block' }
+        { 'color': this.grey, 'display': 'none' }
       ),
   		'playhouse': this._createContentObject(
         'St. Jacobs Playhouse',
@@ -157,7 +157,7 @@ export class ContentService {
           'details': []
         },
         {},
-        { 'color': this.grey, 'display': 'block' }
+        { 'color': this.grey, 'display': 'none' }
       )
   	};
   }
@@ -166,7 +166,7 @@ export class ContentService {
   {
   	return {
   		'memcheck': this._createContentObject(
-        'MINIMALIST VALGRIND EMULATION',
+        'STREAMLINED VALGRIND',
         null,
         2020,
         null,
