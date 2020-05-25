@@ -1,18 +1,25 @@
 <section>
-	<div class="padd flex about-section">
-		<div class="about">
-			<h3 class="section-header-text">Software Developer</h3>
-			<hr class="fade">
-			<p class="about-text">
-				Hi, I'm {{ data.name }}! Thanks for visiting my website!
-				<br/><br/>
-				I am a {{ data.schoolTerm }} Honours Computer Science student at the University of Waterloo. My passion lies in software development, especially low level languages like C++, although I am also proficient in Java, JavaScript, and Bash. My main interests are in Operating Systems development as well as Compiler & Interpreter development. I am always eager to learn new concepts and technologies. Right now I am trying to get started with Golang. I find the incredible performance even with a garbage collector and the unique non C-based design of Golang very exciting.
-				<br/><br/>
-				I'm <b>looking for {{ data.internshipDate }} internship opportunities!</b> Please reach out through email <a href="{{getEmail()}}">dapeet@uwaterloo.ca</a> or <a (click)="openLinkedIn()" href="{{getLinkedIn()}}">LinkedIn</a> if you feel that I would be a good fit on your team!
-				<br/><br/>
-				<!-- <b>Preferred Positions:</b> C++ Developer <br/> -->
-				<b>Preferred Languages:</b> C/C++, Java, Bash, JavaScript
-			</p>
+	<div class="padd about-section">
+		<div class="flex">
+			<div class="about">
+				<h3 class="section-header-text">Software Developer</h3>
+				<hr class="fade">
+				<p class="about-text">
+					Hi, I'm {{ data.name }}! Thanks for visiting my website!
+					<br/><br/>
+					I am a {{ data.schoolTerm }} Honours Computer Science student at the University of Waterloo. My passion lies in software development, especially low level languages like C++, although I am also proficient in Java, JavaScript, and Bash. My main interests are in Operating Systems development as well as Compiler & Interpreter development. I am always eager to learn new concepts and technologies. Right now I am trying to get started with Golang. I find the incredible performance even with a garbage collector and the unique non C-based design of Golang very exciting.
+					<br/><br/>
+					I'm <b>looking for {{ data.internshipDate }} internship opportunities!</b> Please reach out through email <a href="{{getEmail()}}">dapeet@uwaterloo.ca</a> or <a (click)="openLinkedIn()" href="{{getLinkedIn()}}">LinkedIn</a> if you feel that I would be a good fit on your team!
+					<br/><br/>
+					<!-- <b>Preferred Positions:</b> C++ Developer <br/> -->
+					<b>Preferred Languages:</b> C/C++, Java, Bash, JavaScript
+				</p>
+			</div>
+			<div class="profile-img">
+				<img (click)="openLinkedIn()" src="{{ data.imgPath }}">
+			</div>
+		</div>
+		<div class="button-row">
 			<div (click)="openResume()" class="btn">
 				Resume  <i class="far fa-file-alt"></i>
 			</div>
@@ -25,9 +32,6 @@
 			<div (click)="openEmail()" class="btn">
 				Email <i class="fas fa-envelope"></i>
 			</div>
-		</div>
-		<div class="profile-img">
-			<img (click)="openLinkedIn()" src="{{ data.imgPath }}">
 		</div>
 	</div>
 </section>
