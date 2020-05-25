@@ -27,9 +27,14 @@ export class AboutComponent implements OnInit {
     return "mailto:" + this.config.links.email
   }
 
-  openGithub(): void
+  openGithub() 
   {
-  	window.open(this.config.links.github, "_blank");
+    window.open(this.config.links.github, "_blank");
+  }
+
+  openLinkedIn() 
+  {
+    window.open(this.config.links.linkedIn, "_blank");
   }
 
   openResume() 
