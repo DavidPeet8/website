@@ -13,15 +13,18 @@
 				<!-- <b>Preferred Positions:</b> C++ Developer <br/> -->
 				<b>Preferred Languages:</b> C/C++, Java, Bash, JavaScript
 			</p>
-			<a (click)="openResume()" href="#" class="btn">
+			<div (click)="openResume()" class="btn">
 				Resume  <i class="far fa-file-alt"></i>
-			</a>
-			<a (click)="openGithub()" href="#" class="btn">
+			</div>
+			<div (click)="openGithub()" class="btn">
 				Github  <i class="fab fa-github"></i>
-			</a>
-			<a (click)="openEmail()" class="btn">
+			</div>
+			<div (click)="openLinkedIn()" class="btn">
+				LinkedIn <i class="fab fa-linkedin-in"></i>
+			</div>
+			<div (click)="openEmail()" class="btn">
 				Email <i class="fas fa-envelope"></i>
-			</a>
+			</div>
 		</div>
 		<div class="profile-img">
 			<img (click)="openLinkedIn()" src="{{ data.imgPath }}">
