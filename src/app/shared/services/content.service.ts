@@ -165,13 +165,13 @@ export class ContentService {
   _getProjects(): Object
   {
   	return {
-  		'memcheck': this._createContentObject(
-        'STREAMLINED VALGRIND',
+  		'memory-sanitizer': this._createContentObject(
+        'MEMORY SANITIZER',
         null,
         2020,
         null,
         'assets/img/mcheck.png',
-        'https://github.com/DavidPeet8/Memcheck-Shim',
+        'https://github.com/DavidPeet8/Memory-Sanitizer',
         ['C/C++', 'Make', 'Shared Libraries', 'Syscalls', 'Kernel'],
         {
           'splash': 'Software shim intercepting heap allocation library calls and monitoring memory consumption',
@@ -192,13 +192,13 @@ export class ContentService {
           details: [
             'This project works with any C++ executable using new and delete to allocate and deallocate memory. The executable will not need to be recompiled or compiled in a special way',
             'Utilizes Kernel persistent IPC, enabling future support for external plugins to message the shim, modifying behavior',
-            'Implemented DLL Injection enabling Library call interception by forcing new and delete symbol resolution before libstdc++ is linked',
+            'Implemented DLL hijacking enabling library call interception by forcing new and delete symbol resolution before libstdc++ is linked',
             'Leverages static linking of the standard library to prevent infinite new recursion and separate the library heap space from the client',
             'Leveraged readelf and knowledge of both procedural linkage table and dynamic linkage table to debug symbol resolution errors'
           ]
          },
         { 'color': 'white', 'display': 'block' },
-        '/memcheck'
+        '/memory-sanitizer'
       ),
 
   		'website': this._createContentObject(
@@ -229,13 +229,13 @@ export class ContentService {
         '/website'
       ),
 
-  		'banking-payment-tracker': this._createContentObject(
-        'BANKING PAYMENT TRACKER',
+  		'payment-tracker': this._createContentObject(
+        'PAYMENT TRACKER',
         null,
         2019,
         null,
         'assets/img/coin-magnet.jpg',
-        'https://github.com/DavidPeet8/Banking-Payment-Tracker',
+        'https://github.com/DavidPeet8/Payment-Tracker',
         ['Java', 'Spring', 'REST', 'Postgresql'],
         {
           'splash': 'Tracks banking payments utilizing Postgresql for data persistance and Java Spring for RESTful endpoints',
@@ -254,16 +254,16 @@ export class ContentService {
           ]
         },
         { 'color': 'white', 'display': 'block', 'background-position': '50% 40%' },
-        '/banking-payment-tracker'
+        '/payment-tracker'
       ),
 
-  		'git-branch-hierarchy': this._createContentObject(
-        'GIT BRANCH HIERARCHY',
+  		'branch-visualizer': this._createContentObject(
+        'BRANCH VISUALIZER',
         null,
         2019,
         null,
         'assets/img/git-branch-hierarchy.png',
-        'https://github.com/DavidPeet8/Git-Branch-Hierarchy',
+        'https://github.com/DavidPeet8/Branch-Visualizer',
         ['Git', 'Java'],
         {
           'splash': 'Terminal utility tracking the parent-child relationship of git branches assisting in generating correct diffs for code reviews',
@@ -282,16 +282,16 @@ export class ContentService {
           ]
         },
         { 'color': 'white', 'display': 'block' },
-        '/git-branch-hierarchy'
+        '/branch-visualizer'
       ),
 
-  		'highlight-sites': this._createContentObject(
-        'HIGHLIGHT SITES',
+  		'site-spotlight': this._createContentObject(
+        'SITE SPOTLIGHT',
         null,
         2019,
         null,
         'assets/img/highlight-sites.png',
-        'https://github.com/DavidPeet8/Highlight-Sites',
+        'https://github.com/DavidPeet8/Site-Spotlight',
         ['JS', 'JQuery', "CSS"],
         {
           'splash': 'Browser extension enabling fast parsing of  google search results by highlighting results from user specified endpoints',
@@ -308,16 +308,42 @@ export class ContentService {
           ]
         },
         { 'color': 'white', 'display': 'block' },
-        '/highlight-sites'
+        '/site-spotlight'
       ),
 
-  		'new-tab-page': this._createContentObject(
-        'EASY ACCESS NEWTAB PAGE',
+      'gravitate': this._createContentObject(
+        'GRAVITATE',
+        null,
+        2019,
+        null,
+        'assets/img/highlight-sites.png',
+        'https://github.com/DavidPeet8/Gravitate',
+        ['JS', 'HTML', 'CSS'],
+        {
+          'splash': 'Physics simulation of bodies orbiting a mass',
+          'details': []
+        },
+        {
+          imgSrc: [], 
+          description: "Short project exploring modeling physics concepts with software.", 
+          improvements: [
+            'Fix the classic bullet through paper problem'
+          ], 
+          details: [
+            'Hit detection is implemented using pythagorean theorem and radius widths'
+          ]
+        },
+        { 'color': 'white', 'display': 'none' },
+        '/gravitate'
+      ),
+
+  		'beautiful-newtab': this._createContentObject(
+        'BEAUTIFUL NEWTAB',
         null,
         2018,
         null,
         'assets/img/newtab.png',
-        'https://github.com/DavidPeet8/NewTabPage2',
+        'https://github.com/DavidPeet8/Beautiful-NewTab',
         ['JS', 'Firebase', 'HTML', 'CSS'],
         {
           'splash': 'Beautiful custom Chrome NewTab page providing hotkeys and personal memos',
@@ -335,11 +361,11 @@ export class ContentService {
           ]
         },
         { 'color': 'white', 'display': 'block', 'background-position': '50% 0%' },
-        '/new-tab-page'
+        '/beautiful-newtab'
       ),
 
   		'terraria': this._createContentObject(
-        'TERRARIA EMULATION',
+        'TERRARIA',
         null,
         2017,
         null,
@@ -371,7 +397,7 @@ export class ContentService {
       ),
 
       'line-bot': this._createContentObject(
-        'ANALOGUE LINE FOLLOWING ROBOT',
+        'LINE FOLLOWING ROBOT',
         null,
         2014,
         null,

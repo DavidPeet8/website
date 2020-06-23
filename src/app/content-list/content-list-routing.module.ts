@@ -6,11 +6,12 @@ import { ModalComponent } from '@content-modal/components/modal/modal.component'
 
 const routes: Routes = [
 	{ path: 'website', component: ModalComponent },
-	{ path: 'memcheck', component: ModalComponent },
-	{ path: 'banking-payment-tracker', component: ModalComponent },
-	{ path: 'git-branch-hierarchy', component: ModalComponent },
-	{ path: 'highlight-sites', component: ModalComponent },
-	{ path: 'new-tab-page', component: ModalComponent },
+	{ path: 'memory-sanitizer', component: ModalComponent },
+	{ path: 'payment-tracker', component: ModalComponent },
+	{ path: 'branch-visualizer', component: ModalComponent },
+	{ path: 'site-spotlight', component: ModalComponent },
+	{ path: 'gravitate', component: ModalComponent },
+	{ path: 'beautiful-newtab', component: ModalComponent },
 	{ path: 'terraria', component: ModalComponent },
 	{ path: 'line-bot', component: ModalComponent },
 ];
