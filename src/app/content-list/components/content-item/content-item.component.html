@@ -13,9 +13,10 @@
 			</div>
 			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h5>
 			<div class="content">
-				<h3 class="sub-header" *ngIf="isWork">Overview:</h3>
+				<!-- <h3 class="sub-header" *ngIf="isWork">Overview:</h3> -->
 				<p>{{getSplashContent()}}</p>
-				<h3 class="sub-header" *ngIf="isWork && getBullets().length > 0">Details:</h3>
+				<br>
+				<!-- <h3 class="sub-header" *ngIf="isWork && getBullets().length > 0">Details:</h3> -->
 				<ul>
 					<li class="bullet-point" *ngFor="let bullet of getBullets()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 				</ul>

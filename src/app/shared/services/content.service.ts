@@ -91,6 +91,21 @@ export class ContentService {
   _getExperience(): Object
   {
   	return {
+      'huawei': this._createContentObject(
+        'Huawei',
+        'Compiler Software Engineering Intern',
+        'Sept 2020 - Dec 2020',
+        'Toronto, Ontario',
+        'assets/img/huawei.png',
+        'https://www.huawei.com/',
+        ['C++', 'C', 'Bash', 'LLVM'],
+        {
+          'splash': 'Incoming Compiler Software Engineering Intern, will be researching and implementing optimizations in C++ for LLVM compilers',
+          'details': [],
+        },
+        {},
+        {'color': this.grey}
+      ),
       'mcafee': this._createContentObject(
         'McAfee',
         'Software Developer Intern',
