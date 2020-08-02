@@ -68,7 +68,7 @@ export class ContentService {
   	return {
   		'name': 'David', 
   		'imgPath': 'assets/img/profile.jpg', // Relative path
-  		'schoolTerm': '2B', // Ex. 2B
+  		'schoolTerm': '3A', // Ex. 2B
   		'internshipDate': 'Summer 2021 (Jan-Apr)',
   	};
   }
@@ -205,7 +205,8 @@ export class ContentService {
             'Shim malloc and free as well as other C style memory manipulation to allow for memcheck of C programs'
           ],
           details: [
-            'This project works with any C++ executable using new and delete to allocate and deallocate memory. The executable will not need to be recompiled or compiled in a special way',
+            'Works with any C++ executable using new and delete to allocate and deallocate memory',
+            'No need to recompile the binary you are sanitizing',
             'Utilizes Kernel persistent IPC, enabling future support for external plugins to message the shim, modifying behavior',
             'Implemented DLL hijacking enabling library call interception by forcing new and delete symbol resolution before libstdc++ is linked',
             'Leverages static linking of the standard library to prevent infinite new recursion and separate the library heap space from the client',
