@@ -36,7 +36,9 @@
 		display: none
 
 @mixin scalePadding($paddingSmall, $paddingMed, $paddingLarge) 
-	@include scaleProp(padding, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
+	@include scaleProp(padding-top, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
+	@include scaleProp(padding-left, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
+	@include scaleProp(padding-right, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
 
 @mixin regularTextSize()
 	@include scaleProp(font-size, 10pt, 11pt, 12pt, 14pt, 16pt)
