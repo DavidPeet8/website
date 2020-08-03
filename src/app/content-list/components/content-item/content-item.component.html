@@ -22,4 +22,5 @@
 			<app-tag-bar [tags]="item.tags" [css]="item.css"></app-tag-bar>
 		</div>
 	</div>
+	<hr *ngIf="isWork" class="dashed" [ngStyle]="shouldDisplaySeparator()">
 </div>

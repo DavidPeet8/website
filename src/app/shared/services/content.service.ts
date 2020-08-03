@@ -37,9 +37,10 @@ export class ContentService {
     return this.getData(['projects'].concat(this.router.url.slice(1).split('/')));
   }
 
-  _createContentObject(name, position, dateRange, location, imgPath, url, tags, content, modalContent, cssObj, partialURI = ""): Object
+  _createContentObject(idx, name, position, dateRange, location, imgPath, url, tags, content, modalContent, cssObj, partialURI = ""): Object
   {
     return {
+      'index': idx,
       'name': name,
       'position': position,
       'dateRange': dateRange,
@@ -92,6 +93,7 @@ export class ContentService {
   {
   	return {
       'huawei': this._createContentObject(
+        2,
         'Huawei',
         'Compiler Software Engineering Intern',
         'Sept 2020 - Dec 2020',
@@ -107,6 +109,7 @@ export class ContentService {
         {'color': this.grey}
       ),
       'mcafee': this._createContentObject(
+        1,
         'McAfee',
         'Software Developer Intern',
         'Jan 2020 - Apr 2020', 
@@ -126,6 +129,7 @@ export class ContentService {
         { 'color': this.grey }
       ),
   		'axonify': this._createContentObject(
+        0,
         'Axonify',
         'Software Developer Intern',
         'May 2019 - Aug 2019',
@@ -144,36 +148,6 @@ export class ContentService {
         {},
         { 'color': this.grey }
       ),
-  		'sobeys': this._createContentObject(
-        'Sobeys',
-        'Deli Staff',
-        '2017 - 2018',
-        'Waterloo, Ontario',
-        'assets/img/sobeys.jpg',
-        'https://www.sobeys.com/',
-        ['Team Work'],
-        {
-          'splash': 'Positively impacted team work environment by assisting team members and serving customers',
-          'details': []
-        },
-        {},
-        { 'color': this.grey, 'display': 'none' }
-      ),
-  		'playhouse': this._createContentObject(
-        'St. Jacobs Playhouse',
-        'Usher',
-        '2013 - 2018',
-        'St. Jacobs, Ontario',
-        'assets/img/playhouse.jpg',
-        'https://www.draytonentertainment.com/',
-        ['Team Work'],
-        {
-          'splash': 'Escorted customers to their seats and marketed house sales',
-          'details': []
-        },
-        {},
-        { 'color': this.grey, 'display': 'none' }
-      )
   	};
   }
 
@@ -181,6 +155,7 @@ export class ContentService {
   {
   	return {
   		'memory-sanitizer': this._createContentObject(
+        8,
         'MEMORY SANITIZER',
         null,
         2020,
@@ -195,7 +170,7 @@ export class ContentService {
         {
           imgSrc: [],
           description: `
-            This project is a lightweight memcheck program, a piece of code that lies between an executing application and shared libraries that the application uses. My memcheck shim is an emulation of Valgrind, detecting and reporting memory leaks found in an executing program. Valgrind approaches this issue by running the executable in a virtual CPU, then using just in time translation to instrument the executable on the fly. I have adopted the approach of overloading new and delete operators and forcing dynamic symbol resolution for those operators before libstdc++ is linked, then running the program normally. My implementation will run much faster than Valgrind, with the tradeoff that I am unable to produce code snippets and line numbers for detected leaks. 
+            Memory Sanitizer allows users to track the heap memory consumption of a C++ executable without the need to recompile. Memory Sanitizer has a similar purpose to Valgrind, but it's bare-bones implementation allows it to give useful information while running >100x faster than Valgrind.  This project is a shim - a peice of code that lies between an executing process and shared libraries it uses. Although my implementation will run much faster than Valgrind, it is unable to produce code snippets and line numbers for detected leaks. 
             <br/>
             <br/>
             It's worth noting in the image above that Foo only has 20 bytes worth of data to store, yet the report indicates that 24 bytes were requested. This is due to the compiler. The compiler believes the program will run faster if all data members of struct Foo are aligned to 8 byte boundaries, so it pads the int field with another 4 bytes of unused space.
@@ -205,12 +180,12 @@ export class ContentService {
             'Shim malloc and free as well as other C style memory manipulation to allow for memcheck of C programs'
           ],
           details: [
-            'Works with any C++ executable using new and delete to allocate and deallocate memory',
+            'Works on C++ executables using new \& delete to allocate/deallocate memory',
             'No need to recompile the binary you are sanitizing',
+            '>100x Faster than Valgrind',
             'Utilizes Kernel persistent IPC, enabling future support for external plugins to message the shim, modifying behavior',
-            'Implemented DLL hijacking enabling library call interception by forcing new and delete symbol resolution before libstdc++ is linked',
+            'Implements DLL hijacking enabling library call interception by forcing new and delete symbol resolution before libstdc++ is linked',
             'Leverages static linking of the standard library to prevent infinite new recursion and separate the library heap space from the client',
-            'Leveraged readelf and knowledge of both procedural linkage table and dynamic linkage table to debug symbol resolution errors'
           ]
          },
         { 'color': 'white', 'display': 'block' },
@@ -218,6 +193,7 @@ export class ContentService {
       ),
 
   		'website': this._createContentObject(
+        7,
         'PERSONAL WEBSITE',
         null,
         2020,
@@ -246,6 +222,7 @@ export class ContentService {
       ),
 
   		'payment-tracker': this._createContentObject(
+        6,
         'PAYMENT TRACKER',
         null,
         2019,
@@ -274,6 +251,7 @@ export class ContentService {
       ),
 
   		'branch-visualizer': this._createContentObject(
+        5,
         'BRANCH VISUALIZER',
         null,
         2019,
@@ -302,6 +280,7 @@ export class ContentService {
       ),
 
   		'site-spotlight': this._createContentObject(
+        4,
         'SITE SPOTLIGHT',
         null,
         2019,
@@ -328,6 +307,7 @@ export class ContentService {
       ),
 
       'gravitate': this._createContentObject(
+        3,
         'GRAVITATE',
         null,
         2019,
@@ -354,6 +334,7 @@ export class ContentService {
       ),
 
   		'beautiful-newtab': this._createContentObject(
+        2,
         'BEAUTIFUL NEWTAB',
         null,
         2018,
@@ -381,6 +362,7 @@ export class ContentService {
       ),
 
   		'terraria': this._createContentObject(
+        1,
         'TERRARIA',
         null,
         2017,
@@ -413,6 +395,7 @@ export class ContentService {
       ),
 
       'line-bot': this._createContentObject(
+        0,
         'LINE FOLLOWING ROBOT',
         null,
         2014,

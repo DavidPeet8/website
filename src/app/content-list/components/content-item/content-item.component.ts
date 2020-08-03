@@ -136,4 +136,15 @@ export class ContentItemComponent implements OnInit {
     };
   }
 
+  shouldDisplaySeparator(): Object 
+  {
+    console.log(this.item.css.display == 'none');
+    let display = {'display': 'none'}
+    if(this.item.css.display != 'none' && this.item.index != 0)
+    {
+      display.display = 'block';
+    }
+    return display;
+  }
+
 }
