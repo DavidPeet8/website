@@ -14,6 +14,8 @@ const routes: Routes = [
 	{ path: 'beautiful-newtab', component: ModalComponent },
 	{ path: 'terraria', component: ModalComponent },
 	{ path: 'line-bot', component: ModalComponent },
+	{ path: 'todo', component: ModalComponent },
+	{ path: 'note-modules', component: ModalComponent }
 ];
 
 @NgModule({

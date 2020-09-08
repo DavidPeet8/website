@@ -46,7 +46,8 @@ export class ContentService {
       'dateRange': dateRange,
       'location': location,
       'imgPath': imgPath,
-      'url': url,
+      'siteurl': url.site,
+      'githuburl': url.github,
       'tags': tags,
       'content': content,
       'modalContent': modalContent,
@@ -99,7 +100,7 @@ export class ContentService {
         'Sept 2020 - Dec 2020',
         'Toronto, Ontario',
         'assets/img/huawei.png',
-        'https://www.huawei.com/',
+        { site: 'https://www.huawei.com/'},
         ['C++', 'C', 'Bash', 'LLVM'],
         {
           'splash': 'Incoming Compiler Software Engineering Intern, will be researching and implementing optimizations in C++ for LLVM compilers',
@@ -115,7 +116,7 @@ export class ContentService {
         'Jan 2020 - Apr 2020', 
         'Waterloo, Ontario', 
         'assets/img/mcafee.png', 
-        'https://www.mcafee.com/', 
+        { site: 'https://www.mcafee.com/'}, 
         ['C/C++', 'Bash', 'WinAPI', 'Angular', 'CEF'], 
         {
           'splash': 'Intern on the Installer team. Contributed to main product installers and related components including Windows System Security and McAfee Gamer Security',
@@ -135,7 +136,7 @@ export class ContentService {
         'May 2019 - Aug 2019',
         'Waterloo, Ontario',
         'assets/img/axonify.jpg',
-        'https://axonify.com/',
+        { site: 'https://axonify.com/'},
         ['Java', 'JS', 'Hibernate', 'Backbone.js'],
         {
           'splash': 'Constructed new, impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
@@ -154,14 +155,103 @@ export class ContentService {
   _getProjects(): Object
   {
   	return {
-  		'memory-sanitizer': this._createContentObject(
+      'bloodhound': this._createContentObject(
+        11,
+        'BLOODHOUND',
+        null,
+        2020,
+        null,
+        'assets/img/mcheck.png',
+        { github: 'https://github.com/DavidPeet8/Bloodhound'},
+        ['C/C++', 'Kernel', 'Syscalls'],
+        {
+          'splash': 'HTTP Packet Sniffer displaying contents of all HTTP network traffic',
+          'details': []
+        },
+        {
+          imgSrc: [],
+          description: `
+            Bloodhound is cool :D
+            `,
+          improvements: [
+            'Allow for packet dropping based on a list of partial URI\'s',
+          ],
+          details: [
+          ]
+         },
+        { 'color': 'white', 'display': 'none' },
+        '/bloodhound'
+      ),
+
+      'note-modules': this._createContentObject(
+        10,
+        'NOTE MODULES',
+        null,
+        2020,
+        null,
+        'assets/img/mcheck.png',
+        { 
+          github: 'https://github.com/DavidPeet8/Note-Modules',
+          site: 'https://davidpeet8.github.io/Note-Modules/#/'
+        },
+        ['C++', 'Angular'],
+        {
+          'splash': 'Markdown & Latex note taking application affording powerful note preprocessing for modular storage',
+          'details': []
+        },
+        {
+          imgSrc: [],
+          description: `
+            Note Modules is cool :D
+          `,
+          improvements: [
+            'Allow Editing in the in browser viewer',
+          ],
+          details: [
+          ]
+         },
+        { 'color': 'white', 'display': 'block' },
+        '/note-modules'
+      ),
+
+  		'todo': this._createContentObject(
+        9,
+        'SIMPLE TODO',
+        null,
+        2020,
+        null,
+        'assets/img/todo_splash.png',
+        {
+          github: 'https://github.com/DavidPeet8/todo',
+          site: 'https://davidpeet8.github.io/todo/#/'
+        },
+        ['Angular', 'Firestore', 'Authentication', 'TypeScript'],
+        {
+          'splash': 'Minimalist Todo application secured with OAuth2 allowing for seamless workflow integration',
+          'details': []
+        },
+        {
+          imgSrc: ['assets/img/todo_main.png', 'assets/img/todo_add_screen.png', 'assets/img/todo_all_done.png', 'assets/img/todo_login.png'],
+          description: `
+            Minimalist but fully featured todo list implementation. Secured using OAuth for your peace of mind.
+          `,
+          improvements: [
+          ],
+          details: [
+          ]
+         },
+        { 'color': 'white', 'display': 'block' },
+        '/todo'
+      ),
+
+      'memory-sanitizer': this._createContentObject(
         8,
         'MEMORY SANITIZER',
         null,
         2020,
         null,
         'assets/img/mcheck.png',
-        'https://github.com/DavidPeet8/Memory-Sanitizer',
+        { github:'https://github.com/DavidPeet8/Memory-Sanitizer'},
         ['C/C++', 'Make', 'Shared Libraries', 'Syscalls', 'Kernel'],
         {
           'splash': 'Software shim intercepting heap allocation library calls and monitoring memory consumption',
@@ -199,7 +289,7 @@ export class ContentService {
         2020,
         null,
         'assets/img/website.png',
-        'https://github.com/DavidPeet8/website',
+        { github: 'https://github.com/DavidPeet8/website'},
         ['JS', 'Angular', 'HTML', 'Sass'],
         {
           'splash': 'Website displaying my passions and accomplishments',
@@ -228,7 +318,7 @@ export class ContentService {
         2019,
         null,
         'assets/img/coin-magnet.jpg',
-        'https://github.com/DavidPeet8/Payment-Tracker',
+        { github: 'https://github.com/DavidPeet8/Payment-Tracker'},
         ['Java', 'Spring', 'REST', 'Postgresql'],
         {
           'splash': 'Tracks banking payments utilizing Postgresql for data persistance and Java Spring for RESTful endpoints',
@@ -257,7 +347,7 @@ export class ContentService {
         2019,
         null,
         'assets/img/git-branch-hierarchy.png',
-        'https://github.com/DavidPeet8/Branch-Visualizer',
+        { github: 'https://github.com/DavidPeet8/Branch-Visualizer'},
         ['Git', 'Java'],
         {
           'splash': 'Terminal utility tracking the parent-child relationship of git branches assisting in generating correct diffs for code reviews',
@@ -286,7 +376,7 @@ export class ContentService {
         2019,
         null,
         'assets/img/highlight-sites.png',
-        'https://github.com/DavidPeet8/Site-Spotlight',
+        { github: 'https://github.com/DavidPeet8/Site-Spotlight'},
         ['JS', 'JQuery', "CSS"],
         {
           'splash': 'Browser extension enabling fast parsing of  google search results by highlighting results from user specified endpoints',
@@ -313,7 +403,7 @@ export class ContentService {
         2019,
         null,
         'assets/img/highlight-sites.png',
-        'https://github.com/DavidPeet8/Gravitate',
+        { github: 'https://github.com/DavidPeet8/Gravitate'},
         ['JS', 'HTML', 'CSS'],
         {
           'splash': 'Physics simulation of bodies orbiting a mass',
@@ -340,7 +430,7 @@ export class ContentService {
         2018,
         null,
         'assets/img/newtab.png',
-        'https://github.com/DavidPeet8/Beautiful-NewTab',
+        { github: 'https://github.com/DavidPeet8/Beautiful-NewTab'},
         ['JS', 'Firebase', 'HTML', 'CSS'],
         {
           'splash': 'Beautiful custom Chrome NewTab page providing hotkeys and personal memos',
@@ -368,7 +458,7 @@ export class ContentService {
         2017,
         null,
         'assets/img/terraria.png',
-        'https://github.com/DavidPeet8/Terraria',
+        { github: 'https://github.com/DavidPeet8/Terraria'},
         ['Java', 'LibGDX', 'Box2D'],
         {
           'splash': 'Emulation of popular game Terraria with a flare of Microsoft Windows comedy',
@@ -401,7 +491,7 @@ export class ContentService {
         2014,
         null,
         'assets/img/linebot2.png',
-        null,
+        {},
         ['C', 'Circuit Components', 'PWM', 'RealTime Programming'],
         {
           'splash': 'Line Following Robot with digital and analogue modes',

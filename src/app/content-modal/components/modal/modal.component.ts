@@ -51,6 +51,11 @@ export class ModalComponent implements OnInit
   	return this.item.modalContent.details;
   }
 
+  hasDetails() : boolean
+  {
+    return this.item.modalContent.details.length > 0;
+  }
+
   getImprovements () : string 
   {
   	return this.item.modalContent.improvements;
@@ -68,7 +73,7 @@ export class ModalComponent implements OnInit
 
   getDescription() : string
   {
-  	return this.item.modalContent.description
+  	return this.item.modalContent.description;
   }
 
   getSlides () : string[]
@@ -81,11 +86,21 @@ export class ModalComponent implements OnInit
 
   getGithub() : string
   {
-    return this.item.url;
+    return this.item.githuburl;
   }
 
   openSite() : void
   {
-    window.open(this.item.url, "_blank");
+    window.open(this.item.githuburl, "_blank");
+  }
+
+  openSiteLink(): void
+  {
+    window.open(this.item.siteurl, "_blank");
+  }
+
+  getSite(): string 
+  {
+    return this.item.siteurl;
   }
 }

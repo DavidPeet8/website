@@ -2,7 +2,8 @@
 	<div #modalContent class="modal-content" (click)="stopPropagation($event)">
 		<p class="close" (click)="closeModal()" >&times;</p>
 		<div class="content">
-			<h1 class="title">{{getProject()}}</h1>
+			<h1 class="title" *ngIf="getSite() == null" >{{getProject()}}</h1>
+			<h1 class="title site-link" *ngIf="getSite() != null" (click)="openSiteLink()"><i class="fas fa-link"></i> {{getProject()}}</h1>
 			<h3 class="date">
 				<i class="far fa-calendar-alt"></i>
 				<p class="inline" innerHTML=" {{getDate()}}   |   {{getTags()}}"></p>
@@ -17,7 +18,7 @@
 			</div>
 			<div class="flex-row">
 				<div class="details">
-					<h3 class="modal-header nowrap">Details:</h3>
+					<h3 class="modal-header nowrap" *ngIf="hasDetails()">Details:</h3>
 					<ul>
 						<li *ngFor="let bullet of getDetails()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 					</ul>
