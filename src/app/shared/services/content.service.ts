@@ -189,18 +189,18 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/mcheck.png',
+        'assets/img/note_modules_2.png',
         { 
           github: 'https://github.com/DavidPeet8/Note-Modules',
           site: 'https://davidpeet8.github.io/Note-Modules/#/'
         },
-        ['C++', 'Angular'],
+        ['C++', 'Angular', 'Python'],
         {
           'splash': 'Markdown & Latex note taking application affording powerful note preprocessing for modular storage',
           'details': []
         },
         {
-          imgSrc: [],
+          imgSrc: ['assets/img/note_modules_1.png', 'assets/img/note_modules_3.png', 'assets/img/note_modules_4.png'],
           description: `
             Note Modules is cool :D
           `,
@@ -492,7 +492,7 @@ export class ContentService {
         null,
         'assets/img/linebot2.png',
         {},
-        ['C', 'Circuit Components', 'PWM', 'RealTime Programming'],
+        ['C', 'PWM', 'RealTime Programming'],
         {
           'splash': 'Line Following Robot with digital and analogue modes',
           'details': []
