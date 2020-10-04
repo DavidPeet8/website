@@ -101,7 +101,7 @@ export class ContentService {
         'Toronto, Ontario',
         'assets/img/huawei.png',
         { site: 'https://www.huawei.com/'},
-        ['C++', 'C', 'Bash', 'LLVM'],
+        ['C++', 'OpenCL C', 'Bash', 'LLVM'],
         {
           'splash': 'Incoming Compiler Software Engineering Intern, will be researching and implementing optimizations in C++ for LLVM compilers',
           'details': [],
@@ -202,28 +202,35 @@ export class ContentService {
         {
           imgSrc: ['assets/img/note_modules_1.png', 'assets/img/note_modules_3.png', 'assets/img/note_modules_4.png'],
           description: `
-            Note Modules is cool :D
+            Note Modules is a storage and rendering application for notes focused on avoiding duplicate information. To achieve this Note Modules follows a local storage architecture. This architecture allows the user to work on notes regardless of network connection and simultaneously eliminates network latency providing blazing-fast searching. 
+            To keep your collection of notes safe from device failure, Note Modules backs your collection up to GitHub, also allowing you to clone and work on your note archive on another device without a second thought.
+            Coming with a powerful CLI, Note Modules is the perfect tool for taking beautiful, cohesive notes while remaining a solution that will scale without issue, keeping your collection of notes manageable even as your archive expands.
           `,
           improvements: [
-            'Allow Editing in the in browser viewer',
+            'Add Editing in the in browser viewer',
+            'Add a tab bar to allow opening multiple notes at once',
+            'Fix the overscroll feature',
+            'Add a threadpool implementation for preprocessing notes, and gauge benifits',
           ],
           details: [
+            'Notes backed up on Github in case of device failures',
+            'Parallel processes allow for highly modular and testable code',
           ]
          },
         { 'color': 'white', 'display': 'block' },
         '/note-modules'
       ),
 
-  		'todo': this._createContentObject(
+  		'deadline': this._createContentObject(
         9,
-        'SIMPLE TODO',
+        'DEADLINE',
         null,
         2020,
         null,
         'assets/img/todo_splash.png',
         {
-          github: 'https://github.com/DavidPeet8/todo',
-          site: 'https://davidpeet8.github.io/todo/#/'
+          github: 'https://github.com/DavidPeet8/deadline',
+          site: 'https://davidpeet8.github.io/deadline/#/'
         },
         ['Angular', 'Firestore', 'Authentication', 'TypeScript'],
         {
@@ -233,15 +240,21 @@ export class ContentService {
         {
           imgSrc: ['assets/img/todo_main.png', 'assets/img/todo_add_screen.png', 'assets/img/todo_all_done.png', 'assets/img/todo_login.png'],
           description: `
-            Minimalist but fully featured todo list implementation. Secured using OAuth for your peace of mind.
+            Deadline is a minimalist but fully featured todo list implementation. Secured using OAuth for your peace of mind, Deadline is the ideal application for organizing the plethora of tasks regularly demanding your attention.
           `,
           improvements: [
+            'Add due dates for todo items',
+            'Add integration with google calendar',
+            'Add email / push notifications on nearing deadlines'
           ],
           details: [
+            'Utilizes OAuth for authentication',
+            'Clean and minimalist UI providing enjoyable experience',
+            'Accessible from multiple devices simultaneously'
           ]
          },
         { 'color': 'white', 'display': 'block' },
-        '/todo'
+        '/deadline'
       ),
 
       'memory-sanitizer': this._createContentObject(
