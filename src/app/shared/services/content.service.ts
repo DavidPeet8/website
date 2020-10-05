@@ -196,7 +196,7 @@ export class ContentService {
         },
         ['C++', 'Angular', 'Python'],
         {
-          'splash': 'Markdown & Latex note taking application affording powerful note preprocessing for modular storage',
+          'splash': 'Markdown & Latex note taking application laser focused on providing tools to prevent duplicate information',
           'details': []
         },
         {
@@ -305,7 +305,7 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/website'},
         ['JS', 'Angular', 'HTML', 'Sass'],
         {
-          'splash': 'Website displaying my passions and accomplishments',
+          'splash': 'Responsive website displaying my passions and accomplishments',
           'details': []
         },
         {
@@ -313,11 +313,12 @@ export class ContentService {
           description: `
             Creating my personal website served both as an introduction to Angular 9 and a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the poor reusability of both HTML and CSS.
           `, 
-          improvements: ['Idea is to prevent need for future improvements, allowing me to simply update content and not spend extra time on my website'], 
+          improvements: [
+            'Paginate projects displayed and utilize lazy loading to decrease site load latancy'
+          ], 
           details: [
-            'Leveraged Angular 9 to create mantainable, scalable code',
-            'Utilized Sass - precompiled CSS to improve styling maintainability',
-            'Employed routing, improving separation of concerns'
+            'Leveraged Angular to create mantainable, scalable code',
+            'Utilized Sass - precompiled CSS to improve styling maintainability'
           ]
         },
         { 'color': 'white', 'display': 'block' },
