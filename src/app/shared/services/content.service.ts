@@ -207,7 +207,7 @@ export class ContentService {
             Coming with a powerful CLI, Note Modules is the perfect tool for taking beautiful, cohesive notes while remaining a solution that will scale without issue, keeping your collection of notes manageable even as your archive expands.
           `,
           improvements: [
-            'Add Editing in the in browser viewer',
+            'Add editing capabilities from the browser',
             'Add a tab bar to allow opening multiple notes at once',
             'Fix the overscroll feature',
             'Add a threadpool implementation for preprocessing notes, and gauge benifits',
