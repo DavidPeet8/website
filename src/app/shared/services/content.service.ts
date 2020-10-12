@@ -71,7 +71,7 @@ export class ContentService {
   		'name': 'David', 
   		'imgPath': 'assets/img/profile.jpg', // Relative path
   		'schoolTerm': '3A', // Ex. 2B
-  		'internshipDate': 'Summer 2021 (Jan-Apr)',
+  		'internshipDate': 'Summer 2021 (May-Aug)',
   	};
   }
 
