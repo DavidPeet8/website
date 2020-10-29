@@ -26,18 +26,38 @@ export class IconBarComponent implements OnInit {
   			break;
   		case 'phone':
   			// Try to place a call if possible
-        window.location.href= "tel:+1-226-505-7050";
+        window.location.href= this.data['links']['phone'];
   			console.log("phone clicked");
   			break;
   		case 'email':
   			// Open default mail provider and address to me
-        window.location.href = "mailto:dapeet@uwaterloo.ca?body=I%20saw%20your%20website!";
+        window.location.href = "mailto:" + this.data['links']['email'] + "?body=I%20saw%20your%20website!";
   			console.log("Email clicked");
   			break;
   		default:
   			console.log("This button has not been implemented");
   			break;
   	}
+  }
+
+  hasPhone(): boolean
+  {
+    return this.data['links']['phone'] != '';
+  }
+
+  hasGithub(): boolean
+  {
+    return this.data['links']['github'] != '';
+  }
+
+  hasEmail(): boolean
+  {
+    return this.data['links']['email'] != '';
+  }
+
+  hasLinkedIn(): boolean
+  {
+    return this.data['links']['linkedIn'] != '';
   }
 
 }

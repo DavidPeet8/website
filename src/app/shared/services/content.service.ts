@@ -79,13 +79,13 @@ export class ContentService {
   {
   	return {
   		'faviconPath': './favicon.ico',
-  		'resumePath': 'assets/docs/resume.pdf',
+  		'resumePath': 'assets/docs/peet_david_resume.pdf',
   		'windowTitle': 'David Peet',
   		'links': {
   			'github': 'https://github.com/DavidPeet8',
   			'linkedIn': 'https://www.linkedin.com/in/dapeet/',
   			'email': 'dapeet@uwaterloo.ca',
-  			'phone': '226-505-7050'
+  			'phone': '' //tel:+1-XXX-XXX-XXXX
   		},
   	};
   }
@@ -101,9 +101,9 @@ export class ContentService {
         'Toronto, Ontario',
         'assets/img/huawei.png',
         { site: 'https://www.huawei.com/'},
-        ['C++', 'OpenCL C', 'Bash', 'LLVM'],
+        ['C++', 'OpenCL', 'LLVM'],
         {
-          'splash': 'Incoming Compiler Software Engineering Intern, will be researching and implementing optimizations in C++ for LLVM compilers',
+          'splash': 'Researching and implementing compiler optimizations for compute kernels written in OpenCL taking advantage of GPU hardware',
           'details': [],
         },
         {},
@@ -117,9 +117,9 @@ export class ContentService {
         'Waterloo, Ontario', 
         'assets/img/mcafee.png', 
         { site: 'https://www.mcafee.com/'}, 
-        ['C/C++', 'Bash', 'WinAPI', 'Angular', 'CEF'], 
+        ['C++', 'Bash', 'Angular', 'CEF'], 
         {
-          'splash': 'Intern on the Installer team. Contributed to main product installers and related components including Windows System Security and McAfee Gamer Security',
+          'splash': 'Reducing install time of core McAfee security solutions including Windows System Security and McAfee Gamer Security',
           'details': [
             'Improved product installers by <b>profiling compiled binaries</b> in search of bottlenecks',
             'Solved critical issues shipping to <b>500+ million users</b>',
@@ -265,7 +265,7 @@ export class ContentService {
         null,
         'assets/img/mcheck.png',
         { github:'https://github.com/DavidPeet8/Memory-Sanitizer'},
-        ['C/C++', 'Make', 'Shared Libraries', 'Syscalls', 'Kernel'],
+        ['C/C++', 'Make', 'Shared Libraries', 'Syscalls'],
         {
           'splash': 'Software shim intercepting heap allocation library calls and monitoring memory consumption',
           'details': []
@@ -303,7 +303,7 @@ export class ContentService {
         null,
         'assets/img/website.png',
         { github: 'https://github.com/DavidPeet8/website'},
-        ['JS', 'Angular', 'HTML', 'Sass'],
+        ['JS', 'Angular'],
         {
           'splash': 'Responsive website displaying my passions and accomplishments',
           'details': []
@@ -391,7 +391,7 @@ export class ContentService {
         null,
         'assets/img/highlight-sites.png',
         { github: 'https://github.com/DavidPeet8/Site-Spotlight'},
-        ['JS', 'JQuery', "CSS"],
+        ['JS', 'JQuery'],
         {
           'splash': 'Browser extension enabling fast parsing of  google search results by highlighting results from user specified endpoints',
           'details': []
@@ -418,7 +418,7 @@ export class ContentService {
         null,
         'assets/img/highlight-sites.png',
         { github: 'https://github.com/DavidPeet8/Gravitate'},
-        ['JS', 'HTML', 'CSS'],
+        ['JS'],
         {
           'splash': 'Physics simulation of bodies orbiting a mass',
           'details': []
@@ -445,7 +445,7 @@ export class ContentService {
         null,
         'assets/img/newtab.png',
         { github: 'https://github.com/DavidPeet8/Beautiful-NewTab'},
-        ['JS', 'Firebase', 'HTML', 'CSS'],
+        ['JS', 'Firebase'],
         {
           'splash': 'Beautiful custom Chrome NewTab page providing hotkeys and personal memos',
           'details': []
@@ -508,12 +508,12 @@ export class ContentService {
         {},
         ['C', 'PWM', 'RealTime Programming'],
         {
-          'splash': 'Line Following Robot with digital and analogue modes',
+          'splash': 'Line Following Robot with digital and analogue following modes',
           'details': []
         },
         {
           imgSrc: ['assets/img/linebot.jpg'], 
-          description: "This Robot applies knowledge of circuit design and hardware components combined with instructions written in C to either smoothly (analogue mode) or choppily (digital mode) follow a line.", 
+          description: "This Robot applies knowledge of circuit design and hardware components combined with C source code to smooth the path of the robot when follwing a line", 
           improvements: [
             'Implement the ability to roam in search of a line if started without a line to follow'
           ], 
