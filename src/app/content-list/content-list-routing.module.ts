@@ -15,11 +15,12 @@ const routes: Routes = [
 	{ path: 'terraria', component: ModalComponent },
 	{ path: 'line-bot', component: ModalComponent },
 	{ path: 'deadline', component: ModalComponent },
-	{ path: 'note-modules', component: ModalComponent }
+	{ path: 'note-modules', component: ModalComponent },
+	{ path: 'binary-io', component: ModalComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forChild(routes)],
+	exports: [RouterModule]
 })
 export class ContentListRoutingModule { }

@@ -1,6 +1,6 @@
 @import 'mixins'
 
-@mixin getCompanyIconSize() 
+@mixin getCompanyIconSize()
 	@include scaleProp(width, 60px, 100px, 150px, 200px, 300px)
 	@include scaleProp(height, 60px, 100px, 150px, 200px, 300px)
 	@include scaleProp(padding, 3px, 8px, 10px, 10px, 15px)
@@ -10,25 +10,25 @@
 	border-radius: 15px
 	background-color: transparent
 
-
 // Connect these with a subway system type thing
 
 .img-container
 	border-radius: 100%
 	background-color: $grey
-	@include getCompanyIconSize()
 	cursor: pointer
+	@include getCompanyIconSize()
 
-	.img 
-		display: inline-block
-		object-fit: cover
-		width: inherit
-		height: inherit
-		border-radius: 100%
-		
+.img
+	display: inline-block
+	object-fit: cover
+	width: inherit
+	height: inherit
+	border-radius: 100%
+
 .text
 	display: inline-block
 	width: 100%
+	font-weight: 500
 	@include regularTextSize()
 
 .title
@@ -47,7 +47,7 @@
 	border-radius: 10px
 	margin: 20px
 	background-size: cover
-	@include applyXSmall(margin, 10px)	
+	@include applyXSmall(margin, 10px)
 
 .content-item-container:focus
 	outline: none
@@ -91,4 +91,3 @@
 	border: 0
 	border-top: 1px dashed $grey
 	margin: 10px
-
