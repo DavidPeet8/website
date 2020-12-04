@@ -1,22 +1,29 @@
 <div class="fullwidth content-item">
-	<div [routerLink]="['./' + item.partialURI]" [ngClass]="getClasses()" [ngStyle]="getStyle()" [@projectGrow]="isWork ? null : isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()" (mouseout)="onMouseLeaveContainer()">
-		<div *ngIf="isWork" [@grow]="isWork ? (isBigImg ? 'mouseIn' : 'mouseOut') : null" (click)="goToSite()" (mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container hidden-xsmall">
+	<div [routerLink]="['./' + item.partialURI]" [ngClass]="getClasses()" [ngStyle]="getStyle()"
+		[@projectGrow]="isWork ? null : isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()"
+		(mouseout)="onMouseLeaveContainer()">
+		<div *ngIf="isWork" [@grow]="isWork ? (isBigImg ? 'mouseIn' : 'mouseOut') : null" (click)="goToSite()"
+			(mouseover)="onMouseEnterImg()" (mouseout)="onMouseLeaveImg()" class="img-container hidden-xsmall">
 			<img class="img" src="{{item.imgPath}}">
 		</div>
-		
+
 		<div class="text">
 			<div class="title-bar">
 				<div *ngIf="isWork" (click)="goToSite()" class="img-container hidden-large">
 					<img class="img" src="{{item.imgPath}}">
 				</div>
-				<h3 class="title">{{ getPrimary() }} {{ getSecondary() }}</h3>
+				<div *ngIf="isWork" class="work-title">
+					<h3 class="position">{{ getPosition() }}</h3>
+					<h3 (click)="goToSite()" class="title title-work"> {{ getName() }}</h3>
+				</div>
+				<h3 *ngIf="!isWork" class="title title-project">{{ getName() }}</h3>
 			</div>
-			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{getDate()}}</h5>
+			<h5 class="item-date"><i class="far fa-calendar-alt"></i> {{ getDate() }}</h5>
 			<div class="content">
-				<p>{{getSplashContent()}}</p>
-				<br>
+				<p>{{ getSplashContent() }}</p>
 				<ul>
-					<li class="bullet-point" *ngFor="let bullet of getBullets()" [innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
+					<li class="bullet-point" *ngFor="let bullet of getBullets()"
+						[innerHTML]="sanitizer.bypassSecurityTrustHtml(bullet)"></li>
 				</ul>
 			</div>
 			<app-tag-bar [tags]="item.tags" [css]="item.css"></app-tag-bar>

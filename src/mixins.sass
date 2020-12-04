@@ -35,30 +35,33 @@
 	@media only screen and (min-width: $largeWidthMin)
 		display: none
 
-@mixin scalePadding($paddingSmall, $paddingMed, $paddingLarge) 
+@mixin scalePadding($paddingSmall, $paddingMed, $paddingLarge)
 	@include scaleProp(padding-top, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
 	@include scaleProp(padding-left, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
 	@include scaleProp(padding-right, $paddingSmall, $paddingSmall, $paddingMed, $paddingLarge, $paddingLarge)
 
 @mixin regularTextSize()
+	@include scaleProp(font-size, 13pt, 15pt, 15pt, 17pt, 17pt)
+
+@mixin smallTextSize()
 	@include scaleProp(font-size, 10pt, 11pt, 12pt, 14pt, 16pt)
 
 @mixin sectionHeaderTextSize()
 	@include scaleProp(font-size, 16pt, 20pt, 25pt, 40pt, 40pt)
 
 @mixin headerTextSize()
-	@include scaleProp(font-size, 14pt, 18pt, 20pt, 30pt, 30pt)
+	@include scaleProp(font-size, 14pt, 18pt, 20pt, 25pt, 28pt)
 
-@mixin splashTextSize() 
+@mixin splashTextSize()
 	@include scaleProp(font-size, 35pt, 40pt, 70pt, 70pt, 70pt)
 
 @mixin quoteTextSize()
+	@include scaleProp(font-size, 14pt, 14pt, 16pt, 18pt, 20pt)
+
+@mixin iconSize()
 	@include scaleProp(font-size, 14pt, 14pt, 20pt, 20pt, 20pt)
 
-@mixin iconSize() 
-	@include scaleProp(font-size, 14pt, 14pt, 20pt, 20pt, 20pt)
-
-@mixin iconTextSize() 
+@mixin iconTextSize()
 	@include scaleProp(font-size, 12pt, 12pt, 18pt, 18pt, 18pt)
 
 @mixin flex($contentJustification)

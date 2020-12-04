@@ -56,12 +56,12 @@ export class ContentItemComponent implements OnInit {
 
   }
 
-  getPrimary(): string {
+  getName(): string {
     return this.item.name;
   }
 
-  getSecondary(): string {
-    return (this.item.position ? " - " + this.item.position : "");
+  getPosition(): string {
+    return this.item.position;
   }
 
   getImg(): string {
@@ -93,7 +93,7 @@ export class ContentItemComponent implements OnInit {
   }
 
   goToSite(): void {
-    window.open(this.item.url, "_blank");
+    window.open(this.item.siteurl, "_blank");
   }
 
   getClasses(): Object {

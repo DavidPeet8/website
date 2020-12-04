@@ -7,49 +7,29 @@ import { ContentService } from '@shared/services/content.service'
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-	data;
-  headerText:string[] = ['Developer.', 'Athlete.', 'Architect.'];
-  typewriterText:string;
-  headerTextWordIdx:number = 0;
-  headerTextIdx:number = 0;
+  data;
+  headerText: string;
+  expression: string;
 
-  constructor(private contentService: ContentService) {
-    this._typingCallBack = this._typingCallBack.bind(this);
-  }
+  constructor(private contentService: ContentService) { }
 
   ngOnInit(): void {
-  	this.data = this.contentService.getData(['header']);
-    this._typingCallBack();
+    this.data = this.contentService.getData(['header']);
+
+    let rand = Math.floor(Math.random() * this.data.headers.length);
+    this.headerText = this.data.headers[rand];
+
+    rand = Math.floor(Math.random() * this.data.expressions.length);
+    this.expression = this.data.expressions[rand];
   }
 
-  getBackgroundImg() : Object
-  {
-  	return {
-  		'background-image': this.data.imgPath
-  	};
+  getBackgroundImg(): Object {
+    return {
+      'background-image': this.data.imgPath
+    };
   }
 
-  _typingCallBack() : void 
-  {
-    let timeoutConstant: number = 0;
-
-    this.headerTextIdx++;
-    if (this.headerTextIdx == this.headerText[this.headerTextWordIdx].length) 
-    {
-      this.headerTextIdx = 0;
-      this.headerTextWordIdx++;
-    }
-    if (this.headerTextWordIdx == this.headerText.length) 
-    {
-      this.headerTextWordIdx = 0;
-    }
-    if(this.headerTextIdx == this.headerText[this.headerTextWordIdx].length - 1)
-    { 
-      timeoutConstant = 1000; 
-    }
-
-    this.typewriterText = this.headerText[this.headerTextWordIdx].slice(0, this.headerTextIdx + 1);
-    setTimeout(this._typingCallBack, Math.random() * 180 + 100 + timeoutConstant, this);
+  getExpression(): string {
+    return this.expression;
   }
-
 }

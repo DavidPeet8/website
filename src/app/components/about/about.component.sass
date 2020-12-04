@@ -16,10 +16,21 @@ img
 
 .about
 	display: inline-block
+	color: $grey
 
 .about-text
-	padding-top: 10px
+	margin-top: 10px
 	margin-bottom: 30px
+
+.text,
+.text > a,
+.text i,
+.text > span
+	@include scaleProp(font-size, 13pt, 15pt, 15pt, 17pt, 17pt)
+
+.text > a,
+.text > i
+	color: $grey
 
 .about-section
 	width: 100%
@@ -28,11 +39,12 @@ img
 	margin: 0 auto
 	box-sizing: border-box
 	align-items: center
-	@include scalePadding(10px, 25px, 50px)
+	@include scaleProp(margin-top, 10px, 10px, 25px, 25px, 50px)
+	@include scaleProp(margin-bottom, 10px, 10px, 25px, 25px, 50px)
 
 .section-header-text
 	font-family: 'Montserrat', sans-serif
-	font-weight: 700
+	font-weight: 600
 	@include sectionHeaderTextSize()
 
 .btn
@@ -54,7 +66,6 @@ img
 	color: $grey
 	transition: 0.2s ease-in-out
 
-
 .button-row
 	margin-top: 10px
 	display: flex
@@ -63,6 +74,20 @@ img
 	flex-direction: row
 	justify-content: center
 	align-items: center
+	font-family: 'Quicksand'
+	@incude smallTextSize()
 
 .separator
 	border: 1px solid $grey
+
+.text
+	@include scaleProp(margin-bottom, 10px, 15px, 15px, 17px, 17px)
+
+.beg
+	@include scaleProp(margin-bottom, 20px, 25px, 25px, 27px, 27px)
+
+.location
+	font-style: italic
+
+.location-icon
+	margin-right: 10px

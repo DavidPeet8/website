@@ -1,9 +1,9 @@
 @import 'mixins'
 
 @mixin getCompanyIconSize()
-	@include scaleProp(width, 60px, 100px, 150px, 200px, 300px)
-	@include scaleProp(height, 60px, 100px, 150px, 200px, 300px)
-	@include scaleProp(padding, 3px, 8px, 10px, 10px, 15px)
+	@include scaleProp(width, 60px, 100px, 150px, 200px, 200px)
+	@include scaleProp(height, 60px, 100px, 150px, 200px, 200px)
+	@include scaleProp(padding, 3px, 8px, 8px, 10px, 10px)
 	@include scaleProp(margin-right, 10px, 30px, 50px, 50px, 50px)
 
 .content-item
@@ -31,10 +31,24 @@
 	font-weight: 500
 	@include regularTextSize()
 
-.title
+.position
 	font-family: 'Montserrat', sans-serif
-	font-weight: 700
+	font-weight: 400
+	margin-right: 70px
 	@include headerTextSize()
+
+.title-work
+	font-weight: 600
+
+.title
+	font-style: normal
+	cursor: pointer
+	text-decoration: none
+	font-family: 'Montserrat', sans-serif
+	@include headerTextSize()
+
+.title-project
+	font-weight: 700
 
 .title-bar
 	display: flex
@@ -45,7 +59,8 @@
 
 .content-item-container
 	border-radius: 10px
-	margin: 20px
+	margin-top: 20px
+	margin-bottom: 20px
 	background-size: cover
 	@include applyXSmall(margin, 10px)
 
@@ -66,6 +81,8 @@
 
 .content
 	padding-top: 10px
+	font-family: 'Quicksand'
+	font-weight: 400
 
 .details-separator
 	margin: 10px 0
@@ -91,3 +108,16 @@
 	border: 0
 	border-top: 1px dashed $grey
 	margin: 10px
+
+.work-title
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: flex-end
+	width: 100%
+
+.item-date
+	font-family: 'Quicksand'
+	font-weight: 400
+	@include smallTextSize()

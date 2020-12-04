@@ -54,8 +54,8 @@ export class ContentService {
 
   _getHeader(): Object {
     return {
-      'mainHeader': 'Developer.',
-      'expressionLine': 'I google better than the occasional bear',
+      'headers': ['Developer.', 'Athlete.', 'Architect.'],
+      'expressions': ['I Google better than your average bear', `It's not a bug it's a feature`, 'It works on my machine'],
       'imgPath': 'url("assets/img/codesnippet-min.jpg")'
     };
   }
@@ -64,8 +64,9 @@ export class ContentService {
     return {
       'name': 'David',
       'imgPath': 'assets/img/profile.jpg', // Relative path
-      'schoolTerm': '3A', // Ex. 2B
+      'schoolTerm': '3rd year', // Ex. 2B
       'internshipDate': 'Summer 2021 (May-Aug)',
+      'bigSplash': 'Software Developer'
     };
   }
 
@@ -89,7 +90,7 @@ export class ContentService {
         2,
         'Huawei',
         'Compiler Software Engineering Intern',
-        'Sept 2020 - Dec 2020',
+        'Sept - Dec 2020',
         'Toronto, Ontario',
         'assets/img/huawei.png',
         { site: 'https://www.huawei.com/' },
@@ -105,18 +106,14 @@ export class ContentService {
         1,
         'McAfee',
         'Software Developer Intern',
-        'Jan 2020 - Apr 2020',
+        'Jan - Apr 2020',
         'Waterloo, Ontario',
         'assets/img/mcafee.png',
         { site: 'https://www.mcafee.com/' },
-        ['C++', 'Bash', 'Angular', 'CEF'],
+        ['C++', 'Bash', 'Angular'],
         {
-          'splash': 'Reducing install time of core McAfee security solutions including Windows System Security and McAfee Gamer Security',
-          'details': [
-            'Improved product installers by <b>profiling compiled binaries</b> in search of bottlenecks',
-            'Solved critical issues shipping to <b>500+ million users</b>',
-            '<b>Prevented unnecessary forced device reboots</b> affecting millions of customers globally'
-          ]
+          'splash': 'Reducing install time of McAfee security solutions including Windows System Security and McAfee Gamer Security',
+          'details': []
         },
         {},
         { 'color': this.grey }
@@ -125,18 +122,14 @@ export class ContentService {
         0,
         'Axonify',
         'Software Developer Intern',
-        'May 2019 - Aug 2019',
+        'May - Aug 2019',
         'Waterloo, Ontario',
         'assets/img/axonify.jpg',
         { site: 'https://axonify.com/' },
         ['Java', 'JS', 'Hibernate', 'Backbone.js'],
         {
-          'splash': 'Constructed new, impactful product features by leveraging Hibernate ORM, RESTful data transfer, and Backbone.js',
-          'details': [
-            'Developed <b>RESTful API endpoints</b> and extended functionality of legacy endpoints',
-            '<b>Spearheaded</b> client side <b>development</b> for large <b>features, shipping to 100 000+ users</b> worldwide',
-            'Leveraged <b>Mockito & JUnit</b> allowing for simple unit testing'
-          ]
+          'splash': 'Building out new onboarding feature for the employee training system of tomorrow',
+          'details': []
         },
         {},
         { 'color': this.grey }
@@ -186,7 +179,7 @@ export class ContentService {
         },
         ['C++', 'CMake'],
         {
-          'splash': 'Enables direct reading and writing of binary files using a traditional text editor',
+          'splash': 'Directly read and write binary files using a traditional text editor',
           'details': []
         },
         {
@@ -265,7 +258,7 @@ export class ContentService {
           github: 'https://github.com/DavidPeet8/deadline',
           site: 'https://davidpeet8.github.io/deadline/#/'
         },
-        ['Angular', 'Firestore', 'Authentication', 'TypeScript'],
+        ['Angular', 'Firestore', 'Authentication'],
         {
           'splash': 'Minimalist Todo application secured with OAuth2 allowing for seamless workflow integration',
           'details': []
@@ -298,7 +291,7 @@ export class ContentService {
         null,
         'assets/img/mcheck.png',
         { github: 'https://github.com/DavidPeet8/Memory-Sanitizer' },
-        ['C/C++', 'Make', 'Shared Libraries', 'Syscalls'],
+        ['C/C++', 'Make', 'Syscalls'],
         {
           'splash': 'Software shim intercepting heap allocation library calls and monitoring memory consumption',
           'details': []
