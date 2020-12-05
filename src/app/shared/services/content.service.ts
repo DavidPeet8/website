@@ -96,7 +96,7 @@ export class ContentService {
         { site: 'https://www.huawei.com/' },
         ['C++', 'OpenCL', 'LLVM'],
         {
-          'splash': 'Researching and implementing compiler optimizations for compute kernels written in OpenCL taking advantage of GPU hardware',
+          'splash': 'Building out a heterogeneous optimizing compiler for GPU shaders and GPU compute workloads',
           'details': [],
         },
         {},
@@ -128,7 +128,7 @@ export class ContentService {
         { site: 'https://axonify.com/' },
         ['Java', 'JS', 'Hibernate', 'Backbone.js'],
         {
-          'splash': 'Building out new onboarding feature for the employee training system of tomorrow',
+          'splash': 'Designing & implementing new features for employee onboarding in the employee training system of tomorrow',
           'details': []
         },
         {},
@@ -222,7 +222,7 @@ export class ContentService {
         },
         ['C++', 'Angular', 'Python'],
         {
-          'splash': 'Markdown & Latex note taking application laser focused on providing tools to prevent duplicate information',
+          'splash': 'Create & organize stylish technical documents without duplicating information (and giving everyone a headache)',
           'details': []
         },
         {
@@ -236,7 +236,7 @@ export class ContentService {
             'Add editing capabilities from the browser',
             'Add a tab bar to allow opening multiple notes at once',
             'Fix the overscroll feature',
-            'Add a threadpool implementation for preprocessing notes, and gauge benifits',
+            'Add a threadpool implementation for preprocessing notes, and gauge benefits',
           ],
           details: [
             'Notes backed up on Github in case of device failures',
@@ -260,7 +260,7 @@ export class ContentService {
         },
         ['Angular', 'Firestore', 'Authentication'],
         {
-          'splash': 'Minimalist Todo application secured with OAuth2 allowing for seamless workflow integration',
+          'splash': 'Minimalistic method of organizing reminders with seamless workflow integration',
           'details': []
         },
         {
@@ -293,7 +293,7 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/Memory-Sanitizer' },
         ['C/C++', 'Make', 'Syscalls'],
         {
-          'splash': 'Software shim intercepting heap allocation library calls and monitoring memory consumption',
+          'splash': 'Software shim monitoring process memory consumption & checking for leaks',
           'details': []
         },
         {
@@ -331,7 +331,7 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/website' },
         ['JS', 'Angular'],
         {
-          'splash': 'Responsive website displaying my passions and accomplishments',
+          'splash': 'A place to share my interests & past projects',
           'details': []
         },
         {
@@ -340,10 +340,10 @@ export class ContentService {
             Creating my personal website served both as an introduction to Angular 9 and a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the poor reusability of both HTML and CSS.
           `,
           improvements: [
-            'Paginate projects displayed and utilize lazy loading to decrease site load latancy'
+            'Paginate projects displayed and utilize lazy loading to decrease site load latency'
           ],
           details: [
-            'Leveraged Angular to create mantainable, scalable code',
+            'Leveraged Angular to create maintainable, scalable code',
             'Utilized Sass - precompiled CSS to improve styling maintainability'
           ]
         },
@@ -361,7 +361,7 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/Payment-Tracker' },
         ['Java', 'Spring', 'REST', 'Postgresql'],
         {
-          'splash': 'Tracks banking payments utilizing Postgresql for data persistance and Java Spring for RESTful endpoints',
+          'splash': 'Tracker for upcoming banking payments made to make life simpler',
           'details': []
         },
         {
@@ -390,7 +390,7 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/Branch-Visualizer' },
         ['Git', 'Java'],
         {
-          'splash': 'Terminal utility tracking the parent-child relationship of git branches assisting in generating correct diffs for code reviews',
+          'splash': 'Source control visualizer - your best friend for generating correct diffs for code review',
           'details': []
         },
         {
@@ -419,7 +419,7 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/Site-Spotlight' },
         ['JS', 'JQuery'],
         {
-          'splash': 'Browser extension enabling fast parsing of  google search results by highlighting results from user specified endpoints',
+          'splash': 'Boosting productivity by highlighting search results you\'re interested in',
           'details': []
         },
         {
@@ -473,18 +473,19 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/Beautiful-NewTab' },
         ['JS', 'Firebase'],
         {
-          'splash': 'Beautiful custom Chrome NewTab page providing hotkeys and personal memos',
+          'splash': 'Stylish Newtab page putting you one keystroke away from your favourite sites',
           'details': []
         },
         {
           imgSrc: ['assets/img/newtab2.png'],
-          description: "Easy Access NewTab Page is a beautiful newtab page designed to have a personal touch while providing increased functionality. This newtab page includes hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.",
+          description: "Beautiful NewTab is designed to have a personal touch while providing increased functionality. This newtab page includes hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.",
           improvements: [
-            'Sanitize user input to prevent script injection attacks',
+            'Sanitize user input to prevent unwanted input rendering',
             'Improve scalability for different browser window sizes'
           ],
           details: [
             'Leveraged <b>Firebase</b> to persist daily memos which reset at the end of the day',
+            'Although user input is not sanitized, as there is no backend and every user has their own page, there is no security risk'
           ]
         },
         { 'color': 'white', 'display': 'block', 'background-position': '50% 0%' },
@@ -501,7 +502,7 @@ export class ContentService {
         { github: 'https://github.com/DavidPeet8/Terraria' },
         ['Java', 'LibGDX', 'Box2D'],
         {
-          'splash': 'Emulation of popular game Terraria with a flare of Microsoft Windows comedy',
+          'splash': 'Terraria... but with a dash of MS Windows comedy',
           'details': []
         },
         {
@@ -532,9 +533,9 @@ export class ContentService {
         null,
         'assets/img/linebot2.png',
         {},
-        ['C', 'PWM', 'RealTime Programming'],
+        ['C', 'PWM'],
         {
-          'splash': 'Line Following Robot with digital and analogue following modes',
+          'splash': 'Line following robot with digital and analogue following modes',
           'details': []
         },
         {
