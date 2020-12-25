@@ -55,7 +55,13 @@ export class ContentService {
   _getHeader(): Object {
     return {
       'headers': ['Developer.', 'Athlete.', 'Architect.'],
-      'expressions': ['I Google better than your average bear', `It's not a bug it's a feature`, 'It works on my machine'],
+      'expressions': [
+        'I Google better than your average bear',
+        "It's not a bug it's a feature",
+        'It works on my machine',
+        'I � Unicode',
+        "That's not a data breach ... it's a surprise backup"
+      ],
       'imgPath': 'url("assets/img/codesnippet-min.jpg")'
     };
   }
@@ -147,7 +153,7 @@ export class ContentService {
         null,
         'assets/img/mcheck.png',
         { github: 'https://github.com/DavidPeet8/Bloodhound' },
-        ['C/C++', 'Kernel', 'Syscalls'],
+        ['C/C++', 'Kernel'],
         {
           'splash': 'HTTP Packet Sniffer displaying contents of all HTTP network traffic',
           'details': []
@@ -291,7 +297,7 @@ export class ContentService {
         null,
         'assets/img/mcheck.png',
         { github: 'https://github.com/DavidPeet8/Memory-Sanitizer' },
-        ['C/C++', 'Make', 'Syscalls'],
+        ['C/C++', 'Make'],
         {
           'splash': 'Software shim monitoring process memory consumption & checking for leaks',
           'details': []
