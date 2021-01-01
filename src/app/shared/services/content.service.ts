@@ -62,14 +62,14 @@ export class ContentService {
         'I � Unicode',
         "That's not a data breach ... it's a surprise backup"
       ],
-      'imgPath': 'url("assets/img/codesnippet-min.jpg")'
+      'imgPath': 'url("assets/img/codesnippet-min.webp")'
     };
   }
 
   _getAbout(): Object {
     return {
       'name': 'David',
-      'imgPath': 'assets/img/profile.jpg', // Relative path
+      'imgPath': 'assets/img/profile.webp', // Relative path
       'schoolTerm': '3rd year', // Ex. 2B
       'internshipDate': 'Summer 2021 (May-Aug)',
       'bigSplash': 'Software Developer'
@@ -98,7 +98,7 @@ export class ContentService {
         'Compiler Software Engineering Intern',
         'Sept - Dec 2020',
         'Toronto, Ontario',
-        'assets/img/huawei.png',
+        'assets/img/huawei.webp',
         { site: 'https://www.huawei.com/' },
         ['C++', 'OpenCL', 'LLVM'],
         {
@@ -114,7 +114,7 @@ export class ContentService {
         'Software Developer Intern',
         'Jan - Apr 2020',
         'Waterloo, Ontario',
-        'assets/img/mcafee.png',
+        'assets/img/mcafee.webp',
         { site: 'https://www.mcafee.com/' },
         ['C++', 'Bash', 'Angular'],
         {
@@ -130,7 +130,7 @@ export class ContentService {
         'Software Developer Intern',
         'May - Aug 2019',
         'Waterloo, Ontario',
-        'assets/img/axonify.jpg',
+        'assets/img/axonify.webp',
         { site: 'https://axonify.com/' },
         ['Java', 'JS', 'Hibernate', 'Backbone.js'],
         {
@@ -151,7 +151,7 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/mcheck.png',
+        'assets/img/mcheck.webp',
         { github: 'https://github.com/DavidPeet8/Bloodhound' },
         ['C/C++', 'Kernel'],
         {
@@ -179,7 +179,7 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/binary_io_1.png',
+        'assets/img/binary_io_1.webp',
         {
           github: 'https://github.com/DavidPeet8/BinaryIO'
         },
@@ -189,7 +189,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/binary_io_1.png', 'assets/img/binary_io_2.png'],
+          imgSrc: ['assets/img/binary_io_1.webp', 'assets/img/binary_io_2.webp'],
           description: `
             Binary IO is a tool for:
             <ul>
@@ -221,7 +221,7 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/note_modules_2.png',
+        'assets/img/note_modules_2.webp',
         {
           github: 'https://github.com/DavidPeet8/Note-Modules',
           site: 'https://davidpeet8.github.io/Note-Modules/#/'
@@ -232,7 +232,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/note_modules_1.png', 'assets/img/note_modules_3.png', 'assets/img/note_modules_4.png'],
+          imgSrc: ['assets/img/note_modules_1.webp', 'assets/img/note_modules_3.webp', 'assets/img/note_modules_4.webp'],
           description: `
             Note Modules is a storage and rendering application for notes focused on avoiding duplicate information. To achieve this Note Modules follows a local storage architecture. This architecture allows the user to work on notes regardless of network connection and simultaneously eliminates network latency providing blazing-fast searching.
             To keep your collection of notes safe from device failure, Note Modules backs your collection up to GitHub, also allowing you to clone and work on your note archive on another device without a second thought.
@@ -259,7 +259,7 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/todo_splash.png',
+        'assets/img/todo_splash.webp',
         {
           github: 'https://github.com/DavidPeet8/deadline',
           site: 'https://davidpeet8.github.io/deadline/#/'
@@ -270,7 +270,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/todo_main.png', 'assets/img/todo_add_screen.png', 'assets/img/todo_all_done.png', 'assets/img/todo_login.png'],
+          imgSrc: ['assets/img/todo_main.webp', 'assets/img/todo_add_screen.webp', 'assets/img/todo_all_done.webp', 'assets/img/todo_login.webp'],
           description: `
             Deadline is a minimalist but fully featured todo list implementation. Secured using OAuth for your peace of mind, Deadline is the ideal application for organizing the plethora of tasks regularly demanding your attention.
           `,
@@ -295,7 +295,7 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/mcheck.png',
+        'assets/img/mcheck.webp',
         { github: 'https://github.com/DavidPeet8/Memory-Sanitizer' },
         ['C/C++', 'Make'],
         {
@@ -333,7 +333,7 @@ export class ContentService {
         null,
         2020,
         null,
-        'assets/img/website.png',
+        'assets/img/website.webp',
         { github: 'https://github.com/DavidPeet8/website' },
         ['JS', 'Angular'],
         {
@@ -341,7 +341,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/website2.png', 'assets/img/website3.png', 'assets/img/website4.png'],
+          imgSrc: ['assets/img/website2.webp', 'assets/img/website3.webp', 'assets/img/website4.webp'],
           description: `
             Creating my personal website served both as an introduction to Angular 9 and a way of updating my previous website to increase maintainability. My previous websites have been composed of only the base web languages HTML, CSS, and JS. While I gained a deep understanding of those languages throughout previous website iterations, those sites lacked maintainability due to the poor reusability of both HTML and CSS.
           `,
@@ -363,7 +363,7 @@ export class ContentService {
         null,
         2019,
         null,
-        'assets/img/coin-magnet.jpg',
+        'assets/img/coin-magnet.webp',
         { github: 'https://github.com/DavidPeet8/Payment-Tracker' },
         ['Java', 'Spring', 'REST', 'Postgresql'],
         {
@@ -392,7 +392,7 @@ export class ContentService {
         null,
         2019,
         null,
-        'assets/img/git-branch-hierarchy.png',
+        'assets/img/git-branch-hierarchy.webp',
         { github: 'https://github.com/DavidPeet8/Branch-Visualizer' },
         ['Git', 'Java'],
         {
@@ -400,7 +400,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/git-branch-hierarchy-square.png'],
+          imgSrc: ['assets/img/git-branch-hierarchy-square.webp'],
           description: 'Git branch hierarchy solves the issue of remembering the parent branch for a feature branch when trying to create a code review. Git stores branches in a flat list format, which effectively removes information about the base branch for any given branch. Without extra tooling, developers need to keep track of the branch tree for their local repository themselves. In projects where one developer is simultaneously working on multiple branches or is waiting for changes from another team, it becomes difficult to keep track of the branch tree. This scenario was the inspiration for this project. This project serves as a replacement for the Git branch command, but only supporting branch creation and deletion.',
           improvements: [
             'Look into overwriting the Git namespace allowing for identical command line interface',
@@ -421,7 +421,7 @@ export class ContentService {
         null,
         2019,
         null,
-        'assets/img/highlight-sites.png',
+        'assets/img/highlight-sites.webp',
         { github: 'https://github.com/DavidPeet8/Site-Spotlight' },
         ['JS', 'JQuery'],
         {
@@ -448,7 +448,7 @@ export class ContentService {
         null,
         2019,
         null,
-        'assets/img/highlight-sites.png',
+        'assets/img/highlight-sites.webp',
         { github: 'https://github.com/DavidPeet8/Gravitate' },
         ['JS'],
         {
@@ -475,7 +475,7 @@ export class ContentService {
         null,
         2018,
         null,
-        'assets/img/newtab.png',
+        'assets/img/newtab.webp',
         { github: 'https://github.com/DavidPeet8/Beautiful-NewTab' },
         ['JS', 'Firebase'],
         {
@@ -483,7 +483,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/newtab2.png'],
+          imgSrc: ['assets/img/newtab2.webp'],
           description: "Beautiful NewTab is designed to have a personal touch while providing increased functionality. This newtab page includes hotkeys to launch favourite websites and personal memos to keep track of tasks to do today.",
           improvements: [
             'Sanitize user input to prevent unwanted input rendering',
@@ -504,7 +504,7 @@ export class ContentService {
         null,
         2017,
         null,
-        'assets/img/terraria.png',
+        'assets/img/terraria.webp',
         { github: 'https://github.com/DavidPeet8/Terraria' },
         ['Java', 'LibGDX', 'Box2D'],
         {
@@ -512,7 +512,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/terraria1.png', 'assets/img/terraria2.png'],
+          imgSrc: ['assets/img/terraria1.webp', 'assets/img/terraria2.webp'],
           description: "My Terraria Emulation was inspired by the game Terraria. The goal of this project was to implement core features of the game while keeping a casual feel, which turned into a Windows parody.",
           improvements: [
             'Implement <b>enemy collision detection and damage</b> (as well as different images for player vs enemies)',
@@ -537,7 +537,7 @@ export class ContentService {
         null,
         2014,
         null,
-        'assets/img/linebot2.png',
+        'assets/img/linebot2.webp',
         {},
         ['C', 'PWM'],
         {
@@ -545,7 +545,7 @@ export class ContentService {
           'details': []
         },
         {
-          imgSrc: ['assets/img/linebot.jpg'],
+          imgSrc: ['assets/img/linebot.webp'],
           description: "This Robot applies knowledge of circuit design and hardware components combined with C source code to smooth the path of the robot when follwing a line",
           improvements: [
             'Implement the ability to roam in search of a line if started without a line to follow'
