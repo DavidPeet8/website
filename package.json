@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "gh-pages -d build",
-    "pbuild": "ng build --prod --output-path build --base-href /"
+    "pbuild": "ng build --prod --output-path build --base-href /website/"
   },
   "private": true,
   "dependencies": {
