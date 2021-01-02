@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ContentComponent } from '@content-list/components/content/content.component'
 
-const routes: Routes = [];
+const routes: Routes = [
+	{
+		path: '',
+		loadChildren: () => import('@content-list/content-list.module').then(mod => mod.ContentListModule)
+	}
+];
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes, {
