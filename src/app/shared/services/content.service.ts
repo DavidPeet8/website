@@ -31,6 +31,7 @@ export class ContentService {
   }
 
   getProjectForContext() {
+    console.log(this.getData(['projects'].concat(this.router.url.slice(1).split('/'))));
     return this.getData(['projects'].concat(this.router.url.slice(1).split('/')));
   }
 
@@ -103,7 +104,6 @@ export class ContentService {
         ['C++', 'OpenCL', 'LLVM'],
         {
           'splash': 'Building out a heterogeneous optimizing compiler for GPU shaders and GPU compute workloads',
-          'details': [],
         },
         {},
         { 'color': this.grey }
@@ -119,7 +119,6 @@ export class ContentService {
         ['C++', 'Bash', 'Angular'],
         {
           'splash': 'Reducing install time of McAfee security solutions including Windows System Security and McAfee Gamer Security',
-          'details': []
         },
         {},
         { 'color': this.grey }
@@ -135,7 +134,6 @@ export class ContentService {
         ['Java', 'JS', 'Hibernate', 'Backbone.js'],
         {
           'splash': 'Designing & implementing new features for employee onboarding in the employee training system of tomorrow',
-          'details': []
         },
         {},
         { 'color': this.grey }
@@ -156,7 +154,6 @@ export class ContentService {
         ['C/C++', 'Kernel'],
         {
           'splash': 'HTTP Packet Sniffer displaying contents of all HTTP network traffic',
-          'details': []
         },
         {
           imgSrc: [],
@@ -186,7 +183,6 @@ export class ContentService {
         ['C++', 'CMake'],
         {
           'splash': 'Directly read and write binary files using a traditional text editor',
-          'details': []
         },
         {
           imgSrc: ['assets/img/binary_io_1.webp', 'assets/img/binary_io_2.webp'],
@@ -229,7 +225,6 @@ export class ContentService {
         ['C++', 'Angular', 'Python'],
         {
           'splash': 'Create & organize stylish technical documents without duplicating information (and giving everyone a headache)',
-          'details': []
         },
         {
           imgSrc: ['assets/img/note_modules_1.webp', 'assets/img/note_modules_3.webp', 'assets/img/note_modules_4.webp'],
@@ -267,7 +262,6 @@ export class ContentService {
         ['Angular', 'Firestore', 'Authentication'],
         {
           'splash': 'Minimalistic method of organizing reminders with seamless workflow integration',
-          'details': []
         },
         {
           imgSrc: ['assets/img/todo_main.webp', 'assets/img/todo_add_screen.webp', 'assets/img/todo_all_done.webp', 'assets/img/todo_login.webp'],
@@ -300,7 +294,6 @@ export class ContentService {
         ['C/C++', 'Make'],
         {
           'splash': 'Software shim monitoring process memory consumption & checking for leaks',
-          'details': []
         },
         {
           imgSrc: [],
@@ -338,7 +331,6 @@ export class ContentService {
         ['JS', 'Angular'],
         {
           'splash': 'A place to share my interests & past projects',
-          'details': []
         },
         {
           imgSrc: ['assets/img/website2.webp', 'assets/img/website3.webp', 'assets/img/website4.webp'],
@@ -368,7 +360,6 @@ export class ContentService {
         ['Java', 'Spring', 'REST', 'Postgresql'],
         {
           'splash': 'Tracker for upcoming banking payments made to make life simpler',
-          'details': []
         },
         {
           imgSrc: [],
@@ -397,7 +388,6 @@ export class ContentService {
         ['Git', 'Java'],
         {
           'splash': 'Source control visualizer - your best friend for generating correct diffs for code review',
-          'details': []
         },
         {
           imgSrc: ['assets/img/git-branch-hierarchy-square.webp'],
@@ -426,7 +416,6 @@ export class ContentService {
         ['JS', 'JQuery'],
         {
           'splash': 'Boosting productivity by highlighting search results you\'re interested in',
-          'details': []
         },
         {
           imgSrc: [],
@@ -453,7 +442,6 @@ export class ContentService {
         ['JS'],
         {
           'splash': 'Physics simulation of bodies orbiting a mass',
-          'details': []
         },
         {
           imgSrc: [],
@@ -480,7 +468,6 @@ export class ContentService {
         ['JS', 'Firebase'],
         {
           'splash': 'Stylish Newtab page putting you one keystroke away from your favourite sites',
-          'details': []
         },
         {
           imgSrc: ['assets/img/newtab2.webp'],
@@ -509,7 +496,6 @@ export class ContentService {
         ['Java', 'LibGDX', 'Box2D'],
         {
           'splash': 'Terraria... but with a dash of MS Windows comedy',
-          'details': []
         },
         {
           imgSrc: ['assets/img/terraria1.webp', 'assets/img/terraria2.webp'],
@@ -542,7 +528,6 @@ export class ContentService {
         ['C', 'PWM'],
         {
           'splash': 'Line following robot with digital and analogue following modes',
-          'details': []
         },
         {
           imgSrc: ['assets/img/linebot.webp'],

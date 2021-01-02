@@ -8,21 +8,6 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrls: ['./content-item.component.sass'],
   animations:
     [
-      trigger('grow', [
-        state('mouseIn', style({
-          transform: 'scale(1.05)'
-        })),
-        state('mouseOut', style({
-          transform: 'scale(1)'
-        })),
-        transition('mouseOut => mouseIn', [
-          animate('0.05s')
-        ]),
-        transition('mouseIn => mouseOut', [
-          animate('0.05s')
-        ])
-      ]),
-
       trigger('projectGrow', [
         state('big', style({
           transform: 'scale(1.05)',
@@ -66,10 +51,6 @@ export class ContentItemComponent implements OnInit {
 
   getImg(): string {
     return this.item.imgPath;
-  }
-
-  getBullets(): string[] {
-    return this.item.content.details;
   }
 
   onMouseEnterImg(): void {

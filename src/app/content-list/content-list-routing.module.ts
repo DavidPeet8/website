@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ContentItemComponent } from '@content-list/components/content-item/content-item.component'
-import { ContentComponent } from '@content-list/components/content/content.component'
-import { ModalComponent } from '@content-modal/components/modal/modal.component'
+
+function loadModal() {
+	console.log("Something was loaded");
+	return import('@content-modal/content-modal.module').then(m => m.ContentModalModule);
+}
 
 const routes: Routes = [
-	{ path: 'website', component: ModalComponent },
-	{ path: 'memory-sanitizer', component: ModalComponent },
-	{ path: 'payment-tracker', component: ModalComponent },
-	{ path: 'branch-visualizer', component: ModalComponent },
-	{ path: 'site-spotlight', component: ModalComponent },
-	{ path: 'gravitate', component: ModalComponent },
-	{ path: 'beautiful-newtab', component: ModalComponent },
-	{ path: 'terraria', component: ModalComponent },
-	{ path: 'line-bot', component: ModalComponent },
-	{ path: 'deadline', component: ModalComponent },
-	{ path: 'note-modules', component: ModalComponent },
-	{ path: 'binary-io', component: ModalComponent }
+	{ path: 'website', loadChildren: loadModal },
+	{ path: 'memory-sanitizer', loadChildren: loadModal },
+	{ path: 'payment-tracker', loadChildren: loadModal },
+	{ path: 'branch-visualizer', loadChildren: loadModal },
+	{ path: 'site-spotlight', loadChildren: loadModal },
+	{ path: 'gravitate', loadChildren: loadModal },
+	{ path: 'beautiful-newtab', loadChildren: loadModal },
+	{ path: 'terraria', loadChildren: loadModal },
+	{ path: 'line-bot', loadChildren: loadModal },
+	{ path: 'deadline', loadChildren: loadModal },
+	{ path: 'note-modules', loadChildren: loadModal },
+	{ path: 'binary-io', loadChildren: loadModal }
 ];
 
 @NgModule({

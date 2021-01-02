@@ -7,24 +7,22 @@ import { TagComponent } from './components/tag/tag.component';
 import { ContentComponent } from './components/content/content.component';
 import { ContentItemComponent } from './components/content-item/content-item.component';
 import { SharedModule } from '@shared/shared.module';
-import { ContentModalModule } from '@content-modal/content-modal.module';
 
 
 @NgModule({
   declarations: [
-  	ContentComponent,
-  	ContentItemComponent,
-  	TagComponent,
-  	TagBarComponent,
+    ContentComponent,
+    ContentItemComponent,
+    TagComponent,
+    TagBarComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
-    ContentModalModule,
     ContentListRoutingModule,
-  ], 
+  ],
   exports: [
-  	ContentComponent
+    ContentComponent
   ]
 })
 export class ContentListModule { }
