@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations'
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-content-item',
@@ -12,12 +12,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
         state('big', style({
           transform: 'scale(1.05)',
           'background-color': '#111111',
-          //'backdrop-filter': 'blur(200px)'
+          'backdrop-filter': 'blur(200px)'
         })),
         state('smol', style({
           transform: 'scale(1)',
           'background-color': '#222222',
-          //'backdrop-filter': 'blur(0px)'
+          'backdrop-filter': 'blur(0px)'
         })),
         transition('smol => big', [
           animate('0.1s')
@@ -31,7 +31,6 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class ContentItemComponent implements OnInit {
   @Input() item; // do not statically type to allow polymorphism
   @Input() isWork: boolean;
-  isBigImg: boolean = false;
   isBigContent: boolean = false;
   animated: boolean = window.innerWidth > 900 && window.innerHeight > 700
 
@@ -53,19 +52,9 @@ export class ContentItemComponent implements OnInit {
     return this.item.imgPath;
   }
 
-  onMouseEnterImg(): void {
-    if (!this.isWork || !this.animated) return;
-    this.isBigImg = true;
-  }
-
   onMouseEnterContainer(): void {
     if (this.isWork || !this.animated) return;
     this.isBigContent = true;
-  }
-
-  onMouseLeaveImg(): void {
-    if (!this.isWork || !this.animated) return;
-    this.isBigImg = false;
   }
 
   onMouseLeaveContainer(): void {
