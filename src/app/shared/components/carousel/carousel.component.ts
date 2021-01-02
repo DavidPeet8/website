@@ -8,36 +8,31 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 export class CarouselComponent implements OnInit {
   @Input() slides: string[];
   slideIndex: number = 0;
-  carouselBackground:string = "";
+  carouselBackground: string = "";
 
   constructor() { }
 
   ngOnInit(): void {
-  	console.log("Carousel init");
-    console.log(this.slides.length + " " + this.slides[0]);
     this.carouselBackground = this.slides[this.slideIndex];
   }
 
-  showNext () : void 
-  {
-  	this.slideIndex++;
-  	if (this.slideIndex == this.slides.length) this.slideIndex = 0;
+  showNext(): void {
+    this.slideIndex++;
+    if (this.slideIndex == this.slides.length) this.slideIndex = 0;
     console.log('next');
     this.getBackground();
   }
 
-  showPrev () : void
-  {
-  	this.slideIndex--;
-  	if (this.slideIndex < 0) this.slideIndex = this.slides.length - 1;
+  showPrev(): void {
+    this.slideIndex--;
+    if (this.slideIndex < 0) this.slideIndex = this.slides.length - 1;
     console.log('prev');
     this.getBackground();
   }
 
-  getBackground() 
-  {
+  getBackground() {
     console.log("Changing background");
-  	this.carouselBackground = this.slides[this.slideIndex];
+    this.carouselBackground = this.slides[this.slideIndex];
   }
 
 }

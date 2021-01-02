@@ -2,12 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { ContentComponent } from '@content-list/components/content/content.component'
 
-const routes: Routes = [
-	{
-		path: '',
-		component: ContentComponent
-	}
-];
+const routes: Routes = [];
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes, {

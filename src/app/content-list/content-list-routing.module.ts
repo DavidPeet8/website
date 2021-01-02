@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 function loadModal() {
-	console.log("Something was loaded");
 	return import('@content-modal/content-modal.module').then(m => m.ContentModalModule);
 }
 

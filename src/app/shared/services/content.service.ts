@@ -31,7 +31,6 @@ export class ContentService {
   }
 
   getProjectForContext() {
-    console.log(this.getData(['projects'].concat(this.router.url.slice(1).split('/'))));
     return this.getData(['projects'].concat(this.router.url.slice(1).split('/')));
   }
 

@@ -1,5 +1,5 @@
 <div class="fullwidth content-item">
-	<div [routerLink]="[item.partialURI]" [ngClass]="getClasses()" [ngStyle]="getStyle()"
+	<div [routerLink]="['./' + item.partialURI]" [ngClass]="getClasses()" [ngStyle]="getStyle()"
 		[@projectGrow]="isWork ? null : isBigContent ? 'big' : 'smol'" (mouseover)="onMouseEnterContainer()"
 		(mouseout)="onMouseLeaveContainer()">
 		<div *ngIf="isWork" (click)="goToSite()" class="img-container hidden-xsmall">
