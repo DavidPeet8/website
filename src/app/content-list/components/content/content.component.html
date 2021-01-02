@@ -8,8 +8,6 @@
 		</div>
 
 		<div *ngIf="!isWork">
-			<!-- <hr class="section-sep"/> -->
-			<!-- <h1 class="section-heading">PROJECTS</h1> -->
 			<ul class="item-list">
 				<app-content-item *ngFor="let item of projectList" [item]="item" [isWork]="false"></app-content-item>
 			</ul>
