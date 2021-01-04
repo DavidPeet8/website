@@ -25,15 +25,16 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/CNAME"
             ],
             "styles": [
               "src/styles.sass"
             ],
             "stylePreprocessorOptions": {
-                "includePaths": [
-                    "./"
-                ]
+              "includePaths": [
+                "./"
+              ]
             },
             "scripts": []
           },
@@ -128,6 +129,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "website"
 }
