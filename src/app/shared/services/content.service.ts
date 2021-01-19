@@ -57,10 +57,10 @@ export class ContentService {
       'headers': ['Developer.', 'Athlete.', 'Architect.'],
       'expressions': [
         'I Google better than your average bear',
-        "It's not a bug it's a feature",
+        // "It's not a bug it's a feature",
         'It works on my machine',
-        'I � Unicode',
-        "That's not a data breach ... it's a surprise backup"
+        'I � Unicode'
+        // "That's not a data breach ... it's a surprise backup"
       ],
       'imgPath': 'url("assets/img/codesnippet-min.webp")'
     };
