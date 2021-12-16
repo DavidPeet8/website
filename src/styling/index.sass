@@ -1,0 +1,41 @@
+@import "./colorscheme"
+
+body
+	background-color: $primary
+	margin: 0
+	border: 0
+
+@media only screen and (min-width: 1000px)
+	.content
+		margin: 0 auto
+		max-width: 70%
+
+@media only screen and (max-width: 999px) and (min-width: 600px)
+	.content
+		margin: 0 auto
+		max-width: 85%
+
+@media only screen and (max-width: 599px)
+	.content
+		margin: 0 auto
+		max-width: 100%
+
+.intro
+	margin-top: 30px
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+	flex-wrap: wrap-reverse
+
+.projects-intro, .experience-intro
+	color: $secondary
+	margin-top: 50px
+
+@media only screen and (max-width: 599px)
+	.projects-intro, .experience-intro
+		padding: 20px
+
+@media only screen and (min-width: 600px)
+	.spacer
+		margin-bottom: 150px

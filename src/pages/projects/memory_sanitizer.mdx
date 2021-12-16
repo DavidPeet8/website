@@ -1,0 +1,28 @@
+---
+title: Memory Sanitizer
+time: stuff
+index: 6
+type: project
+hidden: false
+splash: Software shim monitoring process memory consumption & checking for leaks
+---
+
+# [Memory Sanitizer](https://github.com/DavidPeet8/Memory-Sanitizer)
+
+**Date Range:** 2020
+
+**Key Technologies:** `C/C++` `Linux` `Make`
+
+**Github Source:** <GitLink url="https://github.com/DavidPeet8/Memory-Sanitizer" />
+
+---
+
+Memory Leaks are a common error in low level programs which can lead to *thrashing* and sometimes security vulnerabilities. Common tooling for detecting and handling memory leaks includes `Valgrind` and `ASAN`. Although both tools are quite useful at detecting leaks, ASAN has a mandatory compile time component rendering it useless on production executables, and Valgrind is just plain slow because it goes to the additional work of emulating x86 instructions by virtualizing the CPU.
+
+Memory Sanitizer is designed to fill the void left by other tools by providing the ability to  smoke test a ***production executable*** for memory leaks. In this situation, no debug symbols exist, and optimizations are enabled, so it is highly unlikely that any memory sanitization program can provide much useful information.
+
+> Thus, *Memory Santizer* only needs to answer one question: ***given a program, does it leak memory***?
+
+With this goal in mind, *Memory Sanitizer* shims memory allocation & deallocation calls  tracking memory consumption over the program lifetime. *Memory Sanitizer* attaches to production executables by taking advantage of `LD_PRELOAD` and dynamic linking order, essentially forcing executables to link with my memory allocation & deallocation implementations rather than those provided by the standard library. As a result of the minimal overhead in Memory sanitizer, it provides:
+- Over 100x startup time improvement over Valgrind
+- Over 100x less runtime overhead than Valgrind

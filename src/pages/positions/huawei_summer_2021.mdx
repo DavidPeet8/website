@@ -1,0 +1,38 @@
+---
+company: Huawei
+title: Linux Kernel / Application Developer Intern
+time: Summer 2021
+index: 3
+type: position
+hidden: false
+splash: Developing modern lightweight cryptographic algorithms improving data security in next-gen IoT devices
+---
+
+# [Huawei Technologies](https://www.huawei.com/)
+
+**Date Range:** May - Aug 2021
+
+**Key Technologies:** `C/C++` `pthreads` `Bash`
+
+**Location:** Ontario, Canada
+
+**Team:** Lightweight Cryptography
+
+---
+
+In my second term at Huawei I worked in our *Data Security & Privacy Lab* on the *Lightweight Cryptography (LWC)* team. My team's goal was to produce a lightweight cryptography library for usage across the company and by partners.
+
+> Lightweight cryptography is an area of active research concerned with developing a collection of algorithms and methodologies specifically targeted at constrained execution environments. Different LWC algorithms optimize for different constraints but typically the constraints considered include:
+> 1. **Cost** - Custom hardware for hardware acceleration is not feasible
+> 2. **Power Consumption** - Algorithms must consume as little energy as possible so that they can continue to function on IoT devices like credit cards
+> 3. **Security** - Algorithms must provide acceptable security against modern attacks
+> 4. **Overhead** - For example reduce authentication code tag length to reduce network overhead
+
+Over the course of the term I implemented 5 different algorithms in our library including:
+1. `SKINNY` - Lightweight tweakable block cipher
+2. `SKINNY-Hash` - A cryptographic hash function based on the `SKINNY` Block cipher
+3. `Romulus` - An AEAD (Authenticated Encryption with Additional Data) scheme based on `SKINNY`
+4. `LightMAC` - A lightweight algorithm for message authentication configurable to use any block cipher. LightMAC reduces authentication tag length by performing *tag truncation* sacrificing exponential security loss for linear tag size reduction.
+5. `ProMAC` - A bleeding edge lightweight MAC algorithm for authenticating packet streams. ProMAC uses a rolling internal state to maintain high *eventual security* for packets by calculating authentication codes using material from previous packets. This approach allows individual tags to remain short without sacrificing security. At time of writing no open source implementations of `ProMAC` exist.
+
+Over the course of the term I also assisted in the development of a ***Memory Integrity Protection*** scheme essentially aiming to encrypt and authenticate all accesses to RAM preventing attackers with physical device access from compromising the device.

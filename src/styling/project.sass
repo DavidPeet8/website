@@ -1,0 +1,57 @@
+@import "./colorscheme"
+@import "./utils"
+
+.project
+	display: table
+	width: 100%
+	margin: 20px 0 20px 0
+	box-size: border-box
+	border-radius: 4px
+	overflow: hidden
+	background-position: center center
+	background-size: cover
+	cursor: pointer
+
+	> div
+		min-height: 150px
+		padding: 20px 20px 20px 20px
+		color: $secondary-text
+		background-color: $secondary-transparent
+		border: 15px solid $secondary-transparent
+		background-clip: padding-box
+
+@media only screen and (max-width: 599px)
+	.project
+		margin: 0
+		border-radius: 0
+
+
+.binary-io
+	background-image: url("../images/binary_io_1.webp")
+
+.line-following-robot
+	background-image: url("../images/linebot.webp")
+
+.terraria
+	background-image: url("../images/terraria.webp")
+
+.beautiful-new-tab
+	background-image: url("../images/newtab.webp")
+
+.site-spotlight
+	background-image: url("../images/highlight-sites.webp")
+
+.branch-visualizer
+	background-image: url("../images/git-branch-hierarchy.webp")
+
+.memory-sanitizer
+	background-image: url("../images/mcheck.webp")
+
+.deadline
+	background-image: url("../images/todo_splash.webp")
+
+.note-modules
+	background-image: url("../images/note_modules_1.webp")
+
+.website
+	background-image: url("../images/website.png")

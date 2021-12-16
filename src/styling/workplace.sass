@@ -1,0 +1,61 @@
+@import "./colorscheme"
+@import "./utils"
+
+.company
+	display: table
+	width: 100%
+	margin: 20px 0 20px 0
+	box-size: border-box
+	background: $light-gradient
+	border-radius: 4px
+	overflow: hidden
+	cursor: pointer
+
+	> div
+		min-height: 150px
+		padding: 20px 20px 20px 20px
+		color: $secondary-text
+		background-blend-mode: overlay
+		background-color: $secondary-transparent
+		border: 15px solid $secondary-transparent
+		background-clip: padding-box
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+
+@media only screen and (max-width: 599px)
+	.company
+		margin: 0
+		border-radius: 0
+
+
+.axonify
+		background-image: url("../images/company/axonify.svg")
+
+.uber
+	background-image: url("../images/company/uber.svg")
+
+.huawei
+	background-image: url("../images/company/huawei.svg")
+
+.hudson-river-trading
+	background-image: url("../images/company/hudsonrivertrading.svg")
+
+.mcafee
+	background-image: url("../images/company/mcafee-dark.svg")
+
+@media (prefers-color-scheme: light)
+	.axonify
+		background-image: url("../images/company/axonify.svg")
+
+	.uber
+		background-image: url("../images/company/uber.svg")
+
+	.huawei
+		background-image: url("../images/company/huawei.svg")
+
+	.hudson-river-trading
+		background-image: url("../images/company/hudsonrivertrading.svg")
+
+	.mcafee
+		background-image: url("../images/company/mcafee.svg")
