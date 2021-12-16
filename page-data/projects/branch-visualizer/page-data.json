@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-projects-branch-visualizer-mdx",
+    "path": "/projects/branch-visualizer/",
+    "result": {"pageContext":{"frontmatter":{"title":"Branch Visualizer","time":"stuff","index":5,"type":"project","hidden":false,"splash":"Source control visualizer - your best friend for generating correct diffs for code review"}}},
+    "staticQueryHashes": []}

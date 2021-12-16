@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-projects-binaryio-mdx",
+    "path": "/projects/binaryio/",
+    "result": {"pageContext":{"frontmatter":{"title":"Binary IO","time":"Summer 2022","index":9,"type":"project","hidden":false,"splash":"Directly read and write binary files using a traditional text editor"}}},
+    "staticQueryHashes": []}

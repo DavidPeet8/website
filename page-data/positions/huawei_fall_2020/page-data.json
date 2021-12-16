@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-positions-huawei-fall-2020-mdx",
+    "path": "/positions/huawei_fall_2020/",
+    "result": {"pageContext":{"frontmatter":{"company":"Huawei","title":"Compiler Software Engineering Intern","time":"Fall 2020","index":2,"type":"position","hidden":false,"splash":"Building out a heterogeneous optimizing compiler for GPU shaders and GPU compute workloads"}}},
+    "staticQueryHashes": []}

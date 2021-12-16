@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-projects-memory-sanitizer-mdx",
+    "path": "/projects/memory_sanitizer/",
+    "result": {"pageContext":{"frontmatter":{"title":"Memory Sanitizer","time":"stuff","index":6,"type":"project","hidden":false,"splash":"Software shim monitoring process memory consumption & checking for leaks"}}},
+    "staticQueryHashes": []}
