@@ -14,7 +14,12 @@ module.exports = {
 		},
 		"gatsby-plugin-image",
 		"gatsby-plugin-react-helmet",
-		"gatsby-plugin-sitemap",
+		{
+			resolve: "gatsby-plugin-sitemap",
+			options: {
+				excludes: [`/__generated/*`],
+			},
+		},
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
@@ -45,5 +50,6 @@ module.exports = {
 			},
 			__key: "pages",
 		},
+		"gatsby-plugin-open-graph-images",
 	],
 };
