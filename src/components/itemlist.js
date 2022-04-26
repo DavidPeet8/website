@@ -1,8 +1,12 @@
 import React from "react"
+import { HashRouter as Router, Route } from "react-router-dom";
+
 import Workplace from "./workplace"
 import Project from "./project"
 
 import "../styling/itemlist.sass"
+
+// FIXME: Maybe add the hash router here?
 
 class ItemList extends React.Component {
 	constructor(props) {
