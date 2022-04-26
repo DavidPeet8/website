@@ -3,19 +3,16 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import "../styling/headshot.sass"
 
-const Headshot = (props) => {
-	let caption;
+const captions = [
+	"It works on my machine ¯\\_(ツ)_/¯",
+	"I � Unicode",
+	"I Google better than your average bear",
+	"Code goes brrrrr",
+]
 
-	switch (Math.floor((Math.random() * 3) - 0.00001)) {
-		case 0:
-			caption = "It works on my machine ¯\\_(ツ)_/¯"; break;
-		case 1:
-			caption = "I � Unicode"; break;
-		case 2:
-			caption = "I Google better than your average bear"; break;
-		default:
-			throw Error("Not all caption cases handled, or missing a break statement.");
-	}
+const Headshot = (props) => {
+	const index = Math.floor((Math.random() * captions.length))
+	const caption = captions[index]
 
 	return (
 		<div className="headshot" >
