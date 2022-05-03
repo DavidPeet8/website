@@ -1,0 +1,62 @@
+---
+title: Envoy
+time: Winter 2022
+index: 0
+type: open-source
+hidden: false
+splash: Contributed new traffic tapping method to Envoy, the industry standard high performance L7 proxy maintained by the CNCF
+---
+
+# [Envoy](https://github.com/envoyproxy/envoy)
+
+> **TLDR:** I implemented two large features in the traffic tapping functionality of Envoy.
+> 1. Buffered traffic tapping within Envoy. This is a mechanism by which envoy operators can introspect traffic passing through envoy in realtime, and is incredibly valuable for debugging complex distributed issues.
+> 2. New admin endpoint for fetching `config_id` strings needed to write valid tap request bodies.
+
+## Background
+
+[Envoy](https://github.com/envoyproxy/envoy) is a high performance L7 distributed proxy written in `C++` and originally developed by [Lyft](https://www.lyft.com/). Envoy is an official **Cloud Native Computing Foundation** project, seeing widespread adoption and community support.
+
+> **Envoy is industry standard** - used by: Uber, Google, Microsoft, Netflix, Amazon, Snapchat, Salesforce, Airbnb, Stripe, and more
+
+
+### Tap Filter
+
+The Tap Filter in Envoy allows operators to introspect traffic in real time as it passes through Envoy. A tap is initiated by making a POST to `/tap` with a post body that contains a yaml configuration. This configuration specifies what subset of traces to put on output (for example only traces with header X matching Y), and what to do with traces that we wish to stream out. Below is an example of a post body that will configure a tap in streaming mode to that will output any and all traces that pass through envoy.
+
+```yaml
+config_id: test_config_id
+tap_config:
+	match: # What traces should be tapped?
+		any_match: true
+	output_config:
+		sinks: # Where should tapped traces go?
+			- streaming_admin: {}
+```
+
+The existing streaming tap sink used with the tap filter behaves as follows - once a tap is initiated, traces matching the posted configuration are streamed back to the client as they are matched in real time. The stream does not close until it is severed by the client. While this behavior is useful in many cases, it has some drawbacks & pain points.
+
+- Poor for scripting as the stream needs to be closed client side.
+- Difficult to obtain valid `config_id` strings to make a post body
+- Intermediate hops (non edge hosts) may not fully support HTTP streaming, and thus proxied tap requests may not be feasible, forcing developers to connect to the envoy instance they want to tap over `ssh` to collect traces.
+
+
+## [Buffered Tap Sink](https://github.com/envoyproxy/envoy/pull/20142)
+
+To address the pain points mentioned in the streaming tap sink, I implemented a new buffered tap sink within Envoy (PR Link [Here](https://github.com/envoyproxy/envoy/pull/20142). This sink buffers traces internally within Envoy until the requested number of traces are tapped, or the specified timeout expires, at which point the buffered traces are flushed back to the client.
+
+```yaml
+config_id: test_config_id
+tap_config:
+	match: # What traces should be tapped?
+		any_match: true
+	output_config:
+		sinks: # Where should tapped traces go?
+			- buffered_admin:
+				max_traces: 3 # Requested number of traces to buffer
+				timeout: 2s   # Max wait to fill the trace buffer
+```
+
+## [Admin Config IDs Endpoint](https://github.com/envoyproxy/envoy/issues/19942)
+
+As I mentioned above, the `config_id` field needed to create a tap request is not easy to find provided you are not familiar with the configuration for a given envoy instance. To mitigate this issue, I implemented a new admin endpoint at `/tap/config_ids` that dumps a newline separated list of valid `config_id` strings that can be used with the queried Envoy instance.

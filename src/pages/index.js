@@ -29,6 +29,7 @@ class IndexPage extends React.Component {
 			about: null,
 			positions: [],
 			projects: [],
+			openSource: [],
 		};
 
 		for (let el of props.data.allMdx.nodes) {
@@ -40,6 +41,8 @@ class IndexPage extends React.Component {
 					this.state.positions.push(el); break;
 				case "project":
 					this.state.projects.push(el); break;
+				case "open-source":
+					this.state.openSource.push(el); break;
 				default:
 					throw Error("ERROR - could not match type.");
 			}
@@ -69,18 +72,22 @@ class IndexPage extends React.Component {
 							<About el={this.state.about} />
 						</div>
 
+						<div id="open-source" className="open-source-intro">
+							<h1 className="markdown">Open Source</h1>
+							<p className="markdown"></p>
+						</div>
+						<ItemList elementlist={this.state.openSource} setModal={this.showModal} />
+
 						<div id="experience" className="experience-intro">
 							<h1 className="markdown">Experience</h1>
 							<p className="markdown"></p>
 						</div>
-
 						<ItemList elementlist={this.state.positions} setModal={this.showModal} />
 
 						<div id="projects" className="projects-intro">
 							<h1 className="markdown">Projects</h1>
 							<p className="markdown"></p>
 						</div>
-
 						<ItemList elementlist={this.state.projects} setModal={this.showModal} />
 					</div>
 					<div className="spacer"></div>

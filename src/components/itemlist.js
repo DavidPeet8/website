@@ -3,6 +3,7 @@ import { HashRouter as Router, Route } from "react-router-dom";
 
 import Workplace from "./workplace"
 import Project from "./project"
+import OpenSource from "./open-source"
 
 import "../styling/itemlist.sass"
 
@@ -25,8 +26,10 @@ class ItemList extends React.Component {
 								return <Workplace key={index} model={el} setModal={this.setModal} />;
 							case 'project':
 								return <Project key={index} model={el} setModal={this.setModal} />;
+							case 'open-source':
+								return <OpenSource key={index} model={el} setModal={this.setModal} />;
 							default:
-								throw Error("Inavlid element type");
+								throw Error("Invalid element type");
 						}
 					})
 				}

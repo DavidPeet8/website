@@ -1,8 +1,8 @@
 import React from "react"
 
-import "../styling/project.sass"
+import "../styling/open-source.sass"
 
-class Project extends React.Component {
+class OpenSource extends React.Component {
 	constructor(props) {
 		super(props);
 		this.model = props.model;
@@ -19,8 +19,8 @@ class Project extends React.Component {
 	render() {
 		let sfx = this.model.frontmatter.title.toLowerCase().replace(/\s/g, '-')
 		return (
-			<div id={"project-" + sfx} className={"project " + sfx} role="button" tabIndex={0} onClick={this.toggleModal} onKeyDown={this.toggleModal}>
-				<div className="project-splash">
+			<div id={"open-source-" + sfx} className={"open-source " + sfx} role="button" tabIndex={0} onClick={this.toggleModal} onKeyDown={this.toggleModal}>
+				<div className="open-source-splash">
 					<h1 className="markdown">{this.model.frontmatter.title}</h1>
 					<p className="markdown">{this.model.frontmatter.splash}</p>
 				</div>
@@ -29,4 +29,4 @@ class Project extends React.Component {
 	}
 }
 
-export default Project;
+export default OpenSource;

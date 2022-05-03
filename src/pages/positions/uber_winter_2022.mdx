@@ -5,19 +5,45 @@ time: Winter 2022
 index: 4
 type: position
 hidden: false
-splash: Incoming SWE intern
+splash: Routing & distributing all Uber's ingress traffic
 ---
 
 # [Uber](https://www.uber.com/)
 
 **Date Range:** Jan - Apr 2022
 
-**Key Technologies:** To be determined!
+**Key Technologies:** `Go`, `C++`, `gRPC`, `Protobuf`, [Envoy](https://www.envoyproxy.io/), [Abseil](https://abseil.io/)
 
 **Location:** Remote in Canada
 
-**Team:** To be determined!
+**Team:** Software Networking Edge
 
 ---
 
-I'll be joining Uber this Winter (2022) as a *Software Engineering Intern*. Check back for an update then!
+At Uber I worked on the Software Networking Edge team which is responsible for functionality including **DNS, Request Sharding, Routing, Load Balancing, Metrics, Observability, etc.** Throughout the term, I was able to work on a few different projects including contributing to Envoy, and improving our request sharding implementation.
+
+## [Envoy](https://github.com/envoyproxy/envoy) Contributions
+
+[Envoy](https://github.com/envoyproxy/envoy) is a high performance L7 distributed proxy written in `C++` and originally developed by [Lyft](https://www.lyft.com/). Envoy is an official **Cloud Native Computing Foundation** project, seeing widespread adoption and community support.
+
+> **Envoy is industry standard** - used by: Uber, Google, Microsoft, Netflix, Amazon, Snapchat, Salesforce, Airbnb, Stripe, and more
+
+Over the course of my internship at Uber I was able to make two large changes in [Envoy](https://github.com/envoyproxy/envoy) as well as another smaller usability improvement. The most impactful of these changes is the [Buffered Tap Sink](https://github.com/envoyproxy/envoy/pull/20142) which was used to help mitigate a **global Uber Eats outage**.
+1. [Buffered Tap Sink](https://github.com/envoyproxy/envoy/pull/20142) - Feature
+2. [Admin Config IDs Endpoint](https://github.com/envoyproxy/envoy/issues/19942) - Feature
+3. [Code format path matching](https://github.com/envoyproxy/envoy/pull/20108) - Usability
+
+Of these changes, I was able to open source the [Buffered Tap Sink](https://github.com/envoyproxy/envoy/pull/20142) and [Code format path matching](https://github.com/envoyproxy/envoy/pull/20108). I implemented the [Admin Config IDs Endpoint](https://github.com/envoyproxy/envoy/issues/19942) in our own fork of envoy but did not get around to open sourcing it during my term. This change will be open sourced shortly by Uber.
+
+*For a deeper dive into my contributions to Envoy, see [here](#open-source-envoy).*
+
+## Request Sharding
+
+During the second half of my internship with Uber, I worked on improving our implementation of geo location based request sharding.
+> **Sharding** is a common strategy used to scale applications by dividing the ingress work into different compute units (shards) and assigning each shard to a different server.
+
+> **Geo location based sharding** is a sharding scheme based on the latitude / longitude information that is provided with a request when it hits Envoy.
+
+My work with geo location based sharding had a few goals. First, we hoped to vastly reduce the load on backend configuration services, and second, we wished to improve Envoy's fault tolerance against config provider outages. My project accomplished both objectives, resulting in:
+- **>97%** load reduction on sharding configuration services
+- Significantly improved fault tolerance achieved by separating envoy and the sharding configuration cache. This separation allows envoy to perform restarts without affecting the cache, so an Envoy that restarts during a config provider outage will still be able to fetch a valid sharding configuration.

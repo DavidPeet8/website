@@ -17,9 +17,10 @@ class Workplace extends React.Component {
 	}
 
 	render() {
+		let sfx = this.model.frontmatter.company.toLowerCase().replace(/\s/g, '-')
 		return (
-			<div className="company" role="button" tabIndex={0} onClick={this.toggleModal} onKeyDown={this.toggleModal}>
-				<div className={this.model.frontmatter.company.toLowerCase().replace(/\s/g, '-')}>
+			<div id={"company-" + sfx} className="company" role="button" tabIndex={0} onClick={this.toggleModal} onKeyDown={this.toggleModal}>
+				<div className={sfx}>
 					<div className="position-splash">
 						<h1 className="markdown">{this.model.frontmatter.title}</h1>
 						<p className="markdown">{this.model.frontmatter.splash}</p>
