@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-positions-uber-winter-2022-mdx",
     "path": "/positions/uber_winter_2022/",
-    "result": {"pageContext":{"frontmatter":{"company":"Uber","title":"Software Engineering Intern","time":"Winter 2022","index":4,"type":"position","hidden":false,"splash":"Incoming SWE intern"}}},
+    "result": {"pageContext":{"frontmatter":{"company":"Uber","title":"Software Engineering Intern","time":"Winter 2022","index":4,"type":"position","hidden":false,"splash":"Routing & distributing all Uber's ingress traffic"}}},
     "staticQueryHashes": []}

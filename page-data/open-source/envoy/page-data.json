@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-open-source-envoy-mdx",
+    "path": "/open-source/envoy/",
+    "result": {"pageContext":{"frontmatter":{"title":"Envoy","time":"Winter 2022","index":0,"type":"open-source","hidden":false,"splash":"Contributed new traffic tapping method to Envoy, the industry standard high performance L7 proxy maintained by the CNCF"}}},
+    "staticQueryHashes": []}
