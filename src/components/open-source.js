@@ -19,10 +19,12 @@ class OpenSource extends React.Component {
 	render() {
 		let sfx = this.model.frontmatter.title.toLowerCase().replace(/\s/g, '-')
 		return (
-			<div id={"open-source-" + sfx} className={"open-source " + sfx} role="button" tabIndex={0} onClick={this.toggleModal} onKeyDown={this.toggleModal}>
-				<div className="open-source-splash">
-					<h1 className="markdown">{this.model.frontmatter.title}</h1>
-					<p className="markdown">{this.model.frontmatter.splash}</p>
+			<div id={"open-source-" + sfx} className="open-source" role="button" tabIndex={0} onClick={this.toggleModal} onKeyDown={this.toggleModal}>
+				<div className={sfx}>
+					<div className="open-source-splash">
+						<h1 className="markdown">{this.model.frontmatter.title}</h1>
+						<p className="markdown">{this.model.frontmatter.splash}</p>
+					</div>
 				</div>
 			</div>
 		);
