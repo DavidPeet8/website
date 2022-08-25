@@ -5,14 +5,14 @@ time: Summer 2022
 index: 5
 type: position
 hidden: false
-splash: Incoming Core Engineering Intern
+splash: Building infrastructure powering the world's most advanced automated trading system.
 ---
 
 # [Hudson River Trading](https://www.hudsonrivertrading.com/)
 
 **Date Range:** May - Aug 2022
 
-**Key Technologies:** `C++`
+**Key Technologies:** `C++`, `Boost`, `Python`
 
 **Location:** New York City
 
@@ -20,4 +20,31 @@ splash: Incoming Core Engineering Intern
 
 ---
 
-I will be joining HRT as a *Software Engineering Intern* under the *Core Engineering* umbrella this Summer (2022). Check back for an update then!
+While I was at HRT, I had the opportunity to work with two teams over two 5-week rotations.
+
+# Distributed Compute
+
+The first team I worked on was the distributed compute team, responsible for developing and maintaining HRT's internal distributed compute system - *Sched*. Sched runs research jobs, builds developer code, and runs jobs in the live trading environment. Throughout this rotation, I was able to take on three projects.
+
+**Dynamic Cluster Configuration:** First, I worked on developing a C++ interface for Netbox - our infrastructure management tool. The idea behind this project was to enable dynamic cluster configuration in Sched. Sched consists of an orchestration node and a compute cluster. The sched orchestrator obtains cluster configuration from a CSV file. This file indicates what hosts are available, how to access them, and their specifications. With the advent of a Netbox library, each host can advertise its presence to the orchestrator, allowing Sched to decide what hosts to add to the compute cluster and when. In other words, sched can scale the cluster size based on the current load.
+
+**Improved Log Searching:** The second project I worked on was implementing binary search by timestamp in log files. This project was pretty straightforward but had a couple of interesting points. First, the search needs to be performed on the caching layer, so system calls cannot be used (they would blow through the caching layer and hit the underlying filesystem). Second, log entries are not uniform in size. As a result, it is impossible to find the "middle" element by index. I addressed these issues with *boundless binary search* and *algorithm selection* respectively.
+
+**Compression at Rest within Sched:** The final project I worked on in my first rotation was compression at rest within sched orchestration nodes. After a developer sends a job to sched, the job context is queued on the orchestration node. From here, the orchestration node will dispatch the enqueued jobs to the compute cluster for evaluation. The issue here is what happens if multiple jobs are submitted that share a lot of common data - say an 800MB Pandas data frame? Currently, such a  data frame would be stored once with each job submitted to sched. As a result, submitting large jobs that share data can quickly exhaust machine resources. To prevent this, I implemented a compressor based on the LZW algorithm using an external codebook. The choice of external codebook allows the codebook to persist across runs of the compressor, and thus compress data replicated across enqueued jobs.
+
+# Acceleration
+
+During my second rotation, I worked with the Acceleration team, responsible for developing tools that make algorithm developers (those that create trading strategies) faster & more effective. During this rotation, I worked on performance benchmarking, profiling and optimization of our internal graph compute framework **Giraffe**. The use case backing this framework is as follows:
+1. Algo developers invent a metric based on data from the markets / other sources that they wish to use in their trading strategy
+2. Algo developers specify the graph topology computing this metric in python
+3. The graph topology is checked and serialized into protobuf format
+4. Later, the graph compute engine loads the protobuf and creates an in-memory representation of the graph
+5. After attaching the graph to the market data source, the graph will begin producing live updates for the desired metric. These values are then fed into the trading strategy running in production.
+
+The performance of the constructed graph is vital as the graph itself is the hot path - trading strategies depend directly on the results of this computation. I tried several optimization techniques (below) to reduce processing latency - the time from new market data to updated metric value. Overall I ended up observing significant improvements in L1 data cache performance.
+- Arena allocation
+- Structure packing
+- Memory layout optimization
+- Conditional compilation of debug code
+- Hiding cold data members behind a pointer
+- Data structure replacement & optimization
