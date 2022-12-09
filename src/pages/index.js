@@ -25,7 +25,7 @@ class IndexPage extends React.Component {
 		this.showModal = this.showModal.bind(this);
 		this.hideModal = this.hideModal.bind(this);
 
-		this.state = {
+		this.content = {
 			about: null,
 			positions: [],
 			projects: [],
@@ -36,13 +36,13 @@ class IndexPage extends React.Component {
 			if (el.frontmatter.hidden) continue;
 			switch (el.frontmatter.type) {
 				case "about":
-					this.state.about = el; break;
+					this.content.about = el; break;
 				case "position":
-					this.state.positions.push(el); break;
+					this.content.positions.push(el); break;
 				case "project":
-					this.state.projects.push(el); break;
+					this.content.projects.push(el); break;
 				case "open-source":
-					this.state.openSource.push(el); break;
+					this.content.openSource.push(el); break;
 				default:
 					throw Error("ERROR - could not match type.");
 			}
@@ -69,26 +69,26 @@ class IndexPage extends React.Component {
 					<div className="content">
 						<div className="intro">
 							<Headshot />
-							<About el={this.state.about} />
+							<About el={this.content.about} />
 						</div>
 
 						<div id="open-source" className="open-source-intro">
 							<h1 className="markdown">Open Source</h1>
 							<p className="markdown"></p>
 						</div>
-						<ItemList elementlist={this.state.openSource} setModal={this.showModal} />
+						<ItemList elementlist={this.content.openSource} setModal={this.showModal} />
 
 						<div id="experience" className="experience-intro">
 							<h1 className="markdown">Experience</h1>
 							<p className="markdown"></p>
 						</div>
-						<ItemList elementlist={this.state.positions} setModal={this.showModal} />
+						<ItemList elementlist={this.content.positions} setModal={this.showModal} />
 
 						<div id="projects" className="projects-intro">
 							<h1 className="markdown">Projects</h1>
 							<p className="markdown"></p>
 						</div>
-						<ItemList elementlist={this.state.projects} setModal={this.showModal} />
+						<ItemList elementlist={this.content.projects} setModal={this.showModal} />
 					</div>
 					<div className="spacer"></div>
 					<Modal register={this.regModal} />
@@ -113,7 +113,7 @@ export const query = graphql`
 				}
 				body
 			}
-    }
+    	}
 	}
 `
 
